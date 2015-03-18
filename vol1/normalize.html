@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      AIFH Volume 1, Chapter 2: Normalize and Denormalize Lab &middot; Artificial Intelligence for Humans
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+
+
+
+  
+  <script src='normalize.js' type="text/javascript"></script>
+  
+
+
+</head>
+
+
+  <body class="theme-base-0d">
+
+    <div class="sidebar">
+  <div class="container sidebar">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          AIFH
+        </a>
+      </h1>
+      <p class="lead">Artificial Intelligence for Humans</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+	<a class="sidebar-nav-item" href="/vol1/">Volume 1: Fundamentals</a>
+	<a class="sidebar-nav-item" href="/vol2/">Volume 2: Nature Inspired</a>
+	<a class="sidebar-nav-item" href="/vol3/">Volume 3: Neural/Deep Learning</a>
+	<a class="sidebar-nav-item" href="http://www.heatonresearch.com/book/cat/1">Buy the books</a>
+	<a class="sidebar-nav-item" href="https://github.com/jeffheaton/aifh">GitHub project</a>
+    </nav>
+
+    <p>&copy; 2015. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <img src="/images/web_header.png">
+<div class="page">
+  <h1 class="page-title">AIFH Volume 1, Chapter 2: Normalize and Denormalize Lab</h1>
+  <h1>Normalization and Denormalization Ranges</h2>
+For more information on normalization, see <a href="http://www.heatonresearch.com/wiki/Range_Normalization">this article</a>. The following paramaters are common to both normalization and denormalization.<br>
+Data High: <input type="text" id="dataHigh" value="100"><br>
+Data Low: <input type="text" id="dataLow" value="0"><br>
+Normalized High: <input type="text" id="normalizedHigh" value="1"><br>
+Normalized Low: <input type="text" id="normalizedLow" value="-1"><br>
+<h2>Normalize a Number</h2>
+Using the above ranges, we can normalize a number.<br>
+Number to normalize: <input type="text" id="normNum" value="5"><br>
+Result: <input type="text" id="normResult" value="" readonly><br>
+<input type="button" id="normButton" value="Normalize">
+		
+<h2>Denormalize a Number</h2>
+Using the above ranges, we can denormalize a number.<br>
+Number to normalize: <input type="text" id="deNormNum" value="0.5"><br>
+Result: <input type="text" id="deNormResult" value="" readonly><br>
+<input type="button" id="deNormButton" value="Denormalize">
+
+
+
+</div>
+
+<iframe frameborder="0" height="420" scrolling="no" src="https://www.kickstarter.com/projects/jeffheaton/artificial-intelligence-for-humans-vol-3-deep-lear/widget/card.html?v=2" width="220"></iframe>
+    </div>
+
+  </body>
+</html>
