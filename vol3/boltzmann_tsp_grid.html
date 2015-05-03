@@ -11,7 +11,7 @@
 
   <title>
     
-      Volume 3: Deep Learning and Neural Networks &middot; Artificial Intelligence for Humans
+      AIFH Volume 3, Chapter 2: Boltzmann Machine TSP Weight Grid &middot; Artificial Intelligence for Humans
     
   </title>
 
@@ -32,6 +32,10 @@
 
 
 
+
+  
+  <script src='boltzmann_tsp_grid.js' type="text/javascript"></script>
+  
 
 
 </head>
@@ -70,32 +74,20 @@
     <div class="content container">
       <img src="/images/web_header.png">
 <div class="page">
-  <h1 class="page-title">Volume 3: Deep Learning and Neural Networks</h1>
-  <ul>
-<li>Chapter 1: Neural Network Basics </li>
-<li>Chapter 2: Classic Neural Networks 
+  <h1 class="page-title">AIFH Volume 3, Chapter 2: Boltzmann Machine TSP Weight Grid</h1>
+  <h1>Generate TSP Boltzmann Machine Weight Matrix</h2>
+Number of cities: <input type="text" id="cityCount" value="5"><br>
+<input type="button" id="generateButton" value="Generate">
+		
+<p>The columns represent source city, by cities (2nd row) inside of the tour position (1st row).  The rows represent [neuron index]([tour position],[city #]).  Gamma is a learning-rate like value provided to the algorithm.  The function d(x,y) returns the distance between city x and city y.  The diagonal is set to zero, and is indicated by a slash (\).
 
-<ul>
-<li><a href="boltzmann_tsp_grid.html">Boltzmann Machine TSP Weight Grid</a></li>
-</ul></li>
-<li>Chapter 3: Feedforward Neural Networks </li>
-<li>Chapter 4: Propagation Training
+<h2>Weights</h2>
+<div id="weightOutput"></div>
+		
+<h2>Biases</h2>
+<p>Biases are always -g/2.</p>
 
-<ul>
-<li><a href="neural_xor.html">XOR Neural Network</a></li>
-<li><a href="classify_ann.html">Classify Neural Network</a> </li>
-<li><a href="benchmark_ann.html">Benchmark Neural Network</a></li>
-</ul></li>
-<li>Chapter 5: NEAT and HyperNEAT Neural Networks </li>
-<li>Chapter 6: Deep Belief Neural Networks </li>
-<li>Chapter 7: Deep Convolutional Network </li>
-<li>Chapter 8: Pruning and Model Selection </li>
-<li>Chapter 9: Architecting Neural Networks </li>
-<li>Chapter 10: Dropout and Regularization </li>
-<li>Chapter 11: Recurrent Neural Networks </li>
-<li>Chapter 12: Visualization </li>
-<li>Chapter 13: Modeling with Neural Networks</li>
-</ul>
+
 
 </div>
 
