@@ -11,7 +11,7 @@
 
   <title>
     
-      AIFH Volume 1, Chapter 1: Read CSV File &middot; Artificial Intelligence for Humans
+      AIFH Volume 3, Chapter 1: Single Layer Network &middot; Artificial Intelligence for Humans
     
   </title>
 
@@ -30,17 +30,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 
-  
-  <link rel="stylesheet" href="readcsv.css" media="screen" type="text/css">
-  
-
 
 
 
   
-  <script src='readcsv.js' type="text/javascript"></script>
-  
-  <script src='jquery.csv-0.71.min.js' type="text/javascript"></script>
+  <script src='single_layer.js' type="text/javascript"></script>
   
 
 
@@ -92,23 +86,29 @@
     <div class="content container">
       <img src="/images/web_header.png">
 <div class="page">
-  <h1 class="page-title">AIFH Volume 1, Chapter 1: Read CSV File</h1>
-  <h1>Read CSV</h2>
-<h2>Source CSV</h2>
-Preload with: 
-<select id="example-preload">
-	<option value="xor.csv">XOR</option>
-	<option value="iris.csv">Iris Data Set</option>
-	<option value="abalone.csv">Abalone</option>
-	<option value="breast-cancer-wisconsin.csv">Breast Cancer (Wisconsin set)</option>
-</select><input type="button" id="btnPreload" value="Load"><br>
+  <h1 class="page-title">AIFH Volume 3, Chapter 1: Single Layer Network</h1>
+  <div style="position:relative">
+<img src="../images/single_layer.png">
+<input type="text" value="0.3" size="3" id="i1" style="position: absolute;left: 70px;top: 20px;">
+<input type="text" value="0.3" size="3" id="i2" style="position: absolute;left: 190px;top: 20px;">
 
-<textarea rows="10" cols="50" id="textCSV"></textarea>
-<br>
-<input id="btnParse" type="button" value="Parse"/>
-<h2>Parsed Output</h2>
-<div id="example-output"></div>
+<input type="text" value="0.1" size="3" id="w1" style="position: absolute;left: 100px;top: 80px;">
+<input type="text" value="0.2" size="3" id="w2" style="position: absolute;left: 170px;top: 80px;">
+<input type="text" value="0.3" size="3" id="w3" style="position: absolute;left: 230px;top: 80px;">
 
+<input type="text" value="" size="3" id="sum" style="position: absolute;left: 200px;top: 200px;" readonly>
+<input type="text" value="" size="3" id="o" style="position: absolute;left: 190px;top: 310px;" readonly>
+
+<input type="button" value="Calculate" id="calculateButton" style="position: absolute;left: 250px;top: 310px;" readonly>
+</div>
+
+<h2>Calculations</h2>
+<p>
+The sigmoid function is calculated following formula. 
+$$S(t) = \frac{1}{1 + e^{-t}}.$$
+Enter input and weight values to see the calculations.
+</p>
+<div id="calculationDisplay"></div>
 
 
 </div>

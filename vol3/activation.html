@@ -11,7 +11,7 @@
 
   <title>
     
-      AIFH Volume 1, Chapter 1: Read CSV File &middot; Artificial Intelligence for Humans
+      AIFH Volume 3, Chapter 1: Activation Functions &middot; Artificial Intelligence for Humans
     
   </title>
 
@@ -30,17 +30,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 
-  
-  <link rel="stylesheet" href="readcsv.css" media="screen" type="text/css">
-  
-
 
 
 
   
-  <script src='readcsv.js' type="text/javascript"></script>
-  
-  <script src='jquery.csv-0.71.min.js' type="text/javascript"></script>
+  <script src='activation.js' type="text/javascript"></script>
   
 
 
@@ -92,22 +86,18 @@
     <div class="content container">
       <img src="/images/web_header.png">
 <div class="page">
-  <h1 class="page-title">AIFH Volume 1, Chapter 1: Read CSV File</h1>
-  <h1>Read CSV</h2>
-<h2>Source CSV</h2>
-Preload with: 
-<select id="example-preload">
-	<option value="xor.csv">XOR</option>
-	<option value="iris.csv">Iris Data Set</option>
-	<option value="abalone.csv">Abalone</option>
-	<option value="breast-cancer-wisconsin.csv">Breast Cancer (Wisconsin set)</option>
-</select><input type="button" id="btnPreload" value="Load"><br>
+  <h1 class="page-title">AIFH Volume 3, Chapter 1: Activation Functions</h1>
+  <h3>Sigmoid Activation Function</h3>
+$$\sigma(x) = \frac{1}{1 + e^{-x}}.$$
+<div id="sigmoid_chart" style="width: 900px; height: 500px"></div>
 
-<textarea rows="10" cols="50" id="textCSV"></textarea>
-<br>
-<input id="btnParse" type="button" value="Parse"/>
-<h2>Parsed Output</h2>
-<div id="example-output"></div>
+<h3>Tanh Activation Function</h3>
+$$\sigma(x) = tanh(x).$$
+<div id="tanh_chart" style="width: 900px; height: 500px"></div>
+
+<h3>Linear Activation Function</h3>
+$$\sigma(x) = x.$$
+<div id="linear_chart" style="width: 900px; height: 500px"></div>
 
 
 
