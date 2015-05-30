@@ -11,7 +11,7 @@
 
   <title>
     
-      Volume 3: Deep Learning and Neural Networks &middot; Artificial Intelligence for Humans
+      AIFH Volume 3, Chapter 3: Annealing & ROC &middot; Artificial Intelligence for Humans
     
   </title>
 
@@ -32,6 +32,10 @@
 
 
 
+
+  
+  <script src='anneal_roc.js' type="text/javascript"></script>
+  
 
 
 <script type="text/javascript"
@@ -82,44 +86,45 @@
     <div class="content container">
       <img src="/images/web_header.png">
 <div class="page">
-  <h1 class="page-title">Volume 3: Deep Learning and Neural Networks</h1>
-  <ul>
-<li>Chapter 1: Neural Network Basics 
+  <h1 class="page-title">AIFH Volume 3, Chapter 3: Annealing & ROC</h1>
+  <div style="position:relative">
+<img src="../images/multi-layer.png">
 
-<ul>
-<li><a href="activation.html">Activation Functions</a></li>
-<li><a href="single_layer.html">Single Layer Network</a></li>
-</ul></li>
-<li>Chapter 2: Classic Neural Networks 
+<input type="text" value="0" size="3" id="i1" style="position: absolute;left: 110px;top: 45px;">
+<input type="text" value="1" size="3" id="i2" style="position: absolute;left: 25px;top: 220px;">
 
-<ul>
-<li><a href="hopfield.html">Hopfield Network</a></li>
-<li><a href="boltzmann_tsp_grid.html">Boltzmann Machine TSP Weight Grid</a></li>
-</ul></li>
-<li>Chapter 3: Feedforward Neural Networks 
+<input type="text" value="" size="3" id="w1" style="position: absolute;left: 210px;top: 38px;">
+<input type="text" value="" size="3" id="w2" style="position: absolute;left: 175px;top: 108px;">
+<input type="text" value="" size="3" id="w3" style="position: absolute;left: 105px;top: 160px;">
+<input type="text" value="" size="3" id="w4" style="position: absolute;left: 105px;top: 213px;">
+<input type="text" value="" size="3" id="w5" style="position: absolute;left: 175px;top: 300px;">
+<input type="text" value="" size="3" id="w6" style="position: absolute;left: 235px;top: 356px;">
 
-<ul>
-<li><a href="softmax.html">Softmax</a></li>
-<li><a href="multi_layer.html">Multi Layer Network</a></li>
-<li><a href="anneal_roc.html">Annealing and ROC</a></li>
-</ul></li>
-<li>Chapter 4: Propagation Training
+<input type="text" value="" size="3" id="w7" style="position: absolute;left: 510px;top: 144px;">
+<input type="text" value="" size="3" id="w8" style="position: absolute;left: 500px;top: 243px;">
+<input type="text" value="" size="3" id="w9" style="position: absolute;left: 520px;top: 330px;">
 
-<ul>
-<li><a href="neural_xor.html">XOR Neural Network</a></li>
-<li><a href="classify_ann.html">Classify Neural Network</a> </li>
-<li><a href="benchmark_ann.html">Benchmark Neural Network</a></li>
-</ul></li>
-<li>Chapter 5: NEAT and HyperNEAT Neural Networks </li>
-<li>Chapter 6: Deep Belief Neural Networks </li>
-<li>Chapter 7: Deep Convolutional Network </li>
-<li>Chapter 8: Pruning and Model Selection </li>
-<li>Chapter 9: Architecting Neural Networks </li>
-<li>Chapter 10: Dropout and Regularization </li>
-<li>Chapter 11: Recurrent Neural Networks </li>
-<li>Chapter 12: Visualization </li>
-<li>Chapter 13: Modeling with Neural Networks</li>
-</ul>
+<input type="text" value="" size="3" id="n1" style="position: absolute;left: 395px;top: 95px;">
+<input type="text" value="" size="3" id="n2" style="position: absolute;left: 395px;top: 255px;">
+
+<input type="text" value="" size="3" id="o" style="position: absolute;left: 640px;top: 255px;">
+
+<input type="button" value="Calculate" id="calculateButton" style="position: absolute;left: 620px;top: 320px;">
+</div>
+<input type="button" value="Randomize" id="randomizeButton"><br>
+<input type="button" value="Anneal" id="annealButton">
+<h2>Evaluation</h2>
+<p id="rmse">RMSE: </p>
+<div id="roc" style="width: 900px; height: 500px"></div>
+<h2>Calculations</h2>
+<p>
+The sigmoid function is calculated with the following formula: 
+$$S(t) = \frac{1}{1 + e^{-t}}.$$
+Root mean square (RMSE) is calculated with the following formula:
+$$ \operatorname{RMSD}=\sqrt{\frac{\sum_{t=1}^n (\hat y_t - y)^2}{n}}. $$
+</p>
+<div id="calculationDisplay"></div>
+
 
 </div>
 
