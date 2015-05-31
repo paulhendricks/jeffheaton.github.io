@@ -23,7 +23,7 @@ function randomize() {
 	$("#w8").val(w[7]);
 	$("#w9").val(w[8]);
 
-	$("#rmse").html("RMSE: "+calculate_rmse(w));
+	$("#mse").html("mse: "+calculate_mse(w));
 	update_roc(w);
 }
 
@@ -39,12 +39,12 @@ function calculate(i,w) {
 	return(1.0 / (1.0 + Math.exp(-sum3)));
 }
 
-function calculate_rmse(w) {
+function calculate_mse(w) {
 	var d1 = calculate([0,0],w)-0.0;
 	var d2 = calculate([1,0],w)-1.0;
 	var d3 = calculate([0,1],w)-1.0;
 	var d4 = calculate([1,1],w)-0.0;
-	return Math.sqrt((d1*d1)+(d2*d2)+(d3*d3)+(d4*d4));
+	return ((d1*d1)+(d2*d2)+(d3*d3)+(d4*d4))/4;
 }
 
 function calculate_tp_fp(w,thresh) {
@@ -182,7 +182,7 @@ $(document).ready(function(){
 		w.push(parseFloat($("#w9").val()));
 		
 		var best_w = w.slice(0);
-		var best_rmse = calculate_rmse(w);
+		var best_mse = calculate_mse(w);
 
 		for(var i=0;i<100;i++) {
 			// Randomize weights
@@ -191,12 +191,12 @@ $(document).ready(function(){
 			}
 		
 			// Did we improve?
-			rmse = calculate_rmse(w);
-			if( rmse<best_rmse ) {
+			mse = calculate_mse(w);
+			if( mse<best_mse ) {
 				best_w = w.slice(0);
 			} else {
 				var t = coolingSchedule(i, 100, 400, 0.0001);
-				var prob = calcProbability(rmse,best_rmse,t);
+				var prob = calcProbability(mse,best_mse,t);
 				if(prob<Math.random()) {
 					// Do not keep
 					w = best_w.slice(0);
@@ -204,7 +204,7 @@ $(document).ready(function(){
 			}
 		}
 
-		$("#rmse").html("RMSE: "+calculate_rmse(w));
+		$("#mse").html("MSE: "+calculate_mse(w));
 		update_roc(w);
 
 		parseFloat($("#w1").val(w[0]));
