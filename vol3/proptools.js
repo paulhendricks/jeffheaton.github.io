@@ -58,18 +58,7 @@ function round(d) {
 	return(Math.round(d*100000)/100000);
 }
 
-function trainOnline(input,expected) {
-	var w = [];
-	w.push(parseFloat($("#w1").val()));
-	w.push(parseFloat($("#w2").val()));
-	w.push(parseFloat($("#w3").val()));
-	w.push(parseFloat($("#w4").val()));
-	w.push(parseFloat($("#w5").val()));
-	w.push(parseFloat($("#w6").val()));
-	w.push(parseFloat($("#w7").val()));
-	w.push(parseFloat($("#w8").val()));
-	w.push(parseFloat($("#w9").val()));
-	
+function calcGradients(w,input,expected) {
 	var output = "";
 	output+="Training " + input + " to produce " + expected + "<br>";
 	output+="<b>Feedforward: Calculate neural network output</b><br>";
@@ -147,8 +136,7 @@ function trainOnline(input,expected) {
 	output+="g(I2 to H2)=i2*h2_nd="+input[1]+"*"+h2nd+"= "+g[7]+"<br>";
 	g[8] = h2nd;
 	output+="g(bias to H2)=1*h2_nd=1*"+h1nd+"= "+g[8]+"<br>";
-		
-	var lr = parseFloat($("#lr").val());
+	
 	// tables
 	table_html = "<table><tr><th>Node</th><th>Sum</th><th>Output</th><th>Node Delta</th><tr>";
 	table_html+= "<tr><td>Output 1</td><td>"+round(sum3)+"</td><td>"+round(o)+"</td><td>"+round(o1nd)+"</td></tr>";
@@ -156,18 +144,27 @@ function trainOnline(input,expected) {
 	table_html+= "<tr><td>Hidden 2</td><td>"+round(sum2)+"</td><td>"+round(n2)+"</td><td>"+round(h2nd)+"</td></tr>";
 	table_html+= "</table>";
 	
-	table_html+= "<table><tr><th>Connection</th><th>Gradient</th><th>Old Weight</th><th>Delta</th><th>New Weight</th></tr>";
-	table_html+= "<tr><td>0: H1->O1</td><td>"+round(g[0])+"</td><td>"+round(w[0])+"</td><td>"+round(g[0]*0.7)+"</td><td>"+round(w[0]+(g[0]*0.7))+"</td></tr>";
-	table_html+= "<tr><td>1: H2->O1</td><td>"+round(g[1])+"</td><td>"+round(w[1])+"</td><td>"+round(g[1]*0.7)+"</td><td>"+round(w[1]+(g[1]*0.7))+"</td></tr>";
-	table_html+= "<tr><td>2: B2->O1</td><td>"+round(g[2])+"</td><td>"+round(w[2])+"</td><td>"+round(g[2]*0.7)+"</td><td>"+round(w[2]+(g[2]*0.7))+"</td></tr>";
-	table_html+= "<tr><td>3: I1->H1</td><td>"+round(g[3])+"</td><td>"+round(w[3])+"</td><td>"+round(g[3]*0.7)+"</td><td>"+round(w[3]+(g[3]*0.7))+"</td></tr>";
-	table_html+= "<tr><td>4: I2->H1</td><td>"+round(g[4])+"</td><td>"+round(w[4])+"</td><td>"+round(g[4]*0.7)+"</td><td>"+round(w[4]+(g[4]*0.7))+"</td></tr>";
-	table_html+= "<tr><td>5: B1->H1</td><td>"+round(g[5])+"</td><td>"+round(w[5])+"</td><td>"+round(g[5]*0.7)+"</td><td>"+round(w[5]+(g[5]*0.7))+"</td></tr>";
-	table_html+= "<tr><td>6: I1->H2</td><td>"+round(g[6])+"</td><td>"+round(w[6])+"</td><td>"+round(g[6]*0.7)+"</td><td>"+round(w[6]+(g[6]*0.7))+"</td></tr>";
-	table_html+= "<tr><td>7: I2->H2</td><td>"+round(g[7])+"</td><td>"+round(w[7])+"</td><td>"+round(g[7]*0.7)+"</td><td>"+round(w[7]+(g[7]*0.7))+"</td></tr>";
-	table_html+= "<tr><td>8: B1->H2</td><td>"+round(g[8])+"</td><td>"+round(w[8])+"</td><td>"+round(g[8]*0.7)+"</td><td>"+round(w[8]+(g[8]*0.7))+"</td></tr>";
-	table_html+= "</table>";
+	return [g,table_html+output];
+}
 
+function trainOnline(input,expected) {
+	var w = [];
+	w.push(parseFloat($("#w1").val()));
+	w.push(parseFloat($("#w2").val()));
+	w.push(parseFloat($("#w3").val()));
+	w.push(parseFloat($("#w4").val()));
+	w.push(parseFloat($("#w5").val()));
+	w.push(parseFloat($("#w6").val()));
+	w.push(parseFloat($("#w7").val()));
+	w.push(parseFloat($("#w8").val()));
+	w.push(parseFloat($("#w9").val()));
+	
+	result = calcGradients(w,input,expected);
+	g = result[0];
+	output = result[1];
+	
+	var lr = parseFloat($("#lr").val());
+	
 	for(var i=0;i<g.length;i++) {
 		w[i]+=(g[i]*0.7);
 	}
@@ -185,7 +182,110 @@ function trainOnline(input,expected) {
 	parseFloat($("#w7").val(w[6]));
 	parseFloat($("#w8").val(w[7]));
 	parseFloat($("#w9").val(w[8]));
+	
+	table_html= "<table><tr><th>Connection</th><th>Gradient</th><th>Old Weight</th><th>Delta</th><th>New Weight</th></tr>";
+	table_html+= "<tr><td>0: H1->O1</td><td>"+round(g[0])+"</td><td>"+round(w[0])+"</td><td>"+round(g[0]*lr)+"</td><td>"+round(w[0]+(g[0]*0.7))+"</td></tr>";
+	table_html+= "<tr><td>1: H2->O1</td><td>"+round(g[1])+"</td><td>"+round(w[1])+"</td><td>"+round(g[1]*lr)+"</td><td>"+round(w[1]+(g[1]*0.7))+"</td></tr>";
+	table_html+= "<tr><td>2: B2->O1</td><td>"+round(g[2])+"</td><td>"+round(w[2])+"</td><td>"+round(g[2]*lr)+"</td><td>"+round(w[2]+(g[2]*0.7))+"</td></tr>";
+	table_html+= "<tr><td>3: I1->H1</td><td>"+round(g[3])+"</td><td>"+round(w[3])+"</td><td>"+round(g[3]*lr)+"</td><td>"+round(w[3]+(g[3]*0.7))+"</td></tr>";
+	table_html+= "<tr><td>4: I2->H1</td><td>"+round(g[4])+"</td><td>"+round(w[4])+"</td><td>"+round(g[4]*lr)+"</td><td>"+round(w[4]+(g[4]*0.7))+"</td></tr>";
+	table_html+= "<tr><td>5: B1->H1</td><td>"+round(g[5])+"</td><td>"+round(w[5])+"</td><td>"+round(g[5]*lr)+"</td><td>"+round(w[5]+(g[5]*0.7))+"</td></tr>";
+	table_html+= "<tr><td>6: I1->H2</td><td>"+round(g[6])+"</td><td>"+round(w[6])+"</td><td>"+round(g[6]*lr)+"</td><td>"+round(w[6]+(g[6]*0.7))+"</td></tr>";
+	table_html+= "<tr><td>7: I2->H2</td><td>"+round(g[7])+"</td><td>"+round(w[7])+"</td><td>"+round(g[7]*lr)+"</td><td>"+round(w[7]+(g[7]*0.7))+"</td></tr>";
+	table_html+= "<tr><td>8: B1->H2</td><td>"+round(g[8])+"</td><td>"+round(w[8])+"</td><td>"+round(g[8]*lr)+"</td><td>"+round(w[8]+(g[8]*0.7))+"</td></tr>";
+	table_html+= "</table>";
 		
 	// Display calculation
 	$("#calculationDisplay").html(table_html+output);
+}
+
+function trainBatch(prev_delta) {
+	var w = [];
+	w.push(parseFloat($("#w1").val()));
+	w.push(parseFloat($("#w2").val()));
+	w.push(parseFloat($("#w3").val()));
+	w.push(parseFloat($("#w4").val()));
+	w.push(parseFloat($("#w5").val()));
+	w.push(parseFloat($("#w6").val()));
+	w.push(parseFloat($("#w7").val()));
+	w.push(parseFloat($("#w8").val()));
+	w.push(parseFloat($("#w9").val()));
+	
+	var lr = parseFloat($("#lr").val());
+	var mom = parseFloat($("#m").val());
+	var output = "";
+	
+	batch_g = [0,0,0,0,0,0,0,0,0]
+	
+	for(var t=0;t<XOR_x.length;t++) {
+		output+="<h3>Training Element #"+(t+1)+"</h3>";
+		var x = XOR_x[t];
+		var y = XOR_y[t];
+	
+		result = calcGradients(w,x,y);
+		g = result[0];
+		
+		for(var i=0;i<g.length;i++) {
+			batch_g[i]+=g[i]
+		}
+		
+		output+= "<table><tr><th>Connection</th><th>Gradient</th><th>Sum of Gradients So Far</th></tr>";
+		output+= "<tr><td>0: H1->O1</td><td>"+round(g[0])+"</td><td>"+round(batch_g[0])+"</td></tr>";
+		output+= "<tr><td>1: H2->O1</td><td>"+round(g[1])+"</td><td>"+round(batch_g[1])+"</td></tr>";
+		output+= "<tr><td>2: B2->O1</td><td>"+round(g[2])+"</td><td>"+round(batch_g[2])+"</td></tr>";
+		output+= "<tr><td>3: I1->H1</td><td>"+round(g[3])+"</td><td>"+round(batch_g[3])+"</td></tr>";
+		output+= "<tr><td>4: I2->H1</td><td>"+round(g[4])+"</td><td>"+round(batch_g[4])+"</td></tr>";
+		output+= "<tr><td>5: B1->H1</td><td>"+round(g[5])+"</td><td>"+round(batch_g[5])+"</td></tr>";
+		output+= "<tr><td>6: I1->H2</td><td>"+round(g[6])+"</td><td>"+round(batch_g[6])+"</td></tr>";
+		output+= "<tr><td>7: I2->H2</td><td>"+round(g[7])+"</td><td>"+round(batch_g[7])+"</td></tr>";
+		output+= "<tr><td>8: B1->H2</td><td>"+round(g[8])+"</td><td>"+round(batch_g[8])+"</td></tr>";
+		output+= "</table>";
+		
+		output += result[1];
+	}
+	
+	delta = [];
+	for(var i=0;i<batch_g.length;i++) {
+		delta.push( (batch_g[i]*lr)) // + (prev_delta[i]*mom) );
+	}
+	
+	w2 = [];
+	for(var i=0;i<batch_g.length;i++) {
+		w2.push(delta[i]+w[i]);
+	}
+	
+	output+="<h3>Weight Update</h3>";
+	output+= "<table><tr><th>Connection</th><th>Gradient(batch)</th><th>Weight</th><th>Delta</th><th>Prev. Delta</th><th>New Weight</th></tr>";
+	output+= "<tr><td>0: H1->O1</td><td>"+round(batch_g[0])+"</td><td>"+round(w[0])+"</td><td>"+round(delta[0])+"</td><td>"+round(prev_delta[0])+"</td><td>"+round(w2[0])+"</td></tr>";
+	output+= "<tr><td>1: H2->O1</td><td>"+round(batch_g[1])+"</td><td>"+round(w[1])+"</td><td>"+round(delta[1])+"</td><td>"+round(prev_delta[1])+"</td><td>"+round(w2[1])+"</td></tr>";
+	output+= "<tr><td>2: B2->O1</td><td>"+round(batch_g[2])+"</td><td>"+round(w[2])+"</td><td>"+round(delta[2])+"</td><td>"+round(prev_delta[2])+"</td><td>"+round(w2[2])+"</td></tr>";
+	output+= "<tr><td>3: I1->H1</td><td>"+round(batch_g[3])+"</td><td>"+round(w[3])+"</td><td>"+round(delta[3])+"</td><td>"+round(prev_delta[3])+"</td><td>"+round(w2[3])+"</td></tr>";
+	output+= "<tr><td>4: I2->H1</td><td>"+round(batch_g[4])+"</td><td>"+round(w[4])+"</td><td>"+round(delta[4])+"</td><td>"+round(prev_delta[4])+"</td><td>"+round(w2[4])+"</td></tr>";
+	output+= "<tr><td>5: B1->H1</td><td>"+round(batch_g[5])+"</td><td>"+round(w[5])+"</td><td>"+round(delta[5])+"</td><td>"+round(prev_delta[5])+"</td><td>"+round(w2[5])+"</td></tr>";
+	output+= "<tr><td>6: I1->H2</td><td>"+round(batch_g[6])+"</td><td>"+round(w[6])+"</td><td>"+round(delta[6])+"</td><td>"+round(prev_delta[6])+"</td><td>"+round(w2[6])+"</td></tr>";
+	output+= "<tr><td>7: I2->H2</td><td>"+round(batch_g[7])+"</td><td>"+round(w[7])+"</td><td>"+round(delta[7])+"</td><td>"+round(prev_delta[7])+"</td><td>"+round(w2[7])+"</td></tr>";
+	output+= "<tr><td>8: B1->H2</td><td>"+round(batch_g[8])+"</td><td>"+round(w[8])+"</td><td>"+round(delta[8])+"</td><td>"+round(prev_delta[8])+"</td><td>"+round(w2[8])+"</td></tr>";
+	output+= "</table>";
+	
+	for(var i=0;i<g.length;i++) {
+		w[i]+=delta[i];
+		prev_delta[i]=delta[i];
+	}
+
+	// Display MSE
+	$("#mse").html("MSE: "+calculate_mse(w));
+
+	// Display weights
+	parseFloat($("#w1").val(w[0]));
+	parseFloat($("#w2").val(w[1]));
+	parseFloat($("#w3").val(w[2]));
+	parseFloat($("#w4").val(w[3]));
+	parseFloat($("#w5").val(w[4]));
+	parseFloat($("#w6").val(w[5]));
+	parseFloat($("#w7").val(w[6]));
+	parseFloat($("#w8").val(w[7]));
+	parseFloat($("#w9").val(w[8]));
+		
+	// Display calculation
+	$("#calculationDisplay").html(output);
 }
