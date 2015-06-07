@@ -11,7 +11,7 @@
 
   <title>
     
-      Volume 3: Deep Learning and Neural Networks &middot; Artificial Intelligence for Humans
+      Taking the Derivative of the Sigmoid Function &middot; Artificial Intelligence for Humans
     
   </title>
 
@@ -82,47 +82,48 @@
     <div class="content container">
       <img src="/images/web_header.png">
 <div class="page">
-  <h1 class="page-title">Volume 3: Deep Learning and Neural Networks</h1>
-  <ul>
-<li>Chapter 1: Neural Network Basics 
+  <h1 class="page-title">Taking the Derivative of the Sigmoid Function</h1>
+  <p>First, apply the reciprocal rule.</p>
 
-<ul>
-<li><a href="activation.html">Activation Functions</a></li>
-<li><a href="deriv_sigmoid.html">Derivative of the Sigmoid Function</a></li>
-<li><a href="single_layer.html">Single Layer Network</a></li>
-</ul></li>
-<li>Chapter 2: Classic Neural Networks 
+<p>$$
+s&#39;(x) = \frac{d}{dx} \left( \frac{1}{e^{-x}+1} \right) = \frac{-\frac{d}{dx}(e^{-x}+1)}{(e^{-x}+1)^2}
+$$</p>
 
-<ul>
-<li><a href="hopfield.html">Hopfield Network</a></li>
-<li><a href="boltzmann_tsp_grid.html">Boltzmann Machine TSP Weight Grid</a></li>
-</ul></li>
-<li>Chapter 3: Feedforward Neural Networks 
+<p>Second, this is just a linear equation, so we can take the derivative of each part.  Constant 1 goes away.</p>
 
-<ul>
-<li><a href="softmax.html">Softmax</a></li>
-<li><a href="multi_layer.html">Multi Layer Network</a></li>
-<li><a href="anneal_roc.html">Annealing and ROC</a></li>
-</ul></li>
-<li>Chapter 4: Propagation Training
+<p>$$
+ = \frac{-\frac{d}{dx}(e^{-x})}{(e^{-x}+1)^2}
+$$</p>
 
-<ul>
-<li><a href="xor_online.html">XOR Neural Network - Analyze Online</a></li>
-<li><a href="xor_batch.html">XOR Neural Network - Analyze Batch</a></li>
-<li><a href="xor_rprop.html">XOR Neural Network - Analyze Resilient Propagation(RPROP)</a></li>
-<li><a href="neural_xor.html">XOR Neural Network</a></li>
-<li><a href="classify_ann.html">Classify Neural Network</a> </li>
-<li><a href="benchmark_ann.html">Benchmark Neural Network</a></li>
-</ul></li>
-<li>Chapter 5: Deep Neural Networks </li>
-<li>Chapter 6: Deep Convolutional Network </li>
-<li>Chapter 7: Pruning and Model Selection </li>
-<li>Chapter 8: Architecting Neural Networks </li>
-<li>Chapter 9: Dropout and Regularization </li>
-<li>Chapter 10: Recurrent Neural Networks </li>
-<li>Chapter 11: Visualization </li>
-<li>Chapter 12: Modeling with Neural Networks</li>
-</ul>
+<p>Next, exponential function rule with chain rule.</p>
+
+<p>$$
+ = \frac{-( e^{-x} \cdot \frac{d}{dx}({-x}))}{(e^{-x}+1)^2}
+$$</p>
+
+<p>Next, this is just a linear equation, so we can take the derivative of each part.</p>
+
+<p>$$
+ = \frac{-(-1)\cdot{e}^{-x}}{(e^{-x}+1)^2} = 
+$$</p>
+
+<p>Eliminate the double negative.</p>
+
+<p>$$
+ = \frac{e^{-x}}{(e^{-x}+1)^2}
+$$</p>
+
+<p>We could stop with the above derivative.  However, most texts do not display the above derivative as the final form of the sigmoid functions derivative.  For &quot;computational efficiency&quot; we algebraically transform this to use the original sigmoid function twice.</p>
+
+<p>$$
+ = \left( \frac{1}{e^{-x}+1} \right)  \left( \frac{-e^{-x}}{e^{-x}+1} \right)
+$$</p>
+
+<p>This now reduces to the commonly used form of the sigmoid&#39;s derivative.</p>
+
+<p>$$
+ s&#39;(x)= s(x)(1-s(x))
+$$</p>
 
 </div>
 
