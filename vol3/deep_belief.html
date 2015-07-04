@@ -87,12 +87,14 @@
       <img src="/images/web_header.png">
 <div class="page">
   <h1 class="page-title">AIFH Volume 3, Chapter 5: Deep Belief Neural Network</h1>
-  <p>This example allows you to train a neural network using batch backpropagation training.  The training data used the XOR function, so the neural network should output the following:</p>
-<pre>When I1=0 and I2=0 then output 0
-When I1=1 and I2=0 then output 1
-When I1=0 and I2=1 then output 1
-When I1=1 and I2=1 then output 0</pre>
-Because this is online training you can train any of the above four patterns individually, or you can train all 4 at once.  Either way, the weights are adjusted after each pattern. 
+  <p>This example allows you to train a deep belief neural network (DBNN). The training data used is as follows:</p>
+<pre>Input: [1, 1, 1, 1, 0, 0, 0, 0], Expected Output: [1,0]
+[1, 1, 0, 1, 0, 0, 0, 0], Expected Output: [1,0]
+[1, 1, 1, 0, 0, 0, 0, 0], Expected Output: [1,0]
+[0, 0, 0, 0, 1, 1, 1, 1], Expected Output: [0,1]
+[0, 0, 0, 0, 1, 1, 0, 1], Expected Output: [0,1]
+[0, 0, 0, 0, 1, 1, 1, 0], Expected Output: [0,1]</pre>
+ 
 <div style="position:relative">
 <img src="../images/multi-layer.png"  style="max-width: 690px;" >
 
