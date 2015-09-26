@@ -4,7 +4,7 @@
  <title>Heaton Research</title>
  <link href="http://www.heatonresearch.com/atom.xml" rel="self"/>
  <link href="http://www.heatonresearch.com/"/>
- <updated>2015-09-25T10:55:00-05:00</updated>
+ <updated>2015-09-25T21:01:30-05:00</updated>
  <id>http://www.heatonresearch.com</id>
  <author>
    <name></name>
@@ -13,23 +13,1141 @@
 
  
  <entry>
-   <title>Welcome to Jekyll!</title>
-   <link href="http://www.heatonresearch.com/jekyll/update/2015/09/22/welcome-to-jekyll.html"/>
-   <updated>2015-09-22T08:25:33-05:00</updated>
-   <id>http://www.heatonresearch.com/jekyll/update/2015/09/22/welcome-to-jekyll</id>
-   <content type="html">&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+   <title>Visiting Spain and the GECCO Confrence</title>
+   <link href="http://www.heatonresearch.com/phd/2015/08/30/madrid-gecco.html"/>
+   <updated>2015-08-30T08:26:00-05:00</updated>
+   <id>http://www.heatonresearch.com/phd/2015/08/30/madrid-gecco</id>
+   <content type="html">&lt;p&gt;I spent six weeks in Spain this summer.  My wife, Tracy, is earning a &lt;a href=&quot;http://www.slu.edu/department-of-languages-literatures-and-cultures/programs-of-study/spanish/graduate-studies&quot;&gt;Master’s Degree in 
+Spanish&lt;/a&gt; from &lt;a href=&quot;http://www.slu.edu/&quot;&gt;St. Louis University (SLU)&lt;/a&gt;.  Her university has an extension &lt;a href=&quot;http://spain.slu.edu/&quot;&gt;campus in Madrid&lt;/a&gt;.&lt;br /&gt;
+I also wanted to be in Spain to visit the &lt;a href=&quot;http://www.sigevo.org/gecco-2015/&quot;&gt;GECCO-2015&lt;/a&gt; conference, that was held in Madrid.&lt;br /&gt;
+We were able to line up a nice apartment in &lt;a href=&quot;https://en.wikipedia.org/wiki/Salamanca_(Madrid)&quot;&gt;Salamanca, Madrid&lt;/a&gt; and I was able to take a 
+few weeks vacation and work remotely the rest of the time.  It was totally worth it, Spain 
+is an amazing country.  I know just enough Spanish to get around and usually be fed at a 
+restaurant!&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/blog/2015-08-30-madrid-gecco-1.png&quot; alt=&quot;Madrid and GECCO&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;The GECCO conference was awesome.  I was able to briefly meet &lt;a href=&quot;http://www.cs.ucf.edu/~kstanley/&quot;&gt;Dr. Kenneth Stanley&lt;/a&gt; after 
+hearing a tutorial session held by him.  I’ve many of Dr. Stanley’s papers and implemented 
+his NEAT/HyperNEAT algorithms.  He also has a &lt;a href=&quot;http://www.amazon.com/Why-Greatness-Cannot-Planned-Objective/dp/3319155237&quot;&gt;new book&lt;/a&gt; out that I’ve just read and recommend.&lt;br /&gt;
+The book points out that it is very difficult to design objective functions that might 
+truly create amazing results.  Some of the best results on &lt;a href=&quot;http://picbreeder.org/&quot;&gt;Ken’s PicBreader&lt;/a&gt; site were not 
+specifically planned.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I also saw a fascinating Lisp-based language named &lt;a href=&quot;http://faculty.hampshire.edu/lspector/push3-description.html&quot;&gt;Push3&lt;/a&gt;, created by &lt;a href=&quot;http://faculty.hampshire.edu/lspector/&quot;&gt;Dr. Lee Spector&lt;/a&gt;.&lt;br /&gt;
+Genetic programming ha always been fascinating to me because it uses AI to actually 
+evolve AI.  Push3 is a programming language designed for computers to evolve.&lt;br /&gt;
+Dr. Spector’s group is evolving computer programs, to accomplish basic tasks like word 
+count and other basic utilities.  Most machine learning algorithms are simply about 
+optimizing coefficients to decrease a supervised training set’s error.  It is amazing to 
+see algorithms that can actually evolve themselves into new algorithms.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I plan to make use of genetic programming for part of my dissertation.  Of course, I am 
+still finishing up coursework and this is very much in flux.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>My First Kaggle Competition</title>
+   <link href="http://www.heatonresearch.com/phd/2015/05/25/first-kaggle.html"/>
+   <updated>2015-05-25T08:26:00-05:00</updated>
+   <id>http://www.heatonresearch.com/phd/2015/05/25/first-kaggle</id>
+   <content type="html">&lt;p&gt;I placed in the top 10% of my first Kaggle competition.  If you are not familiar with it, 
+&lt;a href=&quot;https://www.kaggle.com/&quot;&gt;Kaggle&lt;/a&gt; is an ongoing forum for competitive data science. Individuals and teams compete to 
+create the best model for data sets provided by industry and sometimes academia.&lt;br /&gt;
+Individuals who enter are ranked as either Novice, Kaggler and &lt;a href=&quot;https://www.kaggle.com/wiki/UserRankingAndTierSystem&quot;&gt;Kaggle Master&lt;/a&gt;.  To become 
+a Kaggle master, one must place in the top 10% of two competitions; and in one of the top 
+10 slots of a third competition.&lt;/p&gt;
+
+&lt;p&gt;I’ve talked about Kaggle in many of my presentations.  I’ve also used Kaggle data in 
+my books. Until now, I had yet to actually enter a Kaggle competition.  I decided it was 
+finally time to try this for myself. I competed in the &lt;a href=&quot;http://otto%20group%20product%20classification%20challenge/&quot;&gt;Otto Group Product Classification&lt;/a&gt; 
+Challenge that ended on May 18th, 2015.  My score was sufficient to land in the top 10%, 
+so I’ve completed one of the requirements for Kaggle master.  My Kaggle profile can be 
+seen here.&lt;/p&gt;
+
+&lt;p&gt;My goals for entering were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;See how hard Kaggle actually is, and move towards a Kaggle master designation.&lt;/li&gt;
+  &lt;li&gt;Learn from the other Kagglers and forums.&lt;/li&gt;
+  &lt;li&gt;Build a basic toolkit that I will use for future Kaggle competitions.&lt;/li&gt;
+  &lt;li&gt;Gain an example (from my entry) for the &lt;a href=&quot;http://www.heatonresearch.com/aifh&quot;&gt;Artificial Intelligence for Humans series&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Maybe get an idea or two for my future dissertation (I am a phd student at &lt;a href=&quot;http://cec.nova.edu/&quot;&gt;Nova Southeastern University)&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-otto-classification-challenge&quot;&gt;The Otto Classification Challenge&lt;/h2&gt;
+
+&lt;p&gt;First, I will give a brief introduction to the exact nature of the Otto Classification 
+Challenge.  For a complete description, refer to the Kaggle description(&lt;a href=&quot;https://www.kaggle.com/c/otto-group-product-classification-challenge&quot;&gt;found here&lt;/a&gt;).&lt;br /&gt;
+This challenge was introduced by the &lt;a href=&quot;http://en.wikipedia.org/wiki/Otto_GmbH&quot;&gt;Otto Group&lt;/a&gt;, who is the world’s largest mail order 
+company and currently one of the biggest &lt;a href=&quot;http://en.wikipedia.org/wiki/E-commerce&quot;&gt;e-commerce&lt;/a&gt; companies, mainly based in Germany 
+and France but operating in more than 20 countries.  They have many products sold over 
+numerous countries.  They would like to be able to classify these products into 9 
+categories, using 93 features (columns).  These 93 columns represent counts, and are 
+often zero.&lt;/p&gt;
+
+&lt;p&gt;The data are completely redacted.  You do not know what the 9 categories are, nor do you 
+know the meaning behind the 93 features.  You only know that the features are integer 
+counts. Most Kaggle competitions provide you with a test and training dataset.  For the 
+training dataset you are given the outcomes, or correct answers.  For the test set, you 
+are only given the 93 features, and you must provide the outcome.  The test and training 
+sets are divided as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Test Data: 144K rows&lt;/li&gt;
+  &lt;li&gt;Training Data: 61K rows&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You do not actually submit your model to Kaggle.  Rather, you submit your predictions 
+based on the test data.  This allows you to use any platform to make these predictions.&lt;br /&gt;
+The actual format of a submission for this competition is the probability of each of 
+the 9 categories being the outcome.  This is not like a university multiple choice test 
+where you must submit your answer as A, B, C, or D.  Rather, you would submit your 
+answer as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A: 80% probability&lt;/li&gt;
+  &lt;li&gt;B: 16% probability&lt;/li&gt;
+  &lt;li&gt;C: 2% probability&lt;/li&gt;
+  &lt;li&gt;D: 2% probability&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I wish college exams were graded like this!  Often I am very confident about two of the 
+answers, and can eliminate the other two.  Simply assign a probability to each, and you 
+get a partial score.  If A were the correct answer for the above, I would get 80% of the 
+points.&lt;/p&gt;
+
+&lt;p&gt;The actual Kaggle score is slightly more complex than that.  Rather, you are graded on a 
+logarithm based scale and are very heavily penalized for having a lower probability on 
+the correct answer. The following are a few lines from my submission:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1,0.0003,0.2132,0.2340,0.5468,6.2998e-05,0.0001,0.0050,0.0001,4.3826e-05
+2,0.0011,0.0029,0.0010,0.0003,0.0001,0.5207,0.0013,0.4711,0.0011
+3,3.2977e-06,4.1419e-06,7.4524e-06,2.6550e-06,5.0014e-07,0.9998,5.2621e-06,0.0001,6.6447e-06
+4,0.0001,0.6786,0.3162,0.0039,3.3378e-05,4.1196e-05,0.0001,0.0001,0.0006
+5,0.1403,0.0002,0.0002,6.734e-05,0.0001,0.0027,0.0009,0.0297,0.8255&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Each line starts with a number that specifies the data item that is being answered.&lt;br /&gt;
+The sample above shows the answers for items 1-5.  The next 9 values are the probabilities 
+for each of the product classes.  These probabilities must add up to 1.0 (100%).&lt;/p&gt;
+
+&lt;h2 id=&quot;what-i-learned-from-kaggle&quot;&gt;What I Learned from Kaggle&lt;/h2&gt;
+
+&lt;p&gt;If you want to do well in Kaggle, the following are very important topics, along with 
+the tools I used.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Deep Learning - Using &lt;a href=&quot;http://h2o.ai/&quot;&gt;H2O&lt;/a&gt; and &lt;a href=&quot;https://github.com/Lasagne/Lasagne&quot;&gt;Lasagne&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Gradient Boosting Machines (GBM) - &lt;a href=&quot;https://github.com/dmlc/xgboost&quot;&gt;Using XGBOOST&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Ensemble Learning - &lt;a href=&quot;http://www.numpy.org/&quot;&gt;Using NumPy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Feature Engineering - Using NumPy and &lt;a href=&quot;http://scikit-learn.org/stable/&quot;&gt;Scikit-Learn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The two areas that I learned the most about, during this challenge, were GBM parameter 
+tuning and ensemble learning.  I got pretty good at tuning a GBM.  The individual scores 
+for my GBM’s were in line with those used by the top teams.&lt;/p&gt;
+
+&lt;p&gt;Before Kaggle I typically used only one model, if I were using neural networks, I just 
+used neural networks.  If I were using an SVM, Random Forest or Gradient Boosting, I stuck 
+to just that model.  With Kaggle, it is critical to use multiple models, ensembled to 
+produce better results than each of the models could produce independently.&lt;/p&gt;
+
+&lt;p&gt;Some of my main takeaways from the competition:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GPU is really important for deep learning.  It is best to use a deep learning package that supports it, such as H2O, Theano or Lasagne.&lt;/li&gt;
+  &lt;li&gt;The &lt;a href=&quot;http://lvdmaaten.github.io/tsne/&quot;&gt;t-sne&lt;/a&gt; visualization is awesome for high-dimension visualization and creating features.&lt;/li&gt;
+  &lt;li&gt;I need to learn to ensemble better!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This competition was the first time I used &lt;a href=&quot;http://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding&quot;&gt;T-SNE&lt;/a&gt;.  It works like PCA in that it is capable 
+of reducing dimensions, however, the data points separate in such a way that the 
+visualization is often clearer than &lt;a href=&quot;http://en.wikipedia.org/wiki/Principal_component_analysis&quot;&gt;PCA&lt;/a&gt;. This is done using a stochastic nearest 
+neighbor process. I plan to learn more about how t-sne actually performs the reduction, 
+compared to PCA.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2015-05-25-first-kaggle-1.jpeg&quot; alt=&quot;t-SNE Plot of the Otto Group Challenge&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;my-approach-to-the-otto-challenge&quot;&gt;My Approach to the Otto Challenge&lt;/h2&gt;
+
+&lt;p&gt;So far I’ve only worked with single model systems.  I’ve used models that contain ensembles 
+that are “built in”, such as random forests and gradient boosting machines.  However, it 
+is possible to create higher-level ensembles of these models.  I used a total of 20 models, 
+this included 10 deep neural networks and 10 gradient boosting machines.  My deep neural 
+network system provided one prediction and my gradient boosting machines provided the other.&lt;br /&gt;
+These two predictions were blended together, using a simple ratio.  The resulting prediction 
+vector was then normalized so that the sum equaled 1.0(100%).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2015-05-25-first-kaggle-2.png&quot; alt=&quot;Jeff Heaton&#39;s Kaggle Model for the Otto Group&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I did not remove or engineer any fields.  For both model types I converted all 93 
+attributes into Z-Scores.  For the neural network I normalized all values to be in a 
+specific range.&lt;/p&gt;
+
+&lt;p&gt;My 10 deep learning neural networks used a simple bagging method.  I averaged the 
+predictions from 20 different neural networks.  Each of these neural networks was created 
+by choosing a different 80/20 split between training and validation.  The neural network 
+was trained on the training data until the validation score did not improve for 25 epochs.&lt;br /&gt;
+Once training stopped I used the weights from the epoch that produced the highest training 
+score. This process is a simple form of bagging called &lt;a href=&quot;http://en.wikipedia.org/wiki/Bootstrap_aggregating&quot;&gt;bootstrap aggregation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;My 10 gradient boosting machines (GBM) were each components of a 10-fold cross-validation.&lt;br /&gt;
+I essentially broke the Kaggle training data into 10 folds and used each of these folds 
+as a validation set, and the others as training.  This produced 10 gradient boosting machines.&lt;br /&gt;
+I then used an NxM coefficient matrix to blend each of these together.  Where N is the 
+number of models, M is the number of features.  In this case it was a 10x9 grid.  This 
+matrix weighted each of the 10 model’s predictive power in each of the 9 categories.&lt;br /&gt;
+These coefficients were a straight probability calculation from the &lt;a href=&quot;http://en.wikipedia.org/wiki/Confusion_matrix&quot;&gt;confusion matrix&lt;/a&gt; of 
+each of the 10 models.  This allowed each model to potentially specialize in each of the 
+9 categories.&lt;/p&gt;
+
+&lt;p&gt;I spent considerable time tuning my GBM.  I used Nelder-Mead searches to optimize my 
+hyper-parameter vector.  I ultimately settled on the following parameters:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;max_depth&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;min_child_weight&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;subsample&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;78&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;gamma&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;colsample_bytree&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;eta&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;005&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;threads&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;24&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Each&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;these&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;two&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;approaches&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GBM&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;neural&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;network&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;produced&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;separate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;submission&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;I&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blended&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;these&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;together&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weighting&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;I&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;that&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.65&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gave&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;me&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;best&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blend&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;deep&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;neural&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;network&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;what-worked-well-for-top-teams&quot;&gt;What Worked Well for Top Teams&lt;/h2&gt;
+
+&lt;p&gt;The top Kaggle teams made use of more sophisticated ensemble techniques than I did.&lt;br /&gt;
+This will be my primary learning area for the next competition.  You can read about 
+some of the top models here:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/14335/1st-place-winner-solution-gilberto-titericz-stanislav-semenov&quot;&gt;The Top Scoring Model&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/14315/strategy-for-top-25-score&quot;&gt;Relatively Simple Model for a Top 25 Score&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/14297/share-your-models&quot;&gt;Share Your Models&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/14296/competition-write-up-optimistically-convergent&quot;&gt;One of the Top Ten&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/14295/41599-via-tsne-meta-bagging&quot;&gt;TSNE &amp;amp; Meta-Bagging&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The above write-ups are very useful, I’ve already started examining their approaches.&lt;/p&gt;
+
+&lt;p&gt;Some of the top technologies discussed were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Feature Engineering&lt;/li&gt;
+  &lt;li&gt;Input Transformation - good write up &lt;a href=&quot;http://fmwww.bc.edu/repec/bocode/t/transint.html&quot;&gt;here&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;log transforms&lt;/li&gt;
+      &lt;li&gt;sqrt(x + 3/8) - Not sure what this one is called, but I saw it used a few times&lt;/li&gt;
+      &lt;li&gt;z-score transforms&lt;/li&gt;
+      &lt;li&gt;ranged transformation&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Hyperparameter Optimization
+    &lt;ul&gt;
+      &lt;li&gt;Nelder-Mead&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/JasperSnoek/spearmint&quot;&gt;Spearmint&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I will probably not enter another Kaggle until the fall of this year.  This blog post 
+will be updated to contain my notes as I investigate other techniques for this 
+competition.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>PhD Update: Second Cluster Visit for Winter 2015 Semester at NSU</title>
+   <link href="http://www.heatonresearch.com/phd/2015/03/09/phd-2nd-cluster-visit.html"/>
+   <updated>2015-03-09T08:26:00-05:00</updated>
+   <id>http://www.heatonresearch.com/phd/2015/03/09/phd-2nd-cluster-visit</id>
+   <content type="html">&lt;p&gt;I just got back to St. Louis from my second cluster visit to NSU for the phd in computer 
+science.  I was feeling pretty good about choosing a distance learning program at a 
+university in Ft. Lauderdale, Florida after the really cold weather we’ve been seeing in 
+St. Louis lately.  There was a new blanket of snow on my drive way the morning that I 
+left for the airport.  I just drove over it and headed out, the snow was melted by the 
+time I returned.  The regular (non-distance learning) students were all on spring break, 
+so the campus was unusually empty.  I never did take a spring break trip as an undergrad, 
+so it works out that I have to go to Florida 4 times a year for my doctoral program.&lt;/p&gt;
+
+&lt;p&gt;I am taking two classes: CISD 792: Computer Graphics, taught by Dr. Laszlo, and 
+ISEC 730: Computer Security and Cryptography, taught by Dr. Cannady. The computer 
+graphics class focuses on Three.JS and OpenGL, and consists of numerous programming 
+assignments.  I am learning about 3D programming. I think this will be very useful for 
+some visualizations that I might want to do for my books.  The security class is more 
+focused on writing.  I did a decent amount of programming to replicate the research of a 
+paper that applied neural networks to intrusion detection.  I will post my Java code for 
+this later, as it is a decent Encog tutorial.  One of several reasons that I entered a 
+PhD program was to learn academic writing, so the security class is working out well.&lt;br /&gt;
+I am finding both classes every beneficial and interesting.&lt;/p&gt;
+
+&lt;p&gt;This is my fourth trip to Ft. Lauderdale for the program.  My wife has come along with me 
+each time so far.  We usually try to do at least one “tourist activity” each time.  This 
+time we went to see a spring training baseball game that featured our home-team, the St. 
+Louis Cardinals against the Miami Marlins, (notes to everyone, especially lawyers: both 
+of those names are trademarks of the MLB, MLB is also a trademark of the MLB)  The 
+St. Louis team won, so this made for a particularly enjoyable game!&lt;/p&gt;
+
+&lt;p&gt;I also kept tabs on my Kickstarter campaign while traveling.  So far the deep learning and 
+neural network is going well!  If you would like to back, and obtain my latest book, 
+click here.&lt;/p&gt;
+
+&lt;p&gt;I took this picture at the student center at NSU.  They have a really cool Dr. Who police 
+box.  You can also see the palm trees out the window.  They have a beautiful campus!&lt;br /&gt;
+And now they have a police box!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2015-03-09-phd-2nd-cluster-visit-1.png&quot; alt=&quot;Dr. Who Police Box at NSU&quot; /&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Quick and Very Dirty Data Wrangling Example</title>
+   <link href="http://www.heatonresearch.com/datascience/2014/12/27/quick-dirty-data-wrangling.html"/>
+   <updated>2014-12-27T07:26:00-06:00</updated>
+   <id>http://www.heatonresearch.com/datascience/2014/12/27/quick-dirty-data-wrangling</id>
+   <content type="html">&lt;p&gt;Data science is often described as the intersection of statistics, domain knowledge and 
+hacking skills.  One important part of hacking skills is data wrangling.  Data are rarely 
+in the exact form that you need them.  I am currently working on an example for 
+AIFH Vol 3 that will use a SOM and compare nations based on several statistics.  I could 
+not find a dataset that fit exactly what I was looking for.  So I decided to create my 
+own dataset.&lt;/p&gt;
+
+&lt;p&gt;I wanted a list of countries with three different data points that somehow indicate that 
+nation’s prosperity.  I chose GDP, lifespan and literacy rate.  Remember, this is a 
+computer science experiment, not a sociology experiment.  I am sure others could come up 
+with a much better set of data points to compare countries.  However, for my example 
+program these will work just fine.&lt;/p&gt;
+
+&lt;p&gt;I could not find a data set that was already completed.  However, all of this data is 
+contained in Wikipedia.  To wrangle the data I created a simple Python script to 
+accomplish this.  I am really starting to like Python for quick scripting projects.&lt;br /&gt;
+I could have also used R, Groovy, Perl or a host of others.  The end result looks 
+something like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;code,country,gdp,lifespan,literacy
+AFG,Afghanistan,20650,60,0.431
+ALB,Albania,12800,74,0.98
+DZA,Algeria,215700,73.12,0.918
+AND,Andorra,4800,84.2,1.0
+AGO,Angola,124000,52,0.826
+ATG,Antigua and Barbuda,1220,75.8,0.984
+[Full File]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can download the entire contents of Wikipedia into a data file.  This is usually how 
+you should deal with Wikipedia data.  Do not use HTTP to pull large volumes of data from 
+Wikipedia.  This is a good way to get blocked from Wikipedia.  Also, the datafile for 
+Wikipedia is not HTML encoded and much easier to parse.  I simply pulled the &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_3166-1&quot;&gt;nation codes&lt;/a&gt;
+page, &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29&quot;&gt;GDP&lt;/a&gt;, &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_countries_by_literacy_rate&quot;&gt;literacy&lt;/a&gt;, and &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_countries_by_life_expectancy&quot;&gt;lifespan&lt;/a&gt; pages into text files that my Python script could parse.&lt;/p&gt;
+
+&lt;p&gt;I linked the files together (joined) using the nation name as a key.  If a nation’s name 
+did not appear in all lists I discarded that nation.&lt;/p&gt;
+
+&lt;p&gt;You can see my Python code &lt;a href=&quot;https://github.com/jeffheaton/aifh/blob/master/vol3/misc/nations/build_nations.py&quot;&gt;here&lt;/a&gt;.  This code could be more readable.  But it gets the job 
+done.  It is a quick data wrangling hack.  If I needed to re-pull the data on a frequent 
+basis, particularly if it were high-velocity data, I would do something more formal.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>First time at the NSU Campus - Fall 2014</title>
+   <link href="http://www.heatonresearch.com/phd/2014/09/02/first-visit-nsu.html"/>
+   <updated>2014-09-02T08:26:00-05:00</updated>
+   <id>http://www.heatonresearch.com/phd/2014/09/02/first-visit-nsu</id>
+   <content type="html">&lt;p&gt;I just returned from my first cluster meeting for PhD program in computer science at Nova 
+Southeastern University.  Because it was Labor Day weekend my wife went with me, and we 
+made it a mini Florida vacation.  We flew into Ft. Lauderdale on Wed, Sept 27, 2014.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Wednesday:&lt;/strong&gt; Travel day, and check into hotel.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Thursday:&lt;/strong&gt; program orientation, library tour and kickoff reception.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Friday:&lt;/strong&gt; Two class sessions (4-hours each), with a 1.5 hr break for lunch.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Saturday:&lt;/strong&gt; Two class sessions (4-hours each), with a 1.5 hr break for lunch.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sunday:&lt;/strong&gt; Vacation day with my wife.  We checked out the beach at Ft. Lauderdale and had a a canal tour.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Monday:&lt;/strong&gt; (Labor day, USA holiday): Flew back to St. Louis.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I stayed at the closest hotel to the &lt;a href=&quot;http://www.ihg.com/holidayinnexpress/hotels/us/en/fort-lauderdale/fllsr/hoteldetail&quot;&gt;NSU campus&lt;/a&gt;, the &lt;a href=&quot;http://www.ihg.com/holidayinnexpress/hotels/us/en/fort-lauderdale/fllsr/hoteldetail&quot;&gt;Holiday Inn Airport&lt;/a&gt;.  The hotel is a good value.  They offer a free breakfast and shuttle to/from the airport.  It is nearly a 1.2 mile walk to the campus.  The roads are walk-able and have crosswalks.  In October I might walk it and shower on campus before class.  This would save the rental car expense.  I did walk to the university a few times this trip, however, more for exercise.  After a 1.2 mile walk, in the hot Florida summer sun, I would not be very popular!&lt;/p&gt;
+
+&lt;h2 id=&quot;program-orientation&quot;&gt;Program Orientation&lt;/h2&gt;
+
+&lt;p&gt;The program orientation was lead by &lt;a href=&quot;http://cec.nova.edu/faculty/seagull.html&quot;&gt;Dr. Seagull&lt;/a&gt;, 
+the Associate Dean of Academic Affairs at &lt;a href=&quot;http://cec.nova.edu/&quot;&gt;GSCIS&lt;/a&gt;. He presented an overview of the program 
+and the school.  NSU was founded in 1964, and is currently celebrating their 
+50th anniversary.  There were many different 50th anniversary banners and sings throughout 
+the campus.  For my program I must complete the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;32 credit hours of course work.&lt;/strong&gt;  This will amount to 8 individual four-credit hour courses.  I am currently enrolled in my first two. I will need to fly to Ft. Lauderdale twice a semester for these courses.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;8 credit hours of directed research.&lt;/strong&gt;  It will be at least a year before I start this part. However, my understanding is that I will work on a research problem with one of the professors.  This should help prepare for my own dissertation.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;24(or more) dissertation hours.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The faculty is composed of all full-time professors for the doctoral programs.  For my 
+first two classes, both instructors are full-time and live in the Florida area and had 
+been with NSU for over a decade.&lt;/p&gt;
+
+&lt;h2 id=&quot;artificial-intelligence-class&quot;&gt;Artificial Intelligence Class&lt;/h2&gt;
+
+&lt;p&gt;The artificial intelligence class (CISD 760) is taught by &lt;a href=&quot;http://www.cec.nova.edu/faculty/mukherjee.html&quot;&gt;Sumitra Mukherjee&lt;/a&gt; 
+and uses the textbook &lt;a href=&quot;http://aima.cs.berkeley.edu/&quot;&gt;Artificial Intelligence a Modern Approach&lt;/a&gt;.  For the first class sessions, the professor lectured on path finding, modeling, optimization, and Bayesian inference. We saw neural networks, genetic algorithms, decision trees, Bayesian belief networks and other algorithms.&lt;/p&gt;
+
+&lt;p&gt;The professor also covered the assignments for the semester.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Assignment 1:&lt;/strong&gt; Select a peer reviewed paper in your research area of interest.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Assignment 2:&lt;/strong&gt; Complete programs for four AI problems.  Path finding, vector optimization, data science/predictive modeling (neural net vs decision tree) and Bayesian inference.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Assignment 3:&lt;/strong&gt; Critique the paper from assignment 1, and write an “idea paper” describing further research you might like to pursue.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;In-class mid-term&lt;/strong&gt; at the next cluster meeting.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Final examination&lt;/strong&gt; assignment completed over the last several weeks of the semester.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Most PhD programs have &lt;a href=&quot;http://en.wikipedia.org/wiki/Prelims&quot;&gt;qualifying exams&lt;/a&gt;, and NSU’s CS PhD program breaks this requirement 
+over 8 in-class mid-semester examinations.  For the AI class, this is accomplished with 
+the mid-term assignment.&lt;/p&gt;
+
+&lt;p&gt;I’ve already started the programming assignment and am making use of Python with DEAP, 
+&lt;a href=&quot;http://www.numpy.org/&quot;&gt;Numpy&lt;/a&gt; and &lt;a href=&quot;http://www.numpy.org/&quot;&gt;scikit-learn&lt;/a&gt;.  I think this 
+will be a great class.  The assignment gives a good 
+chance to try out some of the AI algorithms.  The assignments also allow us to start 
+thinking about dissertation topics in AI.  I plan to conduct my dissertation research in 
+the field of AI.&lt;/p&gt;
+
+&lt;h2 id=&quot;data-base-management-systems-class&quot;&gt;Data Base Management Systems Class&lt;/h2&gt;
+
+&lt;p&gt;The data base management systems class (CISD 750) class is taught by &lt;a href=&quot;http://cec.nova.edu/~jps/&quot;&gt;Junping Sun&lt;/a&gt; using 
+the textbook &lt;a href=&quot;http://www.amazon.com/gp/product/0131873253&quot;&gt;Database Systems: The Complete Book (2nd Edition)&lt;/a&gt;.  For the first class 
+sessions, the professor lectured on a variety of topics in database theory.  This class is different than your typical “IT SQL” class.  This course is really more on the design and implementation of an actual database system.  I was familiar with the topics discussed, but I will have quite a bit of studying to do for this class.  Both professors seemed very knowledgeable of their respective areas, and very current on the latest research.&lt;/p&gt;
+
+&lt;p&gt;The assignments for this course are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Research Proposal.&lt;/li&gt;
+  &lt;li&gt;Research Report.&lt;/li&gt;
+  &lt;li&gt;In-class mid-term at the next cluster meeting.&lt;/li&gt;
+  &lt;li&gt;Final examination assignment completed over the last several weeks of the semester.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We are supposed to select a research topic for this course.  KDD (Knowledge Discovery 
+in Databases) is one of the topics.  This is the area I plan to research.  KDD is what 
+computer science groups, such as the ACM, call Data Science.&lt;/p&gt;
+
+&lt;p&gt;So far it looks like a good program.  I wanted to enter the world of academic publishing, 
+but could not fit a traditional PhD program into my life.  This program will be quite a 
+bit of work.  But, so far, the program looks like it will be a good fit for me.&lt;/p&gt;
+
+&lt;h2 id=&quot;around-the-nsu-campus&quot;&gt;Around the NSU Campus&lt;/h2&gt;
+
+&lt;p&gt;Here are some pictures that my wife and I took around the NSU campus.&lt;/p&gt;
+
+&lt;p&gt;The campus is large, and it took some walking to learn my way around!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2014-09-02-first-visit-nsu-1.jpg&quot; alt=&quot;Walking to class at NSU&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can see the main entrance to the campus below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2014-09-02-first-visit-nsu-2.jpg&quot; alt=&quot;Jeff in front of NSU&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the Carl DeSantis building at NSU.  The Graduate School of Information and Computer Science is located here.  I spent most of my time in the building below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2014-09-02-first-visit-nsu-3.jpg&quot; alt=&quot;Carl DeSantis Building&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Of course, this is Ft. Lauderdale, Florida, I had to stop at the beach!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2014-09-02-first-visit-nsu-4.jpg&quot; alt=&quot;Jeff at Ft. Lauderdale Beach&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ft. Lauderdale is made up of many interesting canals.  My wife and I also took a canal tour.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2014-09-02-first-visit-nsu-5.jpg&quot; alt=&quot;Ft. Lauderdale Canal Tour&quot; /&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>I am Starting a Ph.D. in Computer Science</title>
+   <link href="http://www.heatonresearch.com/phd/compsci/2014/05/02/starting-computer-science-phd.html"/>
+   <updated>2014-05-02T08:26:00-05:00</updated>
+   <id>http://www.heatonresearch.com/phd/compsci/2014/05/02/starting-computer-science-phd</id>
+   <content type="html">&lt;p&gt;I am starting a Ph.D. in &lt;a href=&quot;http://cec.nova.edu/doctoral/cisd/index.html&quot;&gt;Computer Science&lt;/a&gt; at &lt;a href=&quot;http://www.nova.edu/&quot;&gt;Nova Southeastern University (NSU)&lt;/a&gt;, in 
+Ft. Lauderdale, Florida. A doctorate level degree is something I’ve considered on-and-off 
+every since I earned my masters degree. I am very interested in Artificial Intelligence, 
+and have read numerous peer reviewed articles as I constructed &lt;a href=&quot;http://www.heatonresearch.com/encog&quot;&gt;Encog&lt;/a&gt; and wrote several 
+&lt;a href=&quot;/aifh/&quot;&gt;books on AI&lt;/a&gt;.  As I learn more about AI and Data Science I am beginning to see the 
+frontiers of human understanding in these areas.  I would really to add a small bit to 
+this understanding.&lt;/p&gt;
+
+&lt;p&gt;My goal for doing this is really to become involved in research– both independently and 
+through my employer.  I currently work in “industry”, and I do not plan on changing that.&lt;br /&gt;
+I have worked as an adjunct professor, on a part-time basis.  Full-time academia is not 
+something I am seeking in a Ph.D.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-criteria-for-a-program&quot;&gt;My Criteria for a Program&lt;/h2&gt;
+
+&lt;p&gt;For my “day job” I work as a &lt;a href=&quot;http://en.wikipedia.org/wiki/Data_science&quot;&gt;data scientist&lt;/a&gt; for a large insurance company.  I am very 
+active in the open source community.  I am a techie!  I love to program.  I love to 
+figure things out!  This is why I have such a passion for AI and data science. There are 
+a number of degrees that offer a blend of management with technology.  I have such a 
+degree for my masters.  These degrees are fine, and offer a good balance.  But this was 
+not what I was looking for in a doctorate.  I did not want to research how technology 
+is applied to business.  I want to research technology itself.  Much as I have been 
+already through open source contribution.&lt;/p&gt;
+
+&lt;p&gt;My criteria for a program were as follows.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I want a doctorate level degree&lt;/li&gt;
+  &lt;li&gt;I do not want to move away from St. Louis, MO USA to pursue this degree&lt;/li&gt;
+  &lt;li&gt;I want exposure to peer reviewed publication&lt;/li&gt;
+  &lt;li&gt;I do not want to quit my job, or reduce to half-time while I pursue my degree&lt;/li&gt;
+  &lt;li&gt;I a degree that focused on technology, rather than management of technology&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I began my search late in 2013.  I evaluated a number of state schools, private 
+universities and even the “for profit” institutions.  Most of the &lt;a href=&quot;http://en.wikipedia.org/wiki/For-profit_education&quot;&gt;“for profit”&lt;/a&gt; 
+guys only had the management based degrees.  I really could not find computer science/engineering.&lt;br /&gt;
+There salesmen did try quite hard to convince me, and still call me.  But I really want 
+a degree that ends with the word “engineering” or “science”, not “management” or 
+“administration”. There is nothing wrong with such degrees, and I have great respect for 
+them. I have certainly managed people before and worked in administration. But I don’t 
+want to publish/research on “management” or “administration”.&lt;/p&gt;
+
+&lt;p&gt;So I applied to NSU, and after a few months, was accepted.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-nsu&quot;&gt;Why NSU?&lt;/h2&gt;
+
+&lt;p&gt;NSU is a 2nd tier non-for-profit private university located in Ft. Lauderdale, Florida.&lt;br /&gt;
+They have a traditional campus, with students living there. They also have a number of 
+“distance learning” options.  I am pursuing a “distance degree”, and need to visit their 
+campus four times a year.  There are certainly worse places to visit than Ft Lauderdale. 
+This also works well, as my wife is pursuing a masters degree in Spanish.  Miami is very 
+close to Ft. Lauderdale, and is a hub of Spanish speaking culture.&lt;/p&gt;
+
+&lt;p&gt;There are essentially three phases to a Ph.D. from NSU.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Course work, for breadth of knowledge (32 credits)&lt;/li&gt;
+  &lt;li&gt;Guided research (8 credits)&lt;/li&gt;
+  &lt;li&gt;Dissertation (24 credits)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I like the approach of guided research before dissertation.  The courses cover topics that 
+sound interesting to me.&lt;/p&gt;
+
+&lt;p&gt;Nova seems to be active in research.  They are in the process of building a &lt;a href=&quot;http://cec.nova.edu/research/megalodon.html&quot;&gt;super computer&lt;/a&gt;, 
+named Megalodon.  You can also see some of their &lt;a href=&quot;https://gscisweb.scis.nova.edu/dlist/webview.cfm&quot;&gt;dissertations here&lt;/a&gt;.  Some of these 
+dissertations, particularly in the area of computer science, sound like topics similar to 
+what I might like to pursue.&lt;/p&gt;
+
+&lt;p&gt;I will start this fall.  I am beginning with two classes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CISD 760:  Artificial Intelligence&lt;/li&gt;
+  &lt;li&gt;CISD 750  Database Management Systems&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am looking forward to starting the program, and seeing what the courses are like.&lt;br /&gt;
+I will travel to Ft. Lauderdale in August, for the first time.  I will write more about 
+this as I continue the process.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Using Kickstarter to Fund an Indie Technical Book</title>
+   <link href="http://www.heatonresearch.com/aifh/kickstarter/2013/07/20/kickstarter-techie-book.html"/>
+   <updated>2013-07-20T08:26:00-05:00</updated>
+   <id>http://www.heatonresearch.com/aifh/kickstarter/2013/07/20/kickstarter-techie-book</id>
+   <content type="html">&lt;p&gt;During June and July of 2013 I &lt;a href=&quot;http://www.kickstarter.com/projects/jeffheaton/artificial-intelligence-for-humans-vol-1-fund-algo&quot;&gt;funded a book project&lt;/a&gt; using &lt;a href=&quot;http://www.kickstarter.com/&quot;&gt;Kickstarter&lt;/a&gt; for total pledges 
+of $18,889 USD from 818 project backers. Because my initial requested amount was $2,500 
+this project was funded at a level of 755%.  To see my Kickstarter project, &lt;a href=&quot;http://www.kickstarter.com/projects/jeffheaton/artificial-intelligence-for-humans-vol-1-fund-algo&quot;&gt;click here&lt;/a&gt;.&lt;br /&gt;
+What does this all mean?  If you are familiar with Kickstarter these stats are likely 
+very familiar.&lt;/p&gt;
+
+&lt;p&gt;If you are not familiar with Kickstarter, let me explain how this works.  Kickstarter is 
+all about crowdfunding.  Crowdfunding is where you obtain money from many individuals to 
+achieve some sort of goal.  People who support a crowdfunding project are called backers.&lt;br /&gt;
+Backers may or may not get something in return for their support.  These days just about 
+&lt;strong&gt;EVERYTHING is being crowdfunded&lt;/strong&gt;.  You can even use crowdfunding to help with the costs of 
+&lt;a href=&quot;https://www.adopttogether.org/&quot;&gt;adopting a child&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In my case, I want to write a book as an &lt;a href=&quot;https://en.wikipedia.org/wiki/Self-publishing&quot;&gt;indie publisher&lt;/a&gt;.  This is nothing new to me. 
+I’ve published a number of books both with big publishing houses, as well as on my own.&lt;br /&gt;
+I am very much sold on the indie publishing route.  Other than the obvious creative 
+freedom  indie publishing is simply more lucrative.  At least for my particular &lt;a href=&quot;https://en.wikipedia.org/wiki/Artificial_intelligence&quot;&gt;niche&lt;/a&gt;.&lt;br /&gt;
+Your results may vary!&lt;/p&gt;
+
+&lt;h2 id=&quot;what-does-it-cost-to-indie-publish-a-book&quot;&gt;What Does it Cost to Indie Publish a Book?&lt;/h2&gt;
+
+&lt;p&gt;I am creating a new book about Artificial Intelligence Programming.  It will be the first 
+in a series of books.  I’ve written on &lt;a href=&quot;http://www.heatonresearch.com/book&quot;&gt;this topic&lt;/a&gt; before.  As an indie author I do have 
+some costs.  These costs break down as follows.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Editing&lt;/li&gt;
+  &lt;li&gt;Book Cover&lt;/li&gt;
+  &lt;li&gt;Book design and layout&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You may have additional costs beyond these.  However, for me, these are the big three.&lt;br /&gt;
+My book is essentially a technical/scientific/mathematical book.  Because of this I 
+simply lay it out in &lt;a href=&quot;http://www.latex-project.org/&quot;&gt;LaTeX&lt;/a&gt; for typesetting, and bullet three above ends up costing me 
+very little.  If you are not that familiar with typesetting then “step three” may 
+cost more.&lt;/p&gt;
+
+&lt;p&gt;I’ve found that previous book projects cost me around $2,500 USD to get off the ground.&lt;br /&gt;
+Because of this I set my Kickstarter goal to be $2,500.  However, the question becomes, 
+“Will I ever sell enough copies to make this money back?”  This is where Kickstarter 
+comes in.  People will pledge money to get the finished project.  Essentially I am 
+pre-selling the book.  For myself, as an author, this is an advance.  Though, $18k is a 
+considerably larger advance than I ever got working with large publishing houses.&lt;/p&gt;
+
+&lt;p&gt;I set my goal to be $2,500 over 30 days.  A project length of 30 days is VERY common in 
+Kickstarter.  Most advice suggests to go with 30 days.  This seems about right for me, 
+and I am not going to suggest to the contrary.  Under this model, I had 30 days to gain 
+enough pledges to meet $2,500.  If I did not hit $2,500, then I get nothing. Kickstarter 
+is all or nothing.&lt;/p&gt;
+
+&lt;p&gt;Setting your funding goal is very important!&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-a-funding-goal&quot;&gt;Setting a Funding Goal&lt;/h2&gt;
+
+&lt;p&gt;Kickstarter is all or nothing.  Either I hit (or exceed) the funding goal, or you get 
+nothing!  My project would forever revert to the status of “Unsuccessful”.  That worried 
+me a bit!  I did not want a failed Kickstarter page as a lasting monument to this book.&lt;/p&gt;
+
+&lt;p&gt;There are two schools of thought on funding goal.  I simply set my funding goal to exactly 
+what I needed to create the book.  If I hit $1000 and not $2500, then I don’t have enough 
+money to produce my product and the project should be canceled.&lt;/p&gt;
+
+&lt;p&gt;The other school of thought is to set this value higher.  There is a fear that if you hit 
+your goal, in my case, $2,500, your project will lose all motivation and you won’t get 
+much funding.  I think there is some truth in that.  I’ve seen projects burst towards an 
+unmet goal in the final days of the project.&lt;/p&gt;
+
+&lt;p&gt;Ultimately, this is your own decision. When I do the second volume in this series, I will 
+very likely set it to $2,500 again.  I felt like this was high enough that it seemed 
+“non-trivial”, yet was actually a genuine estimate of my costs.  I do not think my 
+project lost any motivation once it hit $2,500.  Actually quite the opposite.  For a 
+variety of reasons, which I will cover later in this post, my project really took off 
+after it met its funding goal.&lt;/p&gt;
+
+&lt;h2 id=&quot;overview-of-my-kickstarter-book-project&quot;&gt;Overview of My Kickstarter Book Project&lt;/h2&gt;
+
+&lt;p&gt;My Kickstarter project started on June 10, 2013, you can see it at &lt;a href=&quot;http://www.kickstarter.com/projects/jeffheaton/artificial-intelligence-for-humans-vol-1-fund-algo&quot;&gt;this link&lt;/a&gt;.  You can see 
+its complete progress here.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2013-08-20-kickstarter-techie-book-1.png&quot; alt=&quot;AI For Humans Volume 1 Funding Progress&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are some important dates.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;June 9:&lt;/strong&gt; Project starts.  I post to my author Facebook page and Twitter that I started a Kickstarter project.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;June 11:&lt;/strong&gt; Project is going slowly!  I post a more compelling “call to action” to all followers.  This actually gets me to 50%.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;June 18:&lt;/strong&gt; Now at 50% I post this as news to my blog, Facebook and Twitter.  This gives some “buzz” and I quickly go to 80%.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;June 24:&lt;/strong&gt; When my project got to within $300 of goal, a very generous backer pledged the remaining amount and put me at exactly $2500.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;June 25:&lt;/strong&gt; The news of the project hitting $2500 caused quite a few additional backers.  I reached 110% the next day.  I also adjusted the embedded widget on my website to explain what the widget was and more of a call for action.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;June 31:&lt;/strong&gt; Pretty much a social media chain-reaction.  One of the backers posted the project to Hacker News.  This created a ton of traffic to the project.  This traffic translated into backers.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;July 1:&lt;/strong&gt; Another backer posts the project to Reddit.  This causes a similar traffic burst.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;July 2:&lt;/strong&gt; The combined traffic of Reddit and Hacker News causes Kickstarter to push my project to the front page of Kickstarter.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;July 3-10:&lt;/strong&gt; Between remnant Reddit and Hacker News traffic, and ongoing placement on Kickstarter popular projects the project stays in a very nice trend until the project ends.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I feel like the project got its initial lift, to $2,500 from my existing Facebook and 
+Twitter followers.  However, the major bang came from &lt;a href=&quot;https://news.ycombinator.com/item?id=5976590&quot;&gt;Hacker News&lt;/a&gt;, &lt;a href=&quot;http://www.reddit.com/r/programming/comments/1hi3gs/artificial_intelligence_for_humans_fundamental/&quot;&gt;Reddit&lt;/a&gt; and finally 
+Kickstarter itself. So where did all of these backers come from?  Here is a fragment from 
+my backer source report.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2013-08-20-kickstarter-techie-book-2.png&quot; alt=&quot;AI For Humans Volume 1 Funding Sources&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is just the top portion of the chart, there were quite a few other sources too, just in lower dollar amounts.  As you can see, Direct Traffic accounted $3,460 worth of backers, this was mostly Hacker News. Kickstarter Popular really delivered.  They broke this into the home page, as well as Popular (Discover).  The Embedded Widget also delivered $1,349.  This is a widget that I embedded in several of my sites.  You can see it here.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2013-08-20-kickstarter-techie-book-3.png&quot; alt=&quot;AI For Humans Volume 1 Widget&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Just my followers alone would have gotten me past the goal, and then some.  However, the real power came from social media, particularly Kickstarter itself.&lt;/p&gt;
+
+&lt;h2 id=&quot;was-kickstarter-worth-it&quot;&gt;Was Kickstarter Worth It?&lt;/h2&gt;
+
+&lt;p&gt;I was not sure if I should use Kickstarter for this project.  I figured I already had my 
+established base of followers.  I could even do some sort of pre-sale event on my own 
+website.  Kickstarter also takes 5%.  In the end, I decided that maybe running it on 
+Kickstarter would get me more followers in return for that 5%.  I did get more followers, 
+but I also got my total revenue more than doubled.  The following chart shows it the best.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2013-08-20-kickstarter-techie-book-4.png&quot; alt=&quot;AI For Humans Volume 1 Widget&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Just over half of my revenue came from Kickstarter!  &lt;script type=&quot;math/tex&quot;&gt;So YES, Kickstarter was worth their very small 5%.&lt;/script&gt;&lt;br /&gt;
+Kickstarter pledges were $9,762, whereas others were $9,127.&lt;/p&gt;
+
+&lt;h2 id=&quot;project-video-and-story&quot;&gt;Project Video and Story&lt;/h2&gt;
+
+&lt;p&gt;The project video is very important.  It is very important to show what your book is, and why is it important.  My video probably could have been better.  I feel like my story (the text that goes with your project) was better than the video.  I tried to focus on really two aspects.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Artificial Intelligence (AI) is just an inherently cool topic.&lt;/strong&gt;  There are many things people can use AI for, I can’t cover them all. It really is just a very cool technology.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Data Science is becoming the practical business application of AI.&lt;/strong&gt; You can get a job “doing AI”.  For most business this is called Data Science.  Data Scientist is becoming a very hot career field.  Harvard Business Review even called “Data Scientist” the sexiest job of the 21st century!  &lt;a href=&quot;http://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century/ar/2&quot;&gt;(link)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Every project will take a different video.  I suggest you find books like yours and watch their videos!  Make it relavant!&lt;/p&gt;
+
+&lt;h2 id=&quot;deciding-on-rewards&quot;&gt;Deciding on Rewards&lt;/h2&gt;
+
+&lt;p&gt;Rewards are what cause backers to pledge.  I tried a variety of rewords.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Pledge $3&lt;/strong&gt; (3 backers): Supporter, bronze level. Show your support! As thanks for your pledge, you’ll be updated on the project’s progress.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pledge $7&lt;/strong&gt; (100 backers): Let’s get rolling! The first 100 backers get the e-book for less. Don’t wait, sponsor me today. Receive a DRM-Free electronic copy of the e-book (PDF, MOBI, ePub). Plus free updates for life!&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pledge $9&lt;/strong&gt; (294 backers): Buy the ebook. Receive a DRM-Free electronic copy of the e-book (PDF, MOBI, ePub).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pledge $29&lt;/strong&gt; (297 backers): EBook extravaganza. Buy the ebook. Receive a DRM-Free electronic copy of the e-book (PDF, MOBI, ePub). Plus all of my current AI books. Every book listed at this URL. http://www.heatonresearch.com/book/cat/1&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pledge $34&lt;/strong&gt; (46 backers): Buy the paperback &amp;amp; ebook. You will receive a signed copy of the paperback edition of the book. Add $10 for shipping outside the USA. You will also receive a DRM-Free electronic copy of the e-book (PDF, MOBI, ePub).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pledge $49&lt;/strong&gt; (47 backers): Paperback + EBook Extravaganza - Buy the ebook &amp;amp; paperback of AIFH V1. Plus all of my current AI books. Every book listed at this URL. http://www.heatonresearch.com/book/cat/1&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pledge $49&lt;/strong&gt; (2 backers): Beta tester! You will receive three draft updates as the book is created. You will be seeing material at the same time it goes to the editor. At the end, you will receive a DRM-Free electronic copy of the e-book (PDF, MOBI, ePub).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pledge $59&lt;/strong&gt; (5 backers): Paperback extravaganza. You will get Java &amp;amp; C# versions of “Programming Neural Networks with Encog3”, “Introduction to Neural Networks”, plus a paperback edition of the new AIFH Vol1 (this Kickstarter). You will also get the ebooks. There will be two shipments. The published books in July, and AIFHV1 in Dec 2013. Does not include a paperback of “Math of Neural Networks”, as that book was only released as ebook. (This reword added at the last minute for a request).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pledge $100&lt;/strong&gt; (19 backers): Supporter, silver level. You will receive the paperback, ebook, beta test updates, just as above. However, you will also be mentioned in the books acknowledgements as a supporter.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pledge $500&lt;/strong&gt; (0 backers): Assign me a language! Get the ebook, signed paperback, beta updates, and mention in the books acknowledgements. Plus, assign me an additional language to add examples for. Your choice of Groovy, Scala, F#, Clojure, Python or PHP.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pledge $1,000&lt;/strong&gt; (0 backers): Supporter, gold level. Get the ebook, signed paperback, beta updates and mention in the book’s acknowledgements. Plus, you will be listed on the homepage (http://www.heatonresearch.com/) as a supporter for one year. I will include a link to a website of your choice. Target site cannot be for online gambling, pornography, politics, social cause or anything illegal that might get me in trouble! (if you are unsure, check with me first).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;My “high ticket” pledges did nothing.  I was not sure about these, but I did see other 
+projects have some success with these.  I would not spend much time thinking about 
+high-ticket pledges.  For the next volume I will probably have one $1k high-ticket pledge 
+and the rest will top out at $250.&lt;/p&gt;
+
+&lt;p&gt;I also did an Early Bird pledge level. I’ve seen other sites do this.  The idea is that 
+it helps secure some initial buzz for your project.  In reality, I am not sure the 
+difference between $9 and $7 meant much.  Next time I will probably just do the $9 
+reward level.  $9 is for an ebook, which is what I will ultimately price this book at 
+on Amazon.&lt;/p&gt;
+
+&lt;p&gt;The “ebook extravaganza” was every popular.  I basically threw in my previous AI books at 
+a discount.  This will be a very important component for future Kickstarter projects.&lt;br /&gt;
+The idea here is to give the backers something to read while they wait for the book to be 
+done.  If you have other material you can package up in a digital format, this might be an 
+option for you!&lt;/p&gt;
+
+&lt;p&gt;The $100 backers allowed people to express additional support, and also be mentioned in 
+the books acknowledgments. This was a popular level and contributed to the bottom line.&lt;/p&gt;
+
+&lt;p&gt;Look at other projects and pick rewards that make sense!  This is what I did.&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-the-word-out&quot;&gt;Getting the Word Out&lt;/h2&gt;
+
+&lt;p&gt;Publicity is critical.  While I did get quite a few backers from Kickstarter, I would have 
+not done this without external sources.  Kickstarter is an amplifier.  An amplifier takes 
+a signal and makes it stronger.  However, it has to be a good signal to begin with!&lt;br /&gt;
+Kickstarter will not “kick in” until your project reaches some degree of popularity.  To 
+do this, you need to rely on sources such as:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Your own blog:&lt;/strong&gt; I have two primary sites.  My blog and Heaton Research.  Together these 
+sites see about 100k hits a month.
+Other blogs: Try to reach out to similar blogs.  Ideally BEFORE you start a Kickstarter 
+campaign.  Don’t view similar blogs as competitors.  Comment on their stories and get to 
+know them.  They might help you promote an occasional project. My blog has a decent amount 
+of traffic, and I am often very willing to do this.  If the content is in line with my 
+topic.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Social News Sites:&lt;/strong&gt;  Decide what social news sites make sense.  Don’t post a children’s 
+book to Hacker News.  Write supporting articles and post those. But think about posting 
+to the Reddits, Slashdots, DZones, Diggs and Hacker News sites.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Facebook and Twitter:&lt;/strong&gt; If you have a blog, you should have a page for followers.  This 
+is mine.  Twitter is important too.  I earned several thousand dollars on this Kickstarter 
+from these two.
+Pay Attention&lt;/p&gt;
+
+&lt;p&gt;You backers (and potential backers) will post comments and ask questions.  A quick reply 
+will often win a pledge.  Also look for FAQ’s.  You can easily add FAQ’s to your project.&lt;br /&gt;
+I ended up being out of town for the last 4 days of my Kickstarter!  It actually ended on 
+a travel day!  Here I am in Denver International Airport responding to queries on 
+Kickstarter.  I was on my way back from San Francisco to St. Louis.  Yeah for Denver for 
+having free wifi!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2013-08-20-kickstarter-techie-book-5.jpg&quot; alt=&quot;Jeff Heaton at Denver International Airport&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Questions from users will often give you great ideas for additional pledge levels to add.&lt;/p&gt;
+
+&lt;h1 id=&quot;after-the-project-ends&quot;&gt;After the Project Ends&lt;/h1&gt;
+
+&lt;p&gt;Other than the obvious task of writing your book, here are a few suggestions that I have.&lt;/p&gt;
+
+&lt;p&gt;You can only survey each gift type once:  I did not know this going in. Ultimately you will send your backers a survey when your project has been funded and you are ready to send them their reward.  This survey allows you to collect necessary information to get them their reward.  Here is the part I did not know.  You can only send the survey once!  Why is this a problem?  I have rewards that are staggered.  If they got my ebook extravaganza I had planned (and offered in the text of the gift) to send that in July.  But my book won’t be done until December. So for a “paperback + ebook extravaganza” backer I need their email address NOW and their shipping address in December.  If I use a survey I must ask for BOTH now.  What if they move over those 6 months?  To solve this I am simply messaging all backers that I need info from NOW. &lt;br /&gt;
+Make a final edit to your story: Once your project funding period ends in either success or failure, your project’s story will “lock”.  You will not be able to change it.  I left a link on my project page with instructions for users who might have “missed the Kickstarter”, you can see mine &lt;a href=&quot;http://www.kickstarter.com/projects/jeffheaton/artificial-intelligence-for-humans-vol-1-fund-algo&quot;&gt;here&lt;/a&gt;.  This provides a link to a page on my own website that will evolve as the project does.  For now, it links to a EJunkie Buy Button that allows users to still order the ebook extravaganza or preorder.  Eventually it will likely take them to Amazon to buy the finished book.  (once I finish the book).
+Provide translation: It is easy to provide a translation.  Just use Google translate.  You can find a great example of a project doing it &lt;a href=&quot;http://www.kickstarter.com/projects/lightup/lightup-learn-by-making&quot;&gt;here&lt;/a&gt;.  I did not do this.  I am selling an English book.  If you can’t read my promo page, you probably do not need my book.
+Plans for Next Time&lt;/p&gt;
+
+&lt;p&gt;I will do a Kickstarter project again.  This is a multi-volume set.  The main points for improvement are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Better video.&lt;/strong&gt;  There will be less of me talking into a camera.  More of me doing voice-overs with animations showing what the book is about.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hit social media sooner.&lt;/strong&gt;  I will time a series of articles about examples from the next book to go out every few days once the Kickstarter campaign begins.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Wire release.&lt;/strong&gt;  I will try a wire release from one of the sites that do this sort of thing.  If I use a number of media-friendly (and accurate) buzz words like “Big Data”, “Data Science”, “Business Intelligence”, this will probably get some useful links from some of the media sites.  Probably not going for CNN level coverage, but coverage from some of the business trade journals would be nice.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>2013 Visit to the Computer History Museum in Palo Alto</title>
+   <link href="http://www.heatonresearch.com/compsci/2013/07/17/visit-to-computer-history-museum.html"/>
+   <updated>2013-07-17T08:26:00-05:00</updated>
+   <id>http://www.heatonresearch.com/compsci/2013/07/17/visit-to-computer-history-museum</id>
+   <content type="html">&lt;p&gt;During July 2013 I happened to be in Silicon Valley.  While there my wife and I toured 
+the Computer History Museum.  If you find your self in Mountain View, CA, it is worth a 
+visit.  They have computer systems from the very beginning (abacus) to today (tablets 
+and phones).  There are quite a few computers from the 1940s-1960s.  It was also 
+interesting seeing the Google Street View Car and an IBM Watson set.&lt;/p&gt;
+
+&lt;p&gt;It is a very cool looking building.  Here I am near the entrance.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2013-07-17-visit-to-computer-history-museum-1.jpg&quot; alt=&quot;Computer History Museum&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The museum did have some information on Artificial Intelligence.  There was a very 
+interesting video that explained why some problems, such as AI, are in fact very hard.&lt;br /&gt;
+They had an exhibit featuring IBM Watson.  I had to take a picture at this location!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2013-07-17-visit-to-computer-history-museum-2.jpg&quot; alt=&quot;IBM Watson at the Computer History Museum&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;They also had quite a few robots!  I would have loved to see a robot out and moving about, 
+but alas no.  However, they DID have a working Babbage machine.  Seeing a real Babbage 
+machine calculate a log table was amazing!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2013-07-17-visit-to-computer-history-museum-3.jpg&quot; alt=&quot;Robots at the Computer History Museum&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It was fascinating seeing the Xerox Alto.  This is the machine that started it all!  The 
+mouse and GUI!  Xerox was too much of a lumbering corporate dinosaur to realize what they 
+had invented.  Instead of capitalizing on their new GUI, Xerox gives Steve Jobs was given 
+a tour.  Steve Jobs then promptly stole this technology and created the Mac.  Then Bill 
+Gates promptly stole Steve Jobbs’ “stolen property” and created Windows!  Which then 
+caused Apple to sue Microsoft for stealing what Apple had “rightly stolen” from Xerox!&lt;br /&gt;
+Gets complicated! :)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2013-07-17-visit-to-computer-history-museum-4.jpg&quot; alt=&quot;Xeros Alto at the Computer History Museum&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I wish they had more in the 8-bit era!  As a generation x-er 8-bits are where I got my 
+start!  Ah the days of programming 6510 machine language!  Here you see my by a 
+Commodore 64 and Vic 20.  Would have loved to have seen just a little more on Commodore!&lt;br /&gt;
+Rather than just two machines on a shelf that I have to stand on my tip-toes to see!&lt;br /&gt;
+Oh well.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2013-07-17-visit-to-computer-history-museum-5.jpg&quot; alt=&quot;Commodore at the Computer History Museum&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sitting in a Google Street View car was also fun!  I had also used Google Maps to help me 
+find my way to the Computer History Museum!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2013-07-17-visit-to-computer-history-museum-6.jpg&quot; alt=&quot;Google Car at the Computer History Museum&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There were several video interviews with Donald Knuth!  I am a major Knuth fan!  I’ve 
+used several of his algorithms in The Art of Computer Programming for Encog!  Specifically 
+in the areas of random number generation and efficient string comparison/sorting.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2013-07-17-visit-to-computer-history-museum-7.jpg&quot; alt=&quot;Knuth Quote at the Computer History Museum&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It was a fun visit.  Really like the Computer History Museum.  It was only 10 minutes 
+from where I was staying in Palo Alto.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>GPU Programming in Java Using OpenCL (JUG)</title>
+   <link href="http://www.heatonresearch.com/opencl/gpu/2013/06/13/jug-java-gpu.html"/>
+   <updated>2013-06-13T08:26:00-05:00</updated>
+   <id>http://www.heatonresearch.com/opencl/gpu/2013/06/13/jug-java-gpu</id>
+   <content type="html">&lt;p&gt;Tonight (June 13, 2013), I am giving a presentation at the &lt;a href=&quot;http://java.ociweb.com/javasig/&quot;&gt;St. Louis Java User’s Group&lt;/a&gt; on 
+the topic of &lt;a href=&quot;http://java.ociweb.com/javasig/knowledgebase/2013-06/index.html&quot;&gt;GPU Programming in Java Using OpenCL&lt;/a&gt;. This features the &lt;a href=&quot;http://www.lwjgl.org/&quot;&gt;LWJGL framework&lt;/a&gt;.&lt;br /&gt;
+Included are links to the slides, as well as over 45 minutes of video. The description 
+of this talk is as follows.&lt;/p&gt;
+
+&lt;h2 id=&quot;about-the-presentation&quot;&gt;About the Presentation&lt;/h2&gt;
+
+&lt;p&gt;General Purpose Computing on Graphics Processing Units (GPGPU) allows you to make use of 
+your video card (GPU) to perform general purpose computing. The typical GPU contains 
+hundreds of cores capable of performing mathematically intense operations. However, 
+harnessing the power of the GPU is much different than the traditional CPU programming 
+that most programmers are used to. This presentation will show how to make use of the GPU 
+from Java using OpenCL. OpenCL abstracts the differences between competing GPU 
+architectures.&lt;/p&gt;
+
+&lt;p&gt;GPU’s are not suited to every task, so the criteria for a good GPU task will be reviewed. 
+To demonstrate the power of the GPU in Java I will show how to use the GPU to speed a 
+Big Data process over a large volume of financial data. This can greatly speed up certain 
+data mining and predictive Modeling applications. I will also show how GPU’s can be used 
+in an Amazon EC2 cluster.&lt;/p&gt;
+
+&lt;h2 id=&quot;about-the-presenter&quot;&gt;About the Presenter&lt;/h2&gt;
+
+&lt;p&gt;Jeff Heaton is a Lead Software Analyst at the Reinsurance Group of America (RGA). Jeff is 
+also the lead developer of the Encog Machine Learning Framework and a Senior Member of 
+the IEEE. Jeff has worked with technologies such as Java, C#, C/C++, Groovy, Scala, R 
+and Octave.&lt;/p&gt;
+
+&lt;p&gt;Materials&lt;/p&gt;
+
+&lt;p&gt;Here are the links and materials I discussed during the presentation.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;OpenCL Hello World: &lt;a href=&quot;https://github.com/jeffheaton/opencl-hello-world&quot;&gt;https://github.com/jeffheaton/opencl-hello-world&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;LWJGL: &lt;a href=&quot;http://www.lwjgl.org/&quot;&gt;http://www.lwjgl.org/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Encog CUDA Kernel: &lt;a href=&quot;https://github.com/encog/encog-c/blob/master/encog-core/cuda_eval.cu&quot;&gt;https://github.com/encog/encog-c/blob/master/encog-core/cuda_eval.cu&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Encog Project: &lt;a href=&quot;http://www.encog.org&quot;&gt;http://www.encog.org&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;My Slides: &lt;a href=&quot;http://java.ociweb.com/javasig/knowledgebase/2013-06/JUG_GPU.pdf&quot;&gt;Download&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Youtube Slides: &lt;a href=&quot;http://www.youtube.com/watch?v=4q9fPOI-x80&quot;&gt;Part 1&lt;/a&gt; &lt;a href=&quot;http://www.youtube.com/watch?v=gZDNvL28PVA&quot;&gt;Part 2&lt;/a&gt; &lt;a href=&quot;http://www.youtube.com/watch?v=mTOcsUFyETM&quot;&gt;Part 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Basic Classification in R: Neural Networks and Support Vector Machines</title>
+   <link href="http://www.heatonresearch.com/r/ai/2013/06/12/r-classification.html"/>
+   <updated>2013-06-12T08:26:00-05:00</updated>
+   <id>http://www.heatonresearch.com/r/ai/2013/06/12/r-classification</id>
+   <content type="html">&lt;p&gt;In this article I will introduce you to classification in R. We will use the Iris data 
+set to perform this classification.  The Iris data set is a classic data set that is 
+often used to demonstrate machine learning.  This data set provides four measurements 
+for three different iris species.  Data such as this typically comes in a CSV File.  The 
+iris CSV file looks something like this.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;quot;sepal_l&amp;quot;,&amp;quot;sepal_w&amp;quot;,&amp;quot;petal_l&amp;quot;,&amp;quot;petal_w&amp;quot;,&amp;quot;species&amp;quot;
+5.1,3.5,1.4,0.2,Iris-setosa
+4.9,3.0,1.4,0.2,Iris-setosa
+4.7,3.2,1.3,0.2,Iris-setosa
+4.6,3.1,1.5,0.2,Iris-setosa
+5.0,3.6,1.4,0.2,Iris-setosa
+5.4,3.9,1.7,0.4,Iris-setosa
+4.6,3.4,1.4,0.3,Iris-setosa&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can download the above file here.&lt;/p&gt;
+
+&lt;h2 id=&quot;reading-a-csv-file-in-r&quot;&gt;Reading a CSV File in R&lt;/h2&gt;
+
+&lt;p&gt;By default R expects to find files in your home directory.  You can also specify a full path.  We will now load the iris dataset.  Of course, R has the iris dataset build into the variables iris and iris3.  However, we will assume that you might want to use your own dataset.  Therefore I will demonstrate how to load the iris.csv file.  The following command is used to load the Iris data set.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;irisdata &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; read.csv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;file&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;iris.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;head&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can also load the data right over the web.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;irisdata &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; read.csv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.heatonresearch.com/dload/data/iris.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;head&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now that the iris data set is loaded, you can display the entire data set just by entering the variable name.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt; irisdata
+sepal_l sepal_w petal_l petal_w species
+1 5.1 3.5 1.4 0.2 Iris-setosa
+2 4.9 3.0 1.4 0.2 Iris-setosa
+3 4.7 3.2 1.3 0.2 Iris-setosa
+4 4.6 3.1 1.5 0.2 Iris-setosa
+5 5.0 3.6 1.4 0.2 Iris-setosa
+6 5.4 3.9 1.7 0.4 Iris-setosa
+7 4.6 3.4 1.4 0.3 Iris-setosa
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can also use the summary function to provide a very useful summary of the iris data.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt; summary(irisdata)
+ sepal_l sepal_w petal_l petal_w 
+ Min. :4.300 Min. :2.000 Min. :1.000 Min. :0.100 
+ 1st Qu.:5.100 1st Qu.:2.800 1st Qu.:1.600 1st Qu.:0.300 
+ Median :5.800 Median :3.000 Median :4.350 Median :1.300 
+ Mean :5.843 Mean :3.057 Mean :3.758 Mean :1.199 
+ 3rd Qu.:6.400 3rd Qu.:3.300 3rd Qu.:5.100 3rd Qu.:1.800 
+ Max. :7.900 Max. :4.400 Max. :6.900 Max. :2.500 
+ species 
+ Iris-setosa :50 
+ Iris-versicolor:50 
+ Iris-virginica :50&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;training-and-validation-data&quot;&gt;Training and Validation Data&lt;/h2&gt;
+
+&lt;p&gt;It is often useful to break the data into training and validation sets.  This allows you to validate the SVM or ANN on data that it was never trained with.  The Iris dataset has 150 elements in it.  For our training set we will sample 100 elements from this 150 element set.  This is done with the following commands.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;irisTrainData = sample(1:150,100)
+irisValData = setdiff(1:150,irisTrainData)
+It is very important to note that the above vectors are only indexes, and not the actual data.  To obtain the actual data you must use one of the following commands.
+
+irisdata[irisTrainData,]
+irisdata[irisValData,]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;using-a-support-vector-machine-svm&quot;&gt;Using a Support Vector Machine (SVM)&lt;/h2&gt;
+
+&lt;p&gt;I will now show you how to train a support vector for the Iris data set.  First, we must tell R that we are using SVM’s.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;kernlab&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Next, we create a radial basis function (RBF) that will be used during training.  This will be used as the kernel function.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;rbf &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rbfdot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sigma&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Next we train the SVM.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;irisSVM &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ksvm&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;species&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;irisdata&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irisTrainData&lt;span class=&quot;p&quot;&gt;,],&lt;/span&gt;type&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;C-bsvc&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;kernel&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;rbf&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;C&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;prob.model&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Next we get the fitted values for this iris SVM.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;fitted&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;irisSVM&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Test on the validation set with probabilities as output.  The -5 means to remove the 5th column, which is species.  We are trying to predict species.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;predict&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;irisSVM&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; irisdata&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irisValData&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; type&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;probabilities&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This produces output similar to the following.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Iris-setosa Iris-versicolor Iris-virginica
+ [1,] 0.964182671 0.022183652 0.013633677
+ [2,] 0.952685528 0.032202528 0.015111944
+ [3,] 0.966094194 0.021206723 0.012699083
+ [4,] 0.965805632 0.020603214 0.013591154
+ [5,] 0.962410318 0.024487673 0.013102009
+ [6,] 0.964783325 0.022303353 0.012913322
+ [7,] 0.975483475 0.012628443 0.011888082
+ [8,] 0.918612644 0.060459572 0.020927784
+ [9,] 0.953575715 0.030428791 0.015995494
+[10,] 0.948050721 0.035563597 0.016385682
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The above shows the predictions for the first 10 elements of the validation set.  The numbers you see are probabilities.  As you can see each line has one column with the maximum probability.  These samples are all Iris-setosa.  I only show ten rows, so there is not much variety.  If you run the above command in R, you will see the other species as well.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-a-neural-network-ann&quot;&gt;Using a Neural Network (ANN)&lt;/h2&gt;
+
+&lt;p&gt;I will now show you how to do exactly the same thing using an Artificial Neural Network.  First, we must tell R that we are using ANN’s.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;nnet&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The neural network requires that the species be normalized using one-of-n normalization. We will normalize between 0 and 1.  This can be done with the following command.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;ideal &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; class.ind&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;irisdata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;species&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We can now train a neural network for the training data.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;irisANN &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; nnet&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;irisdata&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irisTrainData&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; ideal&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irisTrainData&lt;span class=&quot;p&quot;&gt;,],&lt;/span&gt; size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; softmax&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we can test the output from the neural network.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;predict&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;irisANN&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; irisdata&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irisValData&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; type&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;class&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The new series of books will cover R, as well as the usual Java and C#. You can pledge ($7) at Kickstarter and pre-order and support this project.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>How to Chart a Function in R</title>
+   <link href="http://www.heatonresearch.com/r/2013/04/01/chart-function-r.html"/>
+   <updated>2013-04-01T08:26:00-05:00</updated>
+   <id>http://www.heatonresearch.com/r/2013/04/01/chart-function-r</id>
+   <content type="html">&lt;p&gt;R works really well as a quick scientific calculator.  I often leave R open simply for 
+quick calculations.  R can also be used to quickly graph a function.  In this article 
+I will show you how to graph a function with R.  The function we will examine is the 
+Sigmoid (or Logistic) function.  This function is often used as an activation function 
+for a neural network.&lt;/p&gt;
+
+&lt;p&gt;We use the following code to define the sigmoid function.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;sigmoid &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;exp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once the sigmoid function has been created it can easily be queried as follows.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;sigmoid&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The above code would produce 0.5.&lt;/p&gt;
+
+&lt;h2 id=&quot;plot-a-function&quot;&gt;Plot a Function&lt;/h2&gt;
+
+&lt;p&gt;The above function could easily be plotted with the following command.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sigmoid&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The -5 and 5 specify the range to plot over. This produces the following plot.&lt;/p&gt;
+
+&lt;p&gt;!{Sigmoid function graphed in R}(/images/blog/)&lt;/p&gt;
+
+&lt;p&gt;If you would like to save your plot to a file, use the following. The plot will be saved to your documents directory.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;png&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;test.png&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sigmoid&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; xlim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; ylim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The above code was used to produce the plot that you see here.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2013-04-01-chart-function-r-1.png&quot; alt=&quot;Sigmoid Function&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you would like to plot two equations on the same graph, the following code can be used.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;pi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;pi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+par&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;new&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;cos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;pi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;pi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>How to Represent Equations in Computer Programs</title>
+   <link href="http://www.heatonresearch.com/geneticprogramming/2013/03/01/represent-equations-programs.html"/>
+   <updated>2013-03-01T07:26:00-06:00</updated>
+   <id>http://www.heatonresearch.com/geneticprogramming/2013/03/01/represent-equations-programs</id>
+   <content type="html">&lt;p&gt;I am currently in the process of adding Genetic Programming to Encog. At their most simple level, a Genetic Programs can be used to create a formula from training data. A neural network or support vector machine is a black box. You really cannot see into how either of these two algorithms is actually providing the values that they are computing. However, with a Genetic Program, you are left with a formula. The formula will likely give you more understanding into the nature of the data than a neural network or SVM.&lt;/p&gt;
+
+&lt;p&gt;To implement Genetic Programming I must have a way to represent formulas in a program. There are many different ways of doing this. Consider the following formula.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In Encog, I refer to the above formula as the “Common Form” of the equation. Encog can parse the above formula and store it internally. Internally Encog stores these expressions in an opcode format based on Reverse Polish Notation (RPN).&lt;/p&gt;
+
+&lt;p&gt;RPN does not require parenthesis. This is a very nice feature of RPN. There are no rules of precedence. Everything is non-ambiguous. Consider a very simple expression, such as 2+4. In RPN this would be stored as follows.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The above basically says to push 2 and 4 onto a stack. Then once we hit the + operator, we pop 2 values off the stack and add them. We know to pop two values off the stack because the plus operator requires two operands. The result of the addition, which is 6, is placed back on the sack. Once the entire expression is evaluated, the answer is the last value on the stack. Now consider a slightly more complex expression.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Written in RPN, this expression would be as follows.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There we start off just as before. 2 and 4 are added and the resulting 6 is on the stack. But now we push another 2 onto the stack. The division now pops 6 and 2 from the stack and divides, resulting in 3.&lt;/p&gt;
+
+&lt;p&gt;Recall the slightly more complex equation from earlier in this article?&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This can be expressed in RPN as well. The above expression in RPN is as follows.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;RPN also lends itself nicely to trees. The above expression could be rendered as the following tree.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2013-04-10-represent-equations-programs-1.png&quot; alt=&quot;Equation Tree&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Encog Workbench rendered the above tree. You can see that the operands for each operator and function are represented by its leaf nodes. Encog is also capable of rendering the expression as a mathematical formula. To render as a formula, LaTex is used. Here you can see the above expression rendered as a formula.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sqrt{\frac{1}{((x+2)^2)}}&lt;/script&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>How to Compute a Derivative in R</title>
+   <link href="http://www.heatonresearch.com/r/2013/02/28/compute-derivative-r.html"/>
+   <updated>2013-02-28T19:00:00-06:00</updated>
+   <id>http://www.heatonresearch.com/r/2013/02/28/compute-derivative-r</id>
+   <content type="html">&lt;p&gt;There are many times that you will want to take the derivative of an expression.  Taking 
+a derivative is a very common thing to do in Machine Learning.  One example is the 
+activation function of a neural network.  If you are going to train the neural network 
+using any of the backpropagation techniques, you will need the derivative of the 
+activation function.  In this article I will show you how to take the derivative of a 
+function using R.&lt;/p&gt;
+
+&lt;p&gt;For this article we will obtain the derivative of the Sigmoid Activation Function. You 
+might be tempted to create a function for the sigmoid.  This can be done as follows.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;sigmoid &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;exp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once the sigmoid function has been created it can easily be queried as follows.&lt;/p&gt;
+
+&lt;p&gt;sigmoid(0)
+The above code would produce 0.5.  Functions are useful when you need to graph the function.  However, to take the derivative you must produce an expression.  This is done as follows.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Ryacas&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; Sym&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+s &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;expression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;e&lt;span class=&quot;o&quot;&gt;^-&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+deriv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This produces the following.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;e^-x * log(e)/(1 + e^-x)^2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you would like to simplify the above, use the following.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;Simplify&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;deriv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </content>
  </entry>
