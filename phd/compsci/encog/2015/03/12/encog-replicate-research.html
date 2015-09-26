@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Heaton Research</title>
-  <meta name="description" content="Jeff Heaton is a data scientist, phd student and indie publisher.  Heaton Research is the homepage for my projects.
-">
+  <title>Using Encog to Replicate Research</title>
+  <meta name="description" content="For the one of my PhD courses at Nova Southeastern University (NSU) it was necessary to reproduce the research of the following paper:">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.heatonresearch.com/jeff/">
+  <link rel="canonical" href="http://www.heatonresearch.com/phd/compsci/encog/2015/03/12/encog-replicate-research.html">
   <link rel="alternate" type="application/rss+xml" title="Heaton Research" href="http://www.heatonresearch.com/feed.xml" />
 <script type="text/javascript"
     src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -194,167 +193,83 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Using Encog to Replicate Research</h1>
+    <p class="post-meta">Mar 12, 2015</p>
+  </header>
 
-  <ul class="post-list">
+  <article class="post-content">
+    <p>For the one of my PhD courses at <a href="http://cec.nova.edu/">Nova Southeastern University (NSU)</a> it was necessary to 
+reproduce the research of the following paper:</p>
+
+<p>I. Ahmad, A. Abdullah, and A. Alghamdi, “Application of artificial neural network in 
+detection of probing attacks,” in IEEE Symposium on Industrial Electronics Applications, 
+2009. ISIEA 2009., vol. 2, Oct 2009, pp. 557–562.</p>
+
+<p>This paper demonstrated how to use a neural network to build a <a href="http://en.wikipedia.org/wiki/Intrusion_detection_system">basic intrusion detection 
+system (IDS)</a> for the <a href="http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html">KDD99 dataset</a>.  It is important to reproduce research, in an academic 
+setting.  This means that you were able to obtain the same results as the original 
+researchers, using the same techniques.  I do this often when I write books or implement 
+parts of Encog. This allows me convince myself that I have implemented an algorithm 
+correctly, and as the researchers intended.  I don’t always agree with what the original 
+researcher did.  If I change it, when I implement Encog, I am now in the area of “original 
+research,” and my changes must be labeled as such.</p>
+
+<p>Some researchers are more helpful than others for replication of research.  Additionally, 
+neural networks are stochastic (they use random numbers).  Basing recommendations off of 
+a small number of runs is usually a bad idea, when dealing with a stochastic system.<br />
+Their small number of runs caused the above researchers to conclude that two hidden layers 
+was optimal for their dataset.  Unless you are dealing with deep learning, this is almost 
+always not the case.  The universal approximation theorem rules out more than a single 
+layer for the old-school sort of perceptron neural network used in this paper.<br />
+Additionally, the vanishing gradient problem prevents the RPROP training that the 
+researchers from fitting well with larger numbers of hidden layers.  The researchers 
+tried up to 4 hidden layers.</p>
+
+<p>For my own research replication I used the same dataset, with many training runs to make 
+sure that their results were within my high-low range.  To prove that a single layer does 
+better I used <a href="http://en.wikipedia.org/wiki/Analysis_of_variance">ANOVA</a> and <a href="http://en.wikipedia.org/wiki/Tukey%27s_range_test">Tukey’s HSD</a> to show that differences among the different neural 
+network architectures were indeed statistically significant and my box and whiskers plot 
+shows that training runs with a single layer more consistently converged to a better 
+mean <a href="http://en.wikipedia.org/wiki/Root-mean-square_deviation">RMSE</a>.</p>
+
+<p>I am attaching both my paper and code in case it is useful.  This is a decent tutorial 
+on using the latest Encog code to normalize and fit to a data set.</p>
+
+<p>The class also required us to write up the results in <a href="http://www.ieee.org/conferences_events/conferences/publishing/templates.html">IEEE conference format</a>.  I am a 
+fan of <a href="http://www.latex-project.org/">LaTex</a>, so that is what I used.</p>
+
+<ul>
+  <li>Source code Includes: <a href="https://github.com/jeffheaton/phd/tree/master/ids-replicate-neural">Source Code Link</a>
+    <ul>
+      <li>Python data prep script</li>
+      <li>R code used to produce graphics and stat analysis</li>
+      <li>Java code to run the training</li>
+    </ul>
+  </li>
+  <li>My report for download (PDF): <a href="https://github.com/jeffheaton/phd/blob/master/ids-replicate-neural/jheaton-ids-replicate.pdf">Paper Link</a></li>
+  <li>My report on ResearchGate: <a href="https://www.researchgate.net/publication/273441572_Replicating_the_Research_of_the_Paper_Application_of_Artificial_Neural_Network_in_Detection_of_Probing_Attacks">Link</a></li>
+</ul>
+
+<p>The code is under LGPL, so feel free to reuse.</p>
+
+  </article>
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'heatonresearch';
     
-      <li>
-        <span class="post-meta">Sep 26, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/phd/2015/09/26/coursera-johns-hopkins-data-science.html">My Experience with the Coursera Johns Hopkins Data Science Certification</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 30, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/phd/2015/08/30/madrid-gecco.html">Visiting Spain and the GECCO Confrence</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 25, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/phd/2015/05/25/first-kaggle.html">My First Kaggle Competition</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 21, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/compsci/r/2015/03/21/r_big_o.html">Quick R Tutorial: The Big-O Chart</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 12, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/phd/compsci/encog/2015/03/12/encog-replicate-research.html">Using Encog to Replicate Research</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 11, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/datascience/2015/03/11/data-science-from-it.html">How I Got Into Data Science from IT Programming</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 9, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/phd/2015/03/09/phd-2nd-cluster-visit.html">PhD Update: Second Cluster Visit for Winter 2015 Semester at NSU</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 27, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/datascience/2014/12/27/quick-dirty-data-wrangling.html">Quick and Very Dirty Data Wrangling Example</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 2, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/phd/2014/09/02/first-visit-nsu.html">First time at the NSU Campus - Fall 2014</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 20, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/learning/2014/05/20/washington-university-mini-medical-school.html">Washington University Mini Medical School</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 2, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/phd/compsci/2014/05/02/starting-computer-science-phd.html">I am Starting a Ph.D. in Computer Science</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 26, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/datascience/2014/02/26/be-a-data-scientist.html">So you want to be a data scientist?</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 20, 2013</span>
-
-        <h2>
-          <a class="post-link" href="/aifh/kickstarter/2013/07/20/kickstarter-techie-book.html">Using Kickstarter to Fund an Indie Technical Book</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 17, 2013</span>
-
-        <h2>
-          <a class="post-link" href="/compsci/2013/07/17/visit-to-computer-history-museum.html">2013 Visit to the Computer History Museum in Palo Alto</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jun 13, 2013</span>
-
-        <h2>
-          <a class="post-link" href="/opencl/gpu/2013/06/13/jug-java-gpu.html">GPU Programming in Java Using OpenCL (JUG)</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jun 12, 2013</span>
-
-        <h2>
-          <a class="post-link" href="/r/ai/2013/06/12/r-classification.html">Basic Classification in R: Neural Networks and Support Vector Machines</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Apr 1, 2013</span>
-
-        <h2>
-          <a class="post-link" href="/r/2013/04/01/chart-function-r.html">How to Chart a Function in R</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 1, 2013</span>
-
-        <h2>
-          <a class="post-link" href="/geneticprogramming/2013/03/01/represent-equations-programs.html">How to Represent Equations in Computer Programs</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 28, 2013</span>
-
-        <h2>
-          <a class="post-link" href="/r/2013/02/28/compute-derivative-r.html">How to Compute a Derivative in R</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 </div>
 

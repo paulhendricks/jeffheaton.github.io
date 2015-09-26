@@ -4,13 +4,150 @@
  <title>Heaton Research</title>
  <link href="http://www.heatonresearch.com/atom.xml" rel="self"/>
  <link href="http://www.heatonresearch.com/"/>
- <updated>2015-09-25T21:01:30-05:00</updated>
+ <updated>2015-09-26T10:02:38-05:00</updated>
  <id>http://www.heatonresearch.com</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>My Experience with the Coursera Johns Hopkins Data Science Certification</title>
+   <link href="http://www.heatonresearch.com/phd/2015/09/26/coursera-johns-hopkins-data-science.html"/>
+   <updated>2015-09-26T08:26:00-05:00</updated>
+   <id>http://www.heatonresearch.com/phd/2015/09/26/coursera-johns-hopkins-data-science</id>
+   <content type="html">&lt;p&gt;This post is a summary of several posts that I had on my old blog about the &lt;a href=&quot;https://www.coursera.org/specializations/jhudatascience&quot;&gt;Johns
+Hopkins Data Science certification&lt;/a&gt; offered by &lt;a href=&quot;https://www.coursera.org/&quot;&gt;Coursera&lt;/a&gt;.
+I am not sure how typical of a student I was for this program.  I currently work as a 
+data scientist, have a decent background in AI, have a number of publications, and am 
+currently completing a PhD in computer science.  So, a logical question is what did I 
+want from this program?&lt;/p&gt;
+
+&lt;p&gt;At the time I took this certification I had not done a great deal of R programming.  This 
+program focused heavily on R.  I view this as both a strength and weakness of the program.&lt;br /&gt;
+I am mostly a Java/Python/C#/C++ guy.  I found the R instruction very useful.
+I’ve focused mainly in AI/machine learning, I hoped this program would fill in some gaps.
+Curiosity.&lt;/p&gt;
+
+&lt;p&gt;I really liked this program.  Courses 1-9 provide a great introduction to the predictive 
+modelling side of data science.  Both machine learning and traditional regression models 
+were covered.  R can be a slow and painful language, at times, but I was able to get 
+through.  It is my opinion that R is primarily useful for ferrying data between models 
+and visualization graphs.  It is not good for heavy-lifting and data wrangling.  The 
+syntax to R is somewhat appalling.  However, it is a domain specific language (DSL), 
+not a general purpose language like Python.  Don’t get me wrong.  I like R for setting up 
+models and graphics.  Not for performing tasks better suited to a general purpose language.&lt;/p&gt;
+
+&lt;p&gt;In a nutshell, here are my opinions.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Pros:&lt;/strong&gt; With the exception of the capstone, very practical real-world data sets.  Experience with both black-box (machine learning) and more explainable (regression models) systems.  Introduction to Slidify and Shiny, I’ve already used both in my day-to-day job.  It takes some real work and understanding to make it through this program.  The last three courses rocked!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Cons:&lt;/strong&gt; Peer review is really hit or miss.  More on this later.  Some lecture material was sub-par (statistical inference) compared to Khan Academy.  Only reinvent the wheel if you are going to make a better wheel.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;course-breakdown&quot;&gt;Course Breakdown&lt;/h2&gt;
+
+&lt;p&gt;Here are my quick opinions on some of these courses.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;The Data Scientist’s Toolbox&lt;/strong&gt;: Basically, can you install R, RStudio and use GitHub.  I’ve already done all three so I got little from this course.  If you have not dealt with R, RStudio and GitHub this class will be a nice slow intro to the program.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;R Programming&lt;/strong&gt;: I enjoyed this course!  It was hard, considering I was taking classes #1 and #3 at the same time.  If you had no programming experiance, this course will be really hard!  Be ready to supplement the instruction with lots of Google Searching.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Getting and Cleaning Data&lt;/strong&gt;: Data wrangling is an important part of data science.  Getting data into a tidy format is important.  This course used quite a bit of R programming.  For me, not being an R programmer and taking course #2 at the same time meant extra work.  If you are NOT an advanced programmer already DO NOT take #2 and #3 at the same time.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Exploratory Data Analysis&lt;/strong&gt;: This was a valuable class, it taught you all about the R graphing packages.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Reproducible Research&lt;/strong&gt;:  Valuable course!  Learning about R markdown was very useful, I am already using this in one of my books to make sure that several of my examples are reproducible by providing a RMD script to produce all the charts from my book.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Statistical Inference&lt;/strong&gt;:  This was an odd class.  I already knew statistical inference and did quite well despite not watching any lectures (hardly).  I don’t believe this course made anyone happy (hardly).  Either you already knew the topic and were bored, or you were completely lost trying to learn statistics for the first time.  There are several Khan academy videos that cover all the material in this course.  Why dose Hopkins need to reproduce this?  Is this not the point of MOOC?  Why not link to the Khan academy videos and test the students.  Best of both worlds!  Also, 90% of the material was not used in the rest of the course, so I suspect many students might have been left wondering why this course is for.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Regression Models&lt;/strong&gt;: Great course, this is the explainable counterpart to machine learning.  You are introduced to linear regression and GLM’s.  This course was setup as the perfect counterpart to #8. My only beef on this course was that I got screwed by peer review.  More on this later.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Practical Machine Learning&lt;/strong&gt;: Great course.  This course showed some of the most current model types in data science: Gradient Boosting Machines (GBMs) and Random Forests.  Also a great description of boosting and an awesome Kaggle like assignment where you submitted results from your model to see if you can match a “hidden data set”.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Developing Data Products&lt;/strong&gt;: Great course.  I really enjoyed playing with shiny, and even used it for one of the examples in my upcoming book.  You can see my shiny project here. https://jeffheaton.shinyapps.io/shiny/  and writeup here.  http://slidify.org/publish.html  They encouraged you to post these to GitHub and public sites, so I assume I am not violating anything by posting here.  Don’t plagiarize me!!!&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Capstone Project&lt;/strong&gt;: Bad ending to an otherwise great program.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;peer-reviewed-grading&quot;&gt;Peer Reviewed Grading&lt;/h2&gt;
+
+&lt;p&gt;If you are not familiar with peer review grading, here is how it works.  For each project 
+you are given four counterparts that review and grade your assignment.  This is mostly 
+double-blind, as neither the student or reviewer knows the other.  I used my regular 
+GitHub account on all assignments.  So it was pretty obvious who I was.  I was even 
+emailed by a grader once who recognized me from my open source projects.  Your grade is an 
+average of what those four people gave you.  At $49 a course maybe this is the only way 
+they can afford grade.  I currently spend nearly 100 times that for each of my 
+PhD courses. :(&lt;/p&gt;
+
+&lt;p&gt;Overall, peer review grading worked good for me in all courses but one.  Here are some of 
+my concerns on peer grading.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You probably have many graders who are pressed for time and just give high-marks without  much thought.  (just a guess/opinion)&lt;/li&gt;
+  &lt;li&gt;You are going to be graded by people who may not have not gotten the question correctly in the first place.&lt;/li&gt;
+  &lt;li&gt;You are instructed NOT to run the R program.  So now I am being graded on someone’s ability to mentally compile and execute my program?&lt;/li&gt;
+  &lt;li&gt;Each peer is going to apply different standards.  You could get radically different marks depending on who your four peers were.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So here is my story in the one case where peer review did not work for me.  I in the 
+upper 98-99% range on most of these courses.  Except for course #8.  I had good scores 
+going into the final project.  However, two of my peers knocked me for these reasons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Two of my peers could not download my file from Coursera.  Yet the other two had no problem.  Fine, so I get a zero because someone’s ISP was flaking out.&lt;/li&gt;
+  &lt;li&gt;Two of peers did not give me credit because the felt I had not used RMD for my report?? (which I had) Fine, so I lose a fair amount of points because two random peers did not know what RMD output looks like.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This took a toll on my grade, I still passed.  But this is the one course I did not get 
+“with distinction” credit.  Yeah big deal.  In the grand scheme of things I don’t really 
+care.  Just mildly annoying.  However, if you are hovering near a 70%, and you get one or 
+two bad reviewers you are probably toast.&lt;/p&gt;
+
+&lt;h2 id=&quot;capstone-project&quot;&gt;Capstone Project&lt;/h2&gt;
+
+&lt;p&gt;The capstone project was to produce a program similar to &lt;a href=&quot;https://swiftkey.com/en&quot;&gt;Swiftkey&lt;/a&gt;, the company that was 
+the partner/sponsor for the capstone.  If you are not familiar with Swiftkey, it attempts 
+to speed mobile text input by predicting the next word you are going to type.  For example, 
+you might type “to be or not to &lt;em&gt;__&lt;/em&gt;”.  The application should fill in “be”.  The end 
+program had to be written in R and deployed to a Shiny Server.&lt;/p&gt;
+
+&lt;p&gt;This project was somewhat flawed in several regards.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Natural Language Processing was not covered in the course.  Neither was unstructured data.  The only material provided on NLP was a handful of links to sites such as Wikipedia.&lt;/li&gt;
+  &lt;li&gt;The first 9 courses had a clear direction.  However, less than half of them had anything to do with the capstone.&lt;/li&gt;
+  &lt;li&gt;The project is not typical of what you would see in most businesses as a data scientist.  It would have been better to do something similar to Kaggle or one of the KDD cups.&lt;/li&gt;
+  &lt;li&gt;In my opinion, R is a bad choice for this sort of project.  During the meetup with Swiftkey, they were asked what tools they used.  R was not among them. R is so cool for many things, why not showcase its abilities?&lt;/li&gt;
+  &lt;li&gt;Student peer review is &lt;a href=&quot;https://www.insidehighered.com/blogs/hack-higher-education/problems-peer-grading-coursera&quot;&gt;bad&lt;/a&gt;… &lt;a href=&quot;http://gregorulm.com/a-critical-view-on-courseras-peer-review-process/&quot;&gt;bad&lt;/a&gt;… &lt;a href=&quot;http://moocnewsandreviews.com/massive-mooc-grading-problem-stanford-hci-group-tackles-peer-assessment/&quot;&gt;bad&lt;/a&gt;… But it might be the &lt;a href=&quot;http://simplystatistics.org/2013/03/26/an-instructors-thoughts-on-peer-review-for-data-analysis-in-coursera/&quot;&gt;only choice&lt;/a&gt;.  The problem with peer review is you have three random reviewers.  They might be easy, they might be hard.  They might penalize you for the fact that they don’t know how to load your program! (this happened to me on a previous coursera course).&lt;/li&gt;
+  &lt;li&gt;Perfect scores on the quizzes were really not possible.  We were given several sample sentences to predict.  The sentences were very specialized and no model would predict them correctly.  The Swiftkey surely did not.  Using my own human intuition and several text mining apps I wrote in Java, I did get 100% on the quizzes.  Even though the instructions clearly said to use your final model.  Knowing I might draw a short straw on peer review, I opted to do what I could to get max points.  I don’t care about my grade, but falling below the cutoff for a bad peer review would not be cool!&lt;/li&gt;
+  &lt;li&gt;Marketing based rubric for final project.  One of the grading criteria posted the question, “Would you hire this person?”  Seriously?  I do participate in the hiring process for data scientists.  I would never hire someone without meeting them, performing a tech interview, and small coding challenge.  I hope this stat is not used in marketing material.  xx% of our graduates produced programs that might land them a job.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After spending several days writing very slow model building code in R, I eventually dropped it and used Java and OpenNLP to write code that would build my model in under 20 minutes.  Others ran into the same issues.  There are somewhat kludge interfaces between R and OpenNLP, Weka and OpenNLP.  But these are native Java apps.  I  just skipped the kludge and built my model in Java and wrote a Shiny app to use the model in R.  This was enough to pass the program.  I was not alone in this approach, based on forum comments.&lt;/p&gt;
+
+&lt;p&gt;Okay, I will just say it.  I thought this was a bad capstone.  This was just my experience 
+on the first run of the certification; hopefully, they’ve improved it since.  The rest of 
+the program was  really good!  If I could make a suggestion, I would say to let the 
+students choose a Kaggle competition to compete.  The Kaggle competitions are closer 
+to the sort of data real data scientists will see.  I am proud of the certificate that I earned.&lt;br /&gt;
+If I were interviewing someone who had this certificate I would consider it a positive.&lt;br /&gt;
+The candidate would still need to go through a standard interview/evaluation process.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;Great program.  It won’t make you a star data scientist, but it will give you a great 
+foundation to go from.  Kaggle might be a good next step.  Another might be a blog and 
+doing some real, and interesting data science to showcase your skills!  This is somewhat 
+how I got into data science.&lt;/p&gt;
+
+&lt;p&gt;A question that I am often asked, is what would I think of this certification, if I saw it
+on the resume of a new data scientist that I was interviewing.  In isolation, I would not
+give a hire recommend based solely on this certification.  However, it would show me that
+someone has mastered the basics of data science.  They know what format data needs to be
+in for predictive modeling.  They know their way around the R-programming language.  They
+also took the initiative to undertake something that took a decent amount of effort.&lt;br /&gt;
+So yes, it is important, particularly, if your resume is lacking in the analytics area.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Visiting Spain and the GECCO Confrence</title>
@@ -251,6 +388,279 @@ competition.&lt;/p&gt;
  </entry>
  
  <entry>
+   <title>Quick R Tutorial: The Big-O Chart</title>
+   <link href="http://www.heatonresearch.com/compsci/r/2015/03/21/r_big_o.html"/>
+   <updated>2015-03-21T08:26:00-05:00</updated>
+   <id>http://www.heatonresearch.com/compsci/r/2015/03/21/r_big_o</id>
+   <content type="html">&lt;p&gt;I needed an original &lt;a href=&quot;http://en.wikipedia.org/wiki/Big_O_notation&quot;&gt;Big-O&lt;/a&gt; chart for a publication.  This tutorial does not cover what 
+Big-O actually is, just how to chart it.  If you want more information on Big-O I 
+recommend reading &lt;a href=&quot;http://bigocheatsheet.com/&quot;&gt;this&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Big_O_notation&quot;&gt;this&lt;/a&gt;.  I know, go figure, for a computer science student. I 
+really like using R for all things chart and visualization.  So, I turned to R for this 
+task.  While this is a very simple chart, it does demonstrate several very common 
+tasks in R:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Overlaying several plots&lt;/li&gt;
+  &lt;li&gt;Adding a legend to a plot&lt;/li&gt;
+  &lt;li&gt;Using “math symbols” inside of the text on a chart&lt;/li&gt;
+  &lt;li&gt;Stripping off all the extra whitespace that R likes to generate&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can see the end-result here:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2015-03-21-r_big_o-1.png&quot; alt=&quot;Computer Science Big-O Chart in R&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This was produced with the following R code:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Remove white space on chart&lt;/span&gt;
+par&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mar&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;+0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# The x &amp;amp; y limits for the plot&lt;/span&gt;
+xl &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+yl &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Just use R&amp;#39;s standard list of colors for the lines (I am too tired to be creative this morning)&lt;/span&gt;
+pal &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; palette&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Plot each of the equations that we are interested in. Note the add=TRUE&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# it causes them to overlay each other.&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;rep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;))),&lt;/span&gt;xlim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;xl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;ylim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;yl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pal&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;xlab&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Elements(N)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;ylab&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Operations&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;xlim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;xl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;ylim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;yl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pal&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;add&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;xlim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;xl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;ylim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;yl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pal&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;add&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;xlim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;xl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;ylim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;yl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pal&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;add&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;xlim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;xl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;ylim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;yl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pal&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;add&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;xlim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;xl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;ylim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;yl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pal&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;add&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;factorial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;xlim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;xl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;ylim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;yl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pal&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;add&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Generate the legend, note the use of expression to handle n to the power of 2.&lt;/span&gt;
+legend&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;topright&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;O(1)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;O(log(n))&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;O(n)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;O(n log(n))&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+ &lt;span class=&quot;kp&quot;&gt;expression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;O&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;expression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;O&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;O(!n)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;lty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pal&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; bty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;n&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; cex&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;.75&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Using Encog to Replicate Research</title>
+   <link href="http://www.heatonresearch.com/phd/compsci/encog/2015/03/12/encog-replicate-research.html"/>
+   <updated>2015-03-12T08:26:00-05:00</updated>
+   <id>http://www.heatonresearch.com/phd/compsci/encog/2015/03/12/encog-replicate-research</id>
+   <content type="html">&lt;p&gt;For the one of my PhD courses at &lt;a href=&quot;http://cec.nova.edu/&quot;&gt;Nova Southeastern University (NSU)&lt;/a&gt; it was necessary to 
+reproduce the research of the following paper:&lt;/p&gt;
+
+&lt;p&gt;I. Ahmad, A. Abdullah, and A. Alghamdi, “Application of artificial neural network in 
+detection of probing attacks,” in IEEE Symposium on Industrial Electronics Applications, 
+2009. ISIEA 2009., vol. 2, Oct 2009, pp. 557–562.&lt;/p&gt;
+
+&lt;p&gt;This paper demonstrated how to use a neural network to build a &lt;a href=&quot;http://en.wikipedia.org/wiki/Intrusion_detection_system&quot;&gt;basic intrusion detection 
+system (IDS)&lt;/a&gt; for the &lt;a href=&quot;http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html&quot;&gt;KDD99 dataset&lt;/a&gt;.  It is important to reproduce research, in an academic 
+setting.  This means that you were able to obtain the same results as the original 
+researchers, using the same techniques.  I do this often when I write books or implement 
+parts of Encog. This allows me convince myself that I have implemented an algorithm 
+correctly, and as the researchers intended.  I don’t always agree with what the original 
+researcher did.  If I change it, when I implement Encog, I am now in the area of “original 
+research,” and my changes must be labeled as such.&lt;/p&gt;
+
+&lt;p&gt;Some researchers are more helpful than others for replication of research.  Additionally, 
+neural networks are stochastic (they use random numbers).  Basing recommendations off of 
+a small number of runs is usually a bad idea, when dealing with a stochastic system.&lt;br /&gt;
+Their small number of runs caused the above researchers to conclude that two hidden layers 
+was optimal for their dataset.  Unless you are dealing with deep learning, this is almost 
+always not the case.  The universal approximation theorem rules out more than a single 
+layer for the old-school sort of perceptron neural network used in this paper.&lt;br /&gt;
+Additionally, the vanishing gradient problem prevents the RPROP training that the 
+researchers from fitting well with larger numbers of hidden layers.  The researchers 
+tried up to 4 hidden layers.&lt;/p&gt;
+
+&lt;p&gt;For my own research replication I used the same dataset, with many training runs to make 
+sure that their results were within my high-low range.  To prove that a single layer does 
+better I used &lt;a href=&quot;http://en.wikipedia.org/wiki/Analysis_of_variance&quot;&gt;ANOVA&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Tukey%27s_range_test&quot;&gt;Tukey’s HSD&lt;/a&gt; to show that differences among the different neural 
+network architectures were indeed statistically significant and my box and whiskers plot 
+shows that training runs with a single layer more consistently converged to a better 
+mean &lt;a href=&quot;http://en.wikipedia.org/wiki/Root-mean-square_deviation&quot;&gt;RMSE&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I am attaching both my paper and code in case it is useful.  This is a decent tutorial 
+on using the latest Encog code to normalize and fit to a data set.&lt;/p&gt;
+
+&lt;p&gt;The class also required us to write up the results in &lt;a href=&quot;http://www.ieee.org/conferences_events/conferences/publishing/templates.html&quot;&gt;IEEE conference format&lt;/a&gt;.  I am a 
+fan of &lt;a href=&quot;http://www.latex-project.org/&quot;&gt;LaTex&lt;/a&gt;, so that is what I used.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Source code Includes: &lt;a href=&quot;https://github.com/jeffheaton/phd/tree/master/ids-replicate-neural&quot;&gt;Source Code Link&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Python data prep script&lt;/li&gt;
+      &lt;li&gt;R code used to produce graphics and stat analysis&lt;/li&gt;
+      &lt;li&gt;Java code to run the training&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;My report for download (PDF): &lt;a href=&quot;https://github.com/jeffheaton/phd/blob/master/ids-replicate-neural/jheaton-ids-replicate.pdf&quot;&gt;Paper Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;My report on ResearchGate: &lt;a href=&quot;https://www.researchgate.net/publication/273441572_Replicating_the_Research_of_the_Paper_Application_of_Artificial_Neural_Network_in_Detection_of_Probing_Attacks&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The code is under LGPL, so feel free to reuse.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>How I Got Into Data Science from IT Programming</title>
+   <link href="http://www.heatonresearch.com/datascience/2015/03/11/data-science-from-it.html"/>
+   <updated>2015-03-11T08:26:00-05:00</updated>
+   <id>http://www.heatonresearch.com/datascience/2015/03/11/data-science-from-it</id>
+   <content type="html">&lt;p&gt;Drew Conway describes data scientist as the combination of domain expertise, statistics 
+and hacker skills.  If you are an IT programmer, you likely already have the last 
+requirement.  If you are a good IT programmer, you probably already understand something 
+about the business data, and have the domain expertise requirement.  In this post I 
+describe how I gained knowledge of statistics/machine learning through a path of open 
+source involvement and publication.&lt;/p&gt;
+
+&lt;p&gt;There are quite a few articles that discuss how to become a data scientist.  Some of them 
+are &lt;a href=&quot;http://www.quora.com/How-do-I-become-a-data-scientist&quot;&gt;even&lt;/a&gt; quite &lt;a href=&quot;http://i1.wp.com/blog.datacamp.com/wp-content/uploads/2014/08/How-to-become-a-data-scientist.jpg&quot;&gt;good&lt;/a&gt;! Most speak in very general terms.  I wrote such an summary awhile 
+back that provides a &lt;a href=&quot;/datascience/2014/02/26/be-a-data-scientist.html&quot;&gt;very general description&lt;/a&gt; of what a data scientist is. In this post, 
+I will describe my own path to becoming a data scientist.  I started out as a Java 
+programmer in a typical IT job.&lt;/p&gt;
+
+&lt;h2 id=&quot;publications&quot;&gt;Publications&lt;/h2&gt;
+
+&lt;p&gt;My publications were some of my earliest credentials.  I started publishing before I had 
+my bachelor’s degree.  My publications and side-programming jobswere the major factors 
+that helped me obtain my first “real” programming job, working for a Fortune 500 
+manufacturing company, back in 1995.  I did not have my first degree at that point.  In 
+1995 I was working on a bachelor’s degree part-time.&lt;/p&gt;
+
+&lt;p&gt;Back in the day, I wrote for publications such as C/C++ Users Journal, Java Developers 
+Journal, and Windows/DOS Developer’s journal.  These were all paper-based magazines.&lt;br /&gt;
+Often on the racks at book stores.  The world has really changed since then!  These days 
+I publish code on sites like &lt;a href=&quot;http://www.github.com/&quot;&gt;GitHub&lt;/a&gt; and &lt;a href=&quot;http://www.codeproject.com/&quot;&gt;CodeProject&lt;/a&gt;.  A great way to gain experience is 
+to find interesting projects to work on, using open source tools.  Then post your projects 
+to GitHub, CodeProject and others.&lt;/p&gt;
+
+&lt;p&gt;I’ve always enjoyed programming and have applied it to many individual projects.  Back in 
+the 80’s I was writing BBS software so that I could run a board on a C64 despite 
+insufficient funds from high school jobs to purchase a RAM expander.  In the 90’s I was 
+hooking up web web cams and writing &lt;a href=&quot;http://en.wikipedia.org/wiki/Common_Gateway_Interface&quot;&gt;CGI&lt;/a&gt; and then later &lt;a href=&quot;http://en.wikipedia.org/wiki/Active_Server_Pages&quot;&gt;ASP&lt;/a&gt;/&lt;a href=&quot;http://en.wikipedia.org/wiki/JavaServer_Pages&quot;&gt;JSP&lt;/a&gt; code to build websites.  I 
+wrote web servers and spiders from the socket up in C++.  Around that time I wrote my 
+first neural network.  Always publish! A hard drive full of cool project code sitting 
+in your desk is not telling the world what you’ve done.  Support open source, a nice set 
+of independent projects on GitHub looks really good.&lt;/p&gt;
+
+&lt;h2 id=&quot;starting-with-ai&quot;&gt;Starting with AI&lt;/h2&gt;
+
+&lt;p&gt;Artificial intelligence is closely related to data science.  In many ways data science 
+is the application of certain AI techniques to potentially large amounts of data.  AI is 
+also closely linked with statistics, an integral part of data science.  I started with AI 
+because it was fun.  I never envisioned using it in my “day job”.  As soon as I got my 
+first neural network done I wrote an article for Java Users Journal.  I quickly discovered 
+that AI had a coolness factor that could help me convince editors to publish my software.&lt;br /&gt;
+I also published my first book on AI.&lt;/p&gt;
+
+&lt;p&gt;Writing code for a book is very different than writing code for a corporate project/open 
+source project.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Book code&lt;/strong&gt;: Readability and understandably are paramount.  Second to none.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Corporate/Open Source Code&lt;/strong&gt;: Readability and understandably are important.  However, real-world necessity often forces scalability &amp;amp; performance to take the front seat.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For example, if my book’s main goal is to show how to use JSP to build a simple blog, 
+do I really care if the blog can scale to the traffic seen by a top-100 website?&lt;br /&gt;
+Likewise, if my goal is to show how a backpropagation neural network trains, do I really 
+want to muddy the water with concurrency?&lt;/p&gt;
+
+&lt;p&gt;The neural network code in my books is meant to be example code.  A clear starting point 
+for something.  But this code is not meant to be “industrial strength”.  However, when 
+people start asking you questions that indicate that they are using your example code 
+for “real projects”, it is now time to start (or join) an open source project!  This is 
+why I started the &lt;a href=&quot;/encog/&quot;&gt;Encog project&lt;/a&gt;.  This might be a path to an open source project for you!&lt;/p&gt;
+
+&lt;h2 id=&quot;deepening-my-understanding-of-ai&quot;&gt;Deepening my Understanding of AI&lt;/h2&gt;
+
+&lt;p&gt;I’ve often heard that neural networks are the &lt;a href=&quot;http://en.wikipedia.org/wiki/Gateway_drug_theory&quot;&gt;gateway drug&lt;/a&gt; to greater artificial 
+intelligence.  Neural networks are an interesting creature.  They have risen and fallen 
+from grace several times.  Currently they are back, and with a vengeance.   Most 
+implementations of deep learning are based on neural networks.  If you would like to 
+learn more about deep learning, I ran a successful Kickstarter campaign on that 
+&lt;a href=&quot;https://www.kickstarter.com/projects/jeffheaton/artificial-intelligence-for-humans-vol-3-deep-lear&quot;&gt;very topic&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I took several really good classes from &lt;a href=&quot;https://www.udacity.com/&quot;&gt;UDacity&lt;/a&gt;, just as they were introduced.  These 
+classes have been somewhat re-branded.  However, UDacity still several great AI and Machine 
+Learning courses.  I also recommend (and have taken) the &lt;a href=&quot;https://www.coursera.org/specialization/jhudatascience/1&quot;&gt;Johns Hopkins Coursera Data Science&lt;/a&gt; 
+specialization.  Its not perfect, but it will expose you to many concepts in AI.  You can 
+read my &lt;a href=&quot;/phd/2015/09/26/coursera-johns-hopkins-data-science.html&quot;&gt;summary of it here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Also, learn statistics.  At least the basics of classical statistics.  You should 
+understand concepts like mean, mode, median, linear regression, anova, manova, Tukey HSD, 
+p-values, etc.  A simple undergraduate course in statistics will give you the foundation.&lt;br /&gt;
+You can build on more complex topics such as Bayesian networks, belief networks, and 
+others later.  Udacity has a nice intro to statistics course.&lt;/p&gt;
+
+&lt;h2 id=&quot;kickstarter-projects&quot;&gt;Kickstarter Projects&lt;/h2&gt;
+
+&lt;p&gt;Public projects are always a good thing.  My projects have brought me speaking 
+opportunities and book opportunities (though I mostly self publish now).  Kickstarter 
+has been great for this.  I launched my Artificial Intelligence for Humans series of books 
+through Kickstarter.&lt;/p&gt;
+
+&lt;h2 id=&quot;from-ai-to-data-science&quot;&gt;From AI to Data Science&lt;/h2&gt;
+
+&lt;p&gt;When data science first started to enter the public scene I was working as a Java 
+programmer writing AI books as a hobby.  A job opportunity at my current company later 
+opened up in data science.  I did not even realize that the opportunity was available, 
+I really was not looking.  However, during the recruiting process they discovered that 
+someone with knowledge of the needed areas lived right here in town.  They had found my 
+project pages.  This led to some good opportunities right in my current company.&lt;/p&gt;
+
+&lt;p&gt;The point is, get your projects out there!  If you don’t have an idea for a project, then 
+enter &lt;a href=&quot;http://www.kaggle.com/&quot;&gt;Kaggle&lt;/a&gt;.  You probably won’t win.  Try to become a Kaggle master.  That will be hard.&lt;br /&gt;
+But you will learn quite a bit trying.  Write about your efforts.  Post code to GitHub.&lt;br /&gt;
+If you use open source tools, write to their creators and send links to your efforts.&lt;br /&gt;
+Open source creators love to post links to people who are actually using their code.&lt;br /&gt;
+For bigger projects (with many or institutional creators), post to their communities.&lt;br /&gt;
+Kaggle gives you a problem to solve.  You don’t have to win.  It will give you something 
+to talk about during an interview.&lt;/p&gt;
+
+&lt;h2 id=&quot;deepening-my-knowledge-as-a-data-scientist&quot;&gt;Deepening my Knowledge as a Data Scientist&lt;/h2&gt;
+
+&lt;p&gt;I try to always be learning.  You will always hear terminology that you feel like you 
+should know, but do not.  This happens to me every day.  Keep a list of what you don’t 
+know, and keep prioritizing and tacking the list (dare I say &lt;a href=&quot;http://guide.agilealliance.org/guide/backlog-grooming.html&quot;&gt;backlog grooming&lt;/a&gt;).&lt;br /&gt;
+Keep learning!  Get involved in projects like Kaggle and read the discussion board.&lt;br /&gt;
+This will show you what you do not know really quick. Write tutorials on your efforts.&lt;br /&gt;
+If something was hard for you, it was hard for others who will appreciate a tutorial.&lt;/p&gt;
+
+&lt;p&gt;I’ve seen a number of articles that question “Do you need a PhD to work as a data 
+scientist?” The answer is that it will help, but is not necessary.  I know numerous 
+data scientists with varying levels of academic credentials.  A PhD demonstrates that 
+someone can follow the rigors of formal academic research and extend human knowledge.&lt;br /&gt;
+When I became a data scientist I was not a PhD student.&lt;/p&gt;
+
+&lt;p&gt;At this point, I am a PhD student in computer science, you can read more about that &lt;a href=&quot;/phd/compsci/2014/05/02/starting-computer-science-phd.html&quot;&gt;here&lt;/a&gt;.&lt;br /&gt;
+I want to learn the process of academic research because I am starting to look at 
+algorithms and techniques that would qualify as original research.  Additionally, I’ve 
+given advice to a several other PhD students, who were using my projects open source 
+projects in their dissertations.  It was time for me to take the leap.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;Data science is described, by Drew Conway, as the intersection of hacker skills, 
+statistics and domain knowledge.  To be an “IT programmer” you most likely already have 
+two of these skills.  Hacker skills is ability to write programs that can wrangle data 
+into many different formats and automate processes.  Domain knowledge is knowing something 
+about the business that you are programming for.  Is your business data just a bunch of 
+columns to you?  An effective IT programmer learns about the business and it’s data.&lt;br /&gt;
+So does an effective data scientist.&lt;/p&gt;
+
+&lt;p&gt;This leaves, only really statistics (and machine learning/AI).  You can learn that from 
+books, MOOCS, and other sources.  Some were mentioned earlier in this article.  I have 
+a list of some of my favorites here.  I also have a &lt;a href=&quot;/book/&quot;&gt;few books&lt;/a&gt; to teach you about AI.&lt;/p&gt;
+
+&lt;p&gt;Most importantly, tinker and learn.  Build/publish projects, blog and contribute to open 
+source.  When you talk to someone interested in hiring you as a data scientist, you will 
+have experience to talk about.  Also have a &lt;a href=&quot;https://github.com/jeffheaton&quot;&gt;GitHub profile&lt;/a&gt;, linked to LinkedIn that shows 
+you do in-fact have something to talk about.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>PhD Update: Second Cluster Visit for Winter 2015 Semester at NSU</title>
    <link href="http://www.heatonresearch.com/phd/2015/03/09/phd-2nd-cluster-visit.html"/>
    <updated>2015-03-09T08:26:00-05:00</updated>
@@ -456,6 +866,63 @@ bit of work.  But, so far, the program looks like it will be a good fit for me.&
  </entry>
  
  <entry>
+   <title>Washington University Mini Medical School</title>
+   <link href="http://www.heatonresearch.com/learning/2014/05/20/washington-university-mini-medical-school.html"/>
+   <updated>2014-05-20T08:26:00-05:00</updated>
+   <id>http://www.heatonresearch.com/learning/2014/05/20/washington-university-mini-medical-school</id>
+   <content type="html">&lt;p&gt;My wife and I just finished the &lt;a href=&quot;https://minimed.wustl.edu/&quot;&gt;Mini-Med series&lt;/a&gt; at &lt;a href=&quot;http://www.wustl.edu/&quot;&gt;Washington University in St. Louis&lt;/a&gt;.&lt;br /&gt;
+Mini-Med is a program offered by WashU that allows laypeople to learn about medicine.&lt;br /&gt;
+Each night is taught by a world class expert in their field.  The biographies of these 
+lecturers is absolutely amazing!  These are some of the doctors who are pushing the 
+boundaries of human understanding in medicine!&lt;/p&gt;
+
+&lt;p&gt;There are three different courses offered in Mini-Med.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Mini-Med 1&lt;/strong&gt;: Lectures and some hands-on labs.  I learned to suture and used a laparoscopy simulator. I also got to tour the Washington University Genome Institute.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Mini-Med 2&lt;/strong&gt;: Lectures and more hands-on labs.  I saw specimens of human organs from cadavers, became CPR certified, learned to examine patients, attended a posture lab, and took a walking tour of the medical school.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Mini-Med 3&lt;/strong&gt;: Revolves more around patient stories and MD’s providing information on their cases.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Mini-Med courses are taught around the typical semester schedule.  There are no 
+classes during the summer semester.  At the end of each class you are given a certificate, 
+if you attended the required number of class sessions.  This is me at the Mini-Med&lt;br /&gt;
+graduation ceremony!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2014-05-20-washington-university-mini-medical-school-1.jpg&quot; alt=&quot;Jeff Graduates Mini-Med&quot; /&gt;
+Jeff graduating Mini-Med 2&lt;/p&gt;
+
+&lt;p&gt;I really enjoyed the hand-on labs.  I particularly enjoyed trying my hand at microsurgery.&lt;br /&gt;
+My wife and I also earned our CPR certification.  Most of the labs were led by medical 
+students, residents and postdocs. They were very knowledgeable, and it was interesting 
+talking with some of them about their medical school journey. We really enjoyed learning 
+from them.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2014-05-20-washington-university-mini-medical-school-2.jpg&quot; alt=&quot;Jeff trying his hand at microsurgery&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;One night we saw human organ specimens from cadavers.  It was fascinating to be able 
+to hold and examine vital organs.  We saw specimens of hearts, kidneys, bladders, 
+the GI track, and even the brain!  Seeing two human brains was fascinating.&lt;br /&gt;
+Being an AI/Machine Learning programmer, it was fascinating to see the “real thing”.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/2014-05-20-washington-university-mini-medical-school-3.jpg&quot; alt=&quot;Jeff holding a human brain&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My wife, Tracy, and I are both life-long learners.  We are both involved in graduate 
+programs. So this is right up our alley.  Tracy is earning a masters degree in Spanish.&lt;br /&gt;
+So she found it fascinating to see the actual “voice box” that she has seen many times 
+in her linguistics texts.  It was fascinating for us both to learn valuable knowledge 
+from outside out fields of study.&lt;/p&gt;
+
+&lt;p&gt;I work as a data scientist for a life insurance company and also working on a doctorate 
+of Computer Science.  I use predictive modeling for insurance underwriting.  Life 
+underwriting has much affinity with medicine.  The two Mini-Med classes have given me 
+valuable information for my job.  As a data scientist it is very useful to learn about 
+the knowledge domain that you are attempting to analyze. In addition to Mini-Med I also 
+worked on the &lt;a href=&quot;http://www.jeffheaton.com/2014/05/review-of-the-first-three-johns-hopkins-coursera-data-science-courses/&quot;&gt;Johns Hopkins Coursera Data Science specialization&lt;/a&gt; this semester.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>I am Starting a Ph.D. in Computer Science</title>
    <link href="http://www.heatonresearch.com/phd/compsci/2014/05/02/starting-computer-science-phd.html"/>
    <updated>2014-05-02T08:26:00-05:00</updated>
@@ -540,6 +1007,146 @@ what I might like to pursue.&lt;/p&gt;
 &lt;p&gt;I am looking forward to starting the program, and seeing what the courses are like.&lt;br /&gt;
 I will travel to Ft. Lauderdale in August, for the first time.  I will write more about 
 this as I continue the process.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>So you want to be a data scientist?</title>
+   <link href="http://www.heatonresearch.com/datascience/2014/02/26/be-a-data-scientist.html"/>
+   <updated>2014-02-26T07:26:00-06:00</updated>
+   <id>http://www.heatonresearch.com/datascience/2014/02/26/be-a-data-scientist</id>
+   <content type="html">&lt;p&gt;Harvard business review calls it the &lt;a href=&quot;http://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century/ar/1&quot;&gt;sexiest job of the 21st century&lt;/a&gt;. But, what skills 
+are needed to become a data scientist, and how can you get these skills?  I began as an 
+advanced computer programmer with business knowledge.  Open Source involvement in 
+Artificial Intelligence gave me the foundation to  move into a data science role.&lt;/p&gt;
+
+&lt;p&gt;There are really three critical skills that a data scientist must posses. A data scientist 
+must be a &lt;strong&gt;statistician&lt;/strong&gt;, &lt;strong&gt;domain expert&lt;/strong&gt; and &lt;strong&gt;hacker&lt;/strong&gt; - not necessarily in that order. There 
+are different types of data scientist. Each type will be stronger in one of these three 
+skills. Lets take a look at each of these three skills and see how you might build up 
+your knowledge.&lt;/p&gt;
+
+&lt;h2 id=&quot;statistician&quot;&gt;Statistician&lt;/h2&gt;
+
+&lt;p&gt;Data scientists examine data and see insights and patterns in data.  Seeing patterns in 
+data is nothing new. &lt;a href=&quot;http://en.wikipedia.org/wiki/Ronald_Fisher&quot;&gt;Sir Ronald Fisher&lt;/a&gt; was doing this back in 1936. Fisher was interested 
+in determining what sort of flower he was looking at. You might think it is easy to 
+determine a flower type. For humans this is an easy task.  However, researchers are still 
+determining exactly how humans performed this seemingly simple task.&lt;/p&gt;
+
+&lt;p&gt;How does a human likely recognize a flower? Most likely we are considering features about 
+the flower. What color is it? How big is it? What does it smell like? Fisher wanted to 
+determine the iris species using a specified set of features about each iris. To do this 
+he collected four numeric measurements for 150 iris flowers. This included 50 flowers 
+each from three different iris species. Using these irises he was able to make a 
+statistical model that would tell him the iris species for a new flower using just these 
+four measurements.&lt;/p&gt;
+
+&lt;p&gt;There are many different ways to acquire statistical skills. If you are not familiar with 
+basic statistics terms such as &lt;a href=&quot;http://en.wikipedia.org/wiki/Standard_score&quot;&gt;z-score&lt;/a&gt;, &lt;a href=&quot;http://en.wikipedia.org/wiki/P-value&quot;&gt;p-value&lt;/a&gt;, &lt;a href=&quot;http://en.wikipedia.org/wiki/Analysis_of_variance&quot;&gt;ANOVA&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Normal_distribution&quot;&gt;Normal Distribution&lt;/a&gt;, you should 
+start with a &lt;a href=&quot;https://www.udacity.com/course/st095&quot;&gt;Statistics 101&lt;/a&gt; type class. &lt;a href=&quot;https://www.udacity.com/&quot;&gt;UDacity&lt;/a&gt; offers several good choices for this. 
+As your statistical skills grow, you will find &lt;a href=&quot;https://www.khanacademy.org/&quot;&gt;Khan Academy&lt;/a&gt; to be indispensable. I’ve 
+learned a great deal pouring over Khan Academy and Wikipedia pages for several statistical 
+models. As you advance, &lt;a href=&quot;http://en.wikipedia.org/wiki/Artificial_intelligence&quot;&gt;Artificial Intelligence&lt;/a&gt; and specifically &lt;a href=&quot;http://en.wikipedia.org/wiki/Machine_learning&quot;&gt;Machine Learning&lt;/a&gt; will 
+also become important. I’ve written several &lt;a href=&quot;/book/&quot;&gt;books&lt;/a&gt; in this space that might be useful for you.&lt;/p&gt;
+
+&lt;h2 id=&quot;domain-expert&quot;&gt;Domain Expert&lt;/h2&gt;
+
+&lt;p&gt;A domain expert is someone who has real-world knowledge about the data that they are 
+analyzing. While Fisher was a statistician, he was also an &lt;a href=&quot;http://en.wikipedia.org/wiki/Evolutionary_biology&quot;&gt;evolutionary biologist&lt;/a&gt; and a 
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Geneticist&quot;&gt;geneticist&lt;/a&gt;. Fisher was a domain expert. The collected iris data was not just a sheet of 
+numbers to him. He knew something about the iris flowers he was analyzing.&lt;/p&gt;
+
+&lt;p&gt;This domain knowledge allowed him to know what flower measurements to consider. Fisher 
+measured the length and width of both the &lt;a href=&quot;http://en.wikipedia.org/wiki/Petal&quot;&gt;petal&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Sepal&quot;&gt;sepal&lt;/a&gt; of each iris flower. He did not 
+measure the roots, stem thickness or chemical makeup of each flower. Because Fisher knew 
+something about flowers, he had an idea of which measurements to consider. He also knew 
+if his results made any sense.&lt;/p&gt;
+
+&lt;p&gt;Being able to determine if your model makes any sense is critical. &lt;a href=&quot;http://en.wikipedia.org/wiki/Dogs_of_the_Dow&quot;&gt;Dogs of the Dow&lt;/a&gt; was a 
+popular investing strategy from early 1990’s that would seemingly pick winning portfolios 
+based on very simple data. Just plug in the dividend yields of the DJIA-30 stocks to gain 
+a portfolio that beats the overall stock market average. Analysis of historic data created 
+this model. The problem is that this model fit the historic data much better than it did 
+the future data. “Dogs of the Dow” found a mostly coincidental pattern in the historic 
+data. While there are some holdouts, the Dogs of the Dow is now a &lt;a href=&quot;http://online.barrons.com/article/SB50001424053111904399004579266300171650902.html&quot;&gt;largely discredited&lt;/a&gt; 
+model.&lt;/p&gt;
+
+&lt;p&gt;Becoming a domain expert is somewhat more elusive. The first question you should be 
+asking is “what domain?” You might choose a domain such as finance, marketing, biology, 
+or any other common business field. It will be helpful if you already have experience in 
+a particular industry. If not, try to take some courses that will expose you to the data 
+of a particular industry. Economics, marketing and finance classes are always good choices.&lt;/p&gt;
+
+&lt;h2 id=&quot;hacker&quot;&gt;Hacker&lt;/h2&gt;
+
+&lt;p&gt;Finally, a data scientist must be a &lt;a href=&quot;http://en.wikipedia.org/wiki/Hacker_(programmer_subculture)&quot;&gt;hacker&lt;/a&gt;. At first this idea might seem strange. By 
+hacker, I do not mean someone who attempts to &lt;a href=&quot;http://en.wikipedia.org/wiki/Hacker_(computer_security)&quot;&gt;circumvent computer security&lt;/a&gt;. For this 
+definition, a hacker is a programmer. However, not every programmer is a hacker. A hacker 
+is a programmer who will hack at a problem until that problem is solved. The hacker is not 
+intimidated by hitting a brick wall. The hacker will come up with a very creative way 
+around the brick wall, even if earlier attempts have all failed.&lt;/p&gt;
+
+&lt;p&gt;Fisher did not need to be a hacker. Fisher had 150 flowers to analyze. He measured each 
+one by hand and made sure his data was clean and accurate. Consider if Fisher had 150 
+million flowers. Further, a mechanical process with a 90% accuracy rate measured each of 
+these flowers. Now we have a huge amount of somewhat inaccurate data. We now have a 
+“&lt;a href=&quot;http://en.wikipedia.org/wiki/Big_data&quot;&gt;Big Data&lt;/a&gt;” problem. Big Data is any data set that is so large that it is difficult to 
+work with. Typically “Big Data” starts at the point where a data set can no longer fit in 
+the memory of a single computer. Not long ago everything over 640k (the original useable 
+memory size of a PC) was “Big Data”.&lt;/p&gt;
+
+&lt;p&gt;The hacker can wrangle “Big Data” and get it into a form that a statistical model can 
+handle. This wrangling might mean merging data from many sources, or writing automated 
+programs to harvest data from the Internet. The hacker might need to clean the data in 
+some way. The data might need further wrangling to even get it into a statistical model.&lt;/p&gt;
+
+&lt;p&gt;If you are a computer programmer already, then you already have some of the hacker skills. 
+If you are a computer programmer who spends their free time learning new programming 
+skills and perhaps contributing to open source, then you might be a hacker! If not, try 
+something new. Two of the most predominant data science languages are Python and R. Java, 
+C# and C/C++ are also choices. &lt;a href=&quot;https://www.udacity.com/&quot;&gt;UDacity&lt;/a&gt; and Coursera(https://www.coursera.org/) both have several courses to allow 
+you to use hacker skills to sharpen data science. The best way to learn to be a hacker 
+is to hack. Practice examples and then experiment with data that interests you.&lt;/p&gt;
+
+&lt;h2 id=&quot;acquiring-data-science-skills&quot;&gt;Acquiring Data Science Skills&lt;/h2&gt;
+
+&lt;p&gt;To summarize, a data scientist must have three primary skills.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mathematics &amp;amp; Statistics (statistician)&lt;/li&gt;
+  &lt;li&gt;Business Domain Knowledge (real world knowledge)&lt;/li&gt;
+  &lt;li&gt;Hacker (creative computer programmer)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are also a number of programs available to teach data science.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/specialization/jhudatascience/1&quot;&gt;Johns Hopkins Data Science Specialization (Coursera)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.udacity.com/courses#!/Data%20Science&quot;&gt;UDacity Data Science&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://datascience.berkeley.edu/&quot;&gt;Berkeley Online Masters Data Science&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://web.ccsu.edu/datamining/&quot;&gt;University of Connecticut Data Mining Masters Degree&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are also many great data science blogs.  I personally read the following.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hilarymason.com/&quot;&gt;Hilary Mason&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://datascience101.wordpress.com/&quot;&gt;Data Science 101&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.r-bloggers.com/&quot;&gt;R Bloggers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kdnuggets.com/&quot;&gt;KD Nuggets&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For me, the road to data science started at programming. I worked for many years as a 
+computer programmer in the life insurance industry. As a result, I learned quite a bit 
+about life insurance data. I also learned how to crunch data and provide reports to 
+present data. Long before I had ever heard the term “data science,” I developed an 
+interest in Artificial Intelligence. What does a hacker do when they are interested in 
+something? I started experimenting and programming. I learned more about AI. This 
+knowledge ultimately opened doors and I moved into more of a data science role.&lt;/p&gt;
+
+&lt;p&gt;If you are interested in AI, you might find some of my projects interesting. I have a 
+machine learning open source projects, write a blog and write books.&lt;/p&gt;
 </content>
  </entry>
  
