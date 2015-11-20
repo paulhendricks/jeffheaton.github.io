@@ -40,9 +40,9 @@
           
         
           
-          <a class="page-link" href="/about/">About</a>
-          
         
+          
+          <a class="page-link" href="/about/">About</a>
           
         
           
@@ -110,25 +110,27 @@
           
         
           
-          <a class="page-link" href="/book/index.html">Books</a>
+          <a class="page-link" href="/book/">Books</a>
           
         
           
-        
-          
-          <a class="page-link" href="/jeff/index.html">Blog</a>
-          
-        
-          
-        
-          
-        
+          <a class="page-link" href="/jeff/">Blog</a>
           
         
           
         
           
           <a class="page-link" href="/encog/">Encog</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -231,30 +233,30 @@ tasks in R:</p>
 
 <p>This was produced with the following R code:</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># Remove white space on chart</span>
-par<span class="p">(</span>mar<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">)</span><span class="m">+0.1</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># Remove white space on chart
+</span><span class="n">par</span><span class="p">(</span><span class="n">mar</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">)</span><span class="m">+0.1</span><span class="p">)</span>
 
-<span class="c1"># The x &amp; y limits for the plot</span>
-xl <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">100</span><span class="p">)</span>
-yl <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1000</span><span class="p">)</span>
+<span class="c1"># The x &amp; y limits for the plot
+</span><span class="n">xl</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">100</span><span class="p">)</span>
+<span class="n">yl</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1000</span><span class="p">)</span>
 
-<span class="c1"># Just use R&#39;s standard list of colors for the lines (I am too tired to be creative this morning)</span>
-pal <span class="o">&lt;-</span> palette<span class="p">()</span>
+<span class="c1"># Just use R's standard list of colors for the lines (I am too tired to be creative this morning)
+</span><span class="n">pal</span> <span class="o">&lt;-</span> <span class="n">palette</span><span class="p">()</span>
 
-<span class="c1"># Plot each of the equations that we are interested in. Note the add=TRUE</span>
-<span class="c1"># it causes them to overlay each other.</span>
-plot<span class="p">(</span><span class="kr">function</span><span class="p">(</span>n<span class="p">)</span> <span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="kp">length</span><span class="p">(</span>n<span class="p">))),</span>xlim<span class="o">=</span>xl<span class="p">,</span>ylim<span class="o">=</span>yl<span class="p">,</span>col<span class="o">=</span>pal<span class="p">[</span><span class="m">1</span><span class="p">],</span>xlab<span class="o">=</span><span class="s">&quot;Elements(N)&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;Operations&quot;</span><span class="p">)</span>
-plot<span class="p">(</span><span class="kr">function</span><span class="p">(</span>n<span class="p">)</span> <span class="p">(</span><span class="kp">log</span><span class="p">(</span>n<span class="p">)),</span>xlim<span class="o">=</span>xl<span class="p">,</span>ylim<span class="o">=</span>yl<span class="p">,</span>col<span class="o">=</span>pal<span class="p">[</span><span class="m">2</span><span class="p">],</span>add<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-plot<span class="p">(</span><span class="kr">function</span><span class="p">(</span>n<span class="p">)</span> <span class="p">(</span>n<span class="p">),</span>xlim<span class="o">=</span>xl<span class="p">,</span>ylim<span class="o">=</span>yl<span class="p">,</span>col<span class="o">=</span>pal<span class="p">[</span><span class="m">3</span><span class="p">],</span>add<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-plot<span class="p">(</span><span class="kr">function</span><span class="p">(</span>n<span class="p">)</span> <span class="p">(</span>n<span class="o">*</span><span class="kp">log</span><span class="p">(</span>n<span class="p">)),</span>xlim<span class="o">=</span>xl<span class="p">,</span>ylim<span class="o">=</span>yl<span class="p">,</span>col<span class="o">=</span>pal<span class="p">[</span><span class="m">4</span><span class="p">],</span>add<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-plot<span class="p">(</span><span class="kr">function</span><span class="p">(</span>n<span class="p">)</span> <span class="p">(</span>n<span class="o">^</span><span class="m">2</span><span class="p">),</span>xlim<span class="o">=</span>xl<span class="p">,</span>ylim<span class="o">=</span>yl<span class="p">,</span>col<span class="o">=</span>pal<span class="p">[</span><span class="m">5</span><span class="p">],</span>add<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-plot<span class="p">(</span><span class="kr">function</span><span class="p">(</span>n<span class="p">)</span> <span class="p">(</span><span class="m">2</span><span class="o">^</span>n<span class="p">),</span>xlim<span class="o">=</span>xl<span class="p">,</span>ylim<span class="o">=</span>yl<span class="p">,</span>col<span class="o">=</span>pal<span class="p">[</span><span class="m">6</span><span class="p">],</span>add<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-plot<span class="p">(</span><span class="kr">function</span><span class="p">(</span>n<span class="p">)</span> <span class="p">(</span><span class="kp">factorial</span><span class="p">(</span>n<span class="p">)),</span>xlim<span class="o">=</span>xl<span class="p">,</span>ylim<span class="o">=</span>yl<span class="p">,</span>col<span class="o">=</span>pal<span class="p">[</span><span class="m">7</span><span class="p">],</span>add<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="c1"># Plot each of the equations that we are interested in. Note the add=TRUE
+# it causes them to overlay each other.
+</span><span class="n">plot</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">(</span><span class="n">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="n">length</span><span class="p">(</span><span class="n">n</span><span class="p">))),</span><span class="n">xlim</span><span class="o">=</span><span class="n">xl</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="n">yl</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="n">pal</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="n">xlab</span><span class="o">=</span><span class="s2">"Elements(N)"</span><span class="p">,</span><span class="n">ylab</span><span class="o">=</span><span class="s2">"Operations"</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="n">n</span><span class="p">)),</span><span class="n">xlim</span><span class="o">=</span><span class="n">xl</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="n">yl</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="n">pal</span><span class="p">[</span><span class="m">2</span><span class="p">],</span><span class="n">add</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="n">xlim</span><span class="o">=</span><span class="n">xl</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="n">yl</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="n">pal</span><span class="p">[</span><span class="m">3</span><span class="p">],</span><span class="n">add</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">log</span><span class="p">(</span><span class="n">n</span><span class="p">)),</span><span class="n">xlim</span><span class="o">=</span><span class="n">xl</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="n">yl</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="n">pal</span><span class="p">[</span><span class="m">4</span><span class="p">],</span><span class="n">add</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">(</span><span class="n">n</span><span class="o">^</span><span class="m">2</span><span class="p">),</span><span class="n">xlim</span><span class="o">=</span><span class="n">xl</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="n">yl</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="n">pal</span><span class="p">[</span><span class="m">5</span><span class="p">],</span><span class="n">add</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">(</span><span class="m">2</span><span class="o">^</span><span class="n">n</span><span class="p">),</span><span class="n">xlim</span><span class="o">=</span><span class="n">xl</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="n">yl</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="n">pal</span><span class="p">[</span><span class="m">6</span><span class="p">],</span><span class="n">add</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)),</span><span class="n">xlim</span><span class="o">=</span><span class="n">xl</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="n">yl</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="n">pal</span><span class="p">[</span><span class="m">7</span><span class="p">],</span><span class="n">add</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
 
-<span class="c1"># Generate the legend, note the use of expression to handle n to the power of 2.</span>
-legend<span class="p">(</span><span class="s">&#39;topright&#39;</span><span class="p">,</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;O(1)&quot;</span><span class="p">,</span><span class="s">&quot;O(log(n))&quot;</span><span class="p">,</span><span class="s">&quot;O(n)&quot;</span><span class="p">,</span><span class="s">&quot;O(n log(n))&quot;</span><span class="p">,</span>
- <span class="kp">expression</span><span class="p">(</span>O<span class="p">(</span>n<span class="o">^</span><span class="m">2</span><span class="p">)),</span><span class="kp">expression</span><span class="p">(</span>O<span class="p">(</span><span class="m">2</span><span class="o">^</span>n<span class="p">),</span><span class="s">&quot;O(!n)&quot;</span><span class="p">))</span>
- <span class="p">,</span>lty<span class="o">=</span><span class="m">1</span><span class="p">,</span> col<span class="o">=</span>pal<span class="p">,</span> bty<span class="o">=</span><span class="s">&#39;n&#39;</span><span class="p">,</span> cex<span class="o">=</span><span class="m">.75</span><span class="p">)</span></code></pre></div>
+<span class="c1"># Generate the legend, note the use of expression to handle n to the power of 2.
+</span><span class="n">legend</span><span class="p">(</span><span class="s1">'topright'</span><span class="p">,</span> <span class="n">c</span><span class="p">(</span><span class="s2">"O(1)"</span><span class="p">,</span><span class="s2">"O(log(n))"</span><span class="p">,</span><span class="s2">"O(n)"</span><span class="p">,</span><span class="s2">"O(n log(n))"</span><span class="p">,</span>
+ <span class="n">expression</span><span class="p">(</span><span class="n">O</span><span class="p">(</span><span class="n">n</span><span class="o">^</span><span class="m">2</span><span class="p">)),</span><span class="n">expression</span><span class="p">(</span><span class="n">O</span><span class="p">(</span><span class="m">2</span><span class="o">^</span><span class="n">n</span><span class="p">),</span><span class="s2">"O(!n)"</span><span class="p">))</span>
+ <span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="m">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="n">pal</span><span class="p">,</span> <span class="n">bty</span><span class="o">=</span><span class="s1">'n'</span><span class="p">,</span> <span class="n">cex</span><span class="o">=</span><span class="m">.75</span><span class="p">)</span></code></pre></figure>
 
 
   </article>

@@ -40,9 +40,9 @@
           
         
           
-          <a class="page-link" href="/about/">About</a>
-          
         
+          
+          <a class="page-link" href="/about/">About</a>
           
         
           
@@ -110,25 +110,27 @@
           
         
           
-          <a class="page-link" href="/book/index.html">Books</a>
+          <a class="page-link" href="/book/">Books</a>
           
         
           
-        
-          
-          <a class="page-link" href="/jeff/index.html">Blog</a>
-          
-        
-          
-        
-          
-        
+          <a class="page-link" href="/jeff/">Blog</a>
           
         
           
         
           
           <a class="page-link" href="/encog/">Encog</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -217,14 +219,14 @@ often used to demonstrate machine learning.  This data set provides four measure
 for three different iris species.  Data such as this typically comes in a CSV File.  The 
 iris CSV file looks something like this.</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">&quot;sepal_l&quot;,&quot;sepal_w&quot;,&quot;petal_l&quot;,&quot;petal_w&quot;,&quot;species&quot;
+<figure class="highlight"><pre><code class="language-text" data-lang="text">"sepal_l","sepal_w","petal_l","petal_w","species"
 5.1,3.5,1.4,0.2,Iris-setosa
 4.9,3.0,1.4,0.2,Iris-setosa
 4.7,3.2,1.3,0.2,Iris-setosa
 4.6,3.1,1.5,0.2,Iris-setosa
 5.0,3.6,1.4,0.2,Iris-setosa
 5.4,3.9,1.7,0.4,Iris-setosa
-4.6,3.4,1.4,0.3,Iris-setosa</code></pre></div>
+4.6,3.4,1.4,0.3,Iris-setosa</code></pre></figure>
 
 <p>You can download the above file here.</p>
 
@@ -232,15 +234,15 @@ iris CSV file looks something like this.</p>
 
 <p>By default R expects to find files in your home directory.  You can also specify a full path.  We will now load the iris dataset.  Of course, R has the iris dataset build into the variables iris and iris3.  However, we will assume that you might want to use your own dataset.  Therefore I will demonstrate how to load the iris.csv file.  The following command is used to load the Iris data set.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r">irisdata <span class="o">&lt;-</span> read.csv<span class="p">(</span>file<span class="o">=</span><span class="s">&quot;iris.csv&quot;</span><span class="p">,</span>head<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span>sep<span class="o">=</span><span class="s">&quot;,&quot;</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">irisdata</span> <span class="o">&lt;-</span> <span class="n">read.csv</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">"iris.csv"</span><span class="p">,</span><span class="n">head</span><span class="o">=</span><span class="n">TRUE</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">","</span><span class="p">)</span></code></pre></figure>
 
 <p>You can also load the data right over the web.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r">irisdata <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="s">&quot;http://www.heatonresearch.com/dload/data/iris.csv&quot;</span><span class="p">,</span>head<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span>sep<span class="o">=</span><span class="s">&quot;,&quot;</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">irisdata</span> <span class="o">&lt;-</span> <span class="n">read.csv</span><span class="p">(</span><span class="s2">"http://www.heatonresearch.com/dload/data/iris.csv"</span><span class="p">,</span><span class="n">head</span><span class="o">=</span><span class="n">TRUE</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">","</span><span class="p">)</span></code></pre></figure>
 
 <p>Now that the iris data set is loaded, you can display the entire data set just by entering the variable name.</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">&gt; irisdata
+<figure class="highlight"><pre><code class="language-text" data-lang="text">&gt; irisdata
 sepal_l sepal_w petal_l petal_w species
 1 5.1 3.5 1.4 0.2 Iris-setosa
 2 4.9 3.0 1.4 0.2 Iris-setosa
@@ -249,11 +251,11 @@ sepal_l sepal_w petal_l petal_w species
 5 5.0 3.6 1.4 0.2 Iris-setosa
 6 5.4 3.9 1.7 0.4 Iris-setosa
 7 4.6 3.4 1.4 0.3 Iris-setosa
-...</code></pre></div>
+...</code></pre></figure>
 
 <p>You can also use the summary function to provide a very useful summary of the iris data.</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">&gt; summary(irisdata)
+<figure class="highlight"><pre><code class="language-text" data-lang="text">&gt; summary(irisdata)
  sepal_l sepal_w petal_l petal_w 
  Min. :4.300 Min. :2.000 Min. :1.000 Min. :0.100 
  1st Qu.:5.100 1st Qu.:2.800 1st Qu.:1.600 1st Qu.:0.300 
@@ -264,44 +266,44 @@ sepal_l sepal_w petal_l petal_w species
  species 
  Iris-setosa :50 
  Iris-versicolor:50 
- Iris-virginica :50</code></pre></div>
+ Iris-virginica :50</code></pre></figure>
 
 <h2 id="training-and-validation-data">Training and Validation Data</h2>
 
 <p>It is often useful to break the data into training and validation sets.  This allows you to validate the SVM or ANN on data that it was never trained with.  The Iris dataset has 150 elements in it.  For our training set we will sample 100 elements from this 150 element set.  This is done with the following commands.</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">irisTrainData = sample(1:150,100)
+<figure class="highlight"><pre><code class="language-text" data-lang="text">irisTrainData = sample(1:150,100)
 irisValData = setdiff(1:150,irisTrainData)
 It is very important to note that the above vectors are only indexes, and not the actual data.  To obtain the actual data you must use one of the following commands.
 
 irisdata[irisTrainData,]
-irisdata[irisValData,]</code></pre></div>
+irisdata[irisValData,]</code></pre></figure>
 
 <h2 id="using-a-support-vector-machine-svm">Using a Support Vector Machine (SVM)</h2>
 
 <p>I will now show you how to train a support vector for the Iris data set.  First, we must tell R that we are using SVM’s.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="kn">library</span><span class="p">(</span>kernlab<span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">kernlab</span><span class="p">)</span></code></pre></figure>
 
 <p>Next, we create a radial basis function (RBF) that will be used during training.  This will be used as the kernel function.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r">rbf <span class="o">&lt;-</span> rbfdot<span class="p">(</span>sigma<span class="o">=</span><span class="m">0.1</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">rbf</span> <span class="o">&lt;-</span> <span class="n">rbfdot</span><span class="p">(</span><span class="n">sigma</span><span class="o">=</span><span class="m">0.1</span><span class="p">)</span></code></pre></figure>
 
 <p>Next we train the SVM.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r">irisSVM <span class="o">&lt;-</span> ksvm<span class="p">(</span>species<span class="o">~</span><span class="m">.</span><span class="p">,</span>data<span class="o">=</span>irisdata<span class="p">[</span>irisTrainData<span class="p">,],</span>type<span class="o">=</span><span class="s">&quot;C-bsvc&quot;</span><span class="p">,</span>kernel<span class="o">=</span>rbf<span class="p">,</span>C<span class="o">=</span><span class="m">10</span><span class="p">,</span>prob.model<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">irisSVM</span> <span class="o">&lt;-</span> <span class="n">ksvm</span><span class="p">(</span><span class="n">species</span><span class="o">~</span><span class="err">.</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">irisdata</span><span class="p">[</span><span class="n">irisTrainData</span><span class="p">,],</span><span class="n">type</span><span class="o">=</span><span class="s2">"C-bsvc"</span><span class="p">,</span><span class="n">kernel</span><span class="o">=</span><span class="n">rbf</span><span class="p">,</span><span class="n">C</span><span class="o">=</span><span class="m">10</span><span class="p">,</span><span class="n">prob.model</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span></code></pre></figure>
 
 <p>Next we get the fitted values for this iris SVM.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r">fitted<span class="p">(</span>irisSVM<span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">fitted</span><span class="p">(</span><span class="n">irisSVM</span><span class="p">)</span></code></pre></figure>
 
 <p>Test on the validation set with probabilities as output.  The -5 means to remove the 5th column, which is species.  We are trying to predict species.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r">predict<span class="p">(</span>irisSVM<span class="p">,</span> irisdata<span class="p">[</span>irisValData<span class="p">,</span><span class="m">-5</span><span class="p">],</span> type<span class="o">=</span><span class="s">&quot;probabilities&quot;</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">predict</span><span class="p">(</span><span class="n">irisSVM</span><span class="p">,</span> <span class="n">irisdata</span><span class="p">[</span><span class="n">irisValData</span><span class="p">,</span><span class="m">-5</span><span class="p">],</span> <span class="n">type</span><span class="o">=</span><span class="s2">"probabilities"</span><span class="p">)</span></code></pre></figure>
 
 <p>This produces output similar to the following.</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">Iris-setosa Iris-versicolor Iris-virginica
+<figure class="highlight"><pre><code class="language-text" data-lang="text"> Iris-setosa Iris-versicolor Iris-virginica
  [1,] 0.964182671 0.022183652 0.013633677
  [2,] 0.952685528 0.032202528 0.015111944
  [3,] 0.966094194 0.021206723 0.012699083
@@ -312,7 +314,7 @@ irisdata[irisValData,]</code></pre></div>
  [8,] 0.918612644 0.060459572 0.020927784
  [9,] 0.953575715 0.030428791 0.015995494
 [10,] 0.948050721 0.035563597 0.016385682
-...</code></pre></div>
+...</code></pre></figure>
 
 <p>The above shows the predictions for the first 10 elements of the validation set.  The numbers you see are probabilities.  As you can see each line has one column with the maximum probability.  These samples are all Iris-setosa.  I only show ten rows, so there is not much variety.  If you run the above command in R, you will see the other species as well.</p>
 
@@ -320,19 +322,19 @@ irisdata[irisValData,]</code></pre></div>
 
 <p>I will now show you how to do exactly the same thing using an Artificial Neural Network.  First, we must tell R that we are using ANN’s.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="kn">library</span><span class="p">(</span>nnet<span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">nnet</span><span class="p">)</span></code></pre></figure>
 
 <p>The neural network requires that the species be normalized using one-of-n normalization. We will normalize between 0 and 1.  This can be done with the following command.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r">ideal <span class="o">&lt;-</span> class.ind<span class="p">(</span>irisdata<span class="o">$</span>species<span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">ideal</span> <span class="o">&lt;-</span> <span class="n">class.ind</span><span class="p">(</span><span class="n">irisdata</span><span class="o">$</span><span class="n">species</span><span class="p">)</span></code></pre></figure>
 
 <p>We can now train a neural network for the training data.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r">irisANN <span class="o">=</span> nnet<span class="p">(</span>irisdata<span class="p">[</span>irisTrainData<span class="p">,</span><span class="m">-5</span><span class="p">],</span> ideal<span class="p">[</span>irisTrainData<span class="p">,],</span> size<span class="o">=</span><span class="m">10</span><span class="p">,</span> softmax<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">irisANN</span> <span class="o">=</span> <span class="n">nnet</span><span class="p">(</span><span class="n">irisdata</span><span class="p">[</span><span class="n">irisTrainData</span><span class="p">,</span><span class="m">-5</span><span class="p">],</span> <span class="n">ideal</span><span class="p">[</span><span class="n">irisTrainData</span><span class="p">,],</span> <span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">softmax</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span></code></pre></figure>
 
 <p>Now we can test the output from the neural network.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r">predict<span class="p">(</span>irisANN<span class="p">,</span> irisdata<span class="p">[</span>irisValData<span class="p">,</span><span class="m">-5</span><span class="p">],</span> type<span class="o">=</span><span class="s">&quot;class&quot;</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"> <span class="n">predict</span><span class="p">(</span><span class="n">irisANN</span><span class="p">,</span> <span class="n">irisdata</span><span class="p">[</span><span class="n">irisValData</span><span class="p">,</span><span class="m">-5</span><span class="p">],</span> <span class="n">type</span><span class="o">=</span><span class="s2">"class"</span><span class="p">)</span></code></pre></figure>
 
 <p>The new series of books will cover R, as well as the usual Java and C#. You can pledge ($7) at Kickstarter and pre-order and support this project.</p>
 

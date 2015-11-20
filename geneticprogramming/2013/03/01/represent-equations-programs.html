@@ -40,9 +40,9 @@
           
         
           
-          <a class="page-link" href="/about/">About</a>
-          
         
+          
+          <a class="page-link" href="/about/">About</a>
           
         
           
@@ -110,25 +110,27 @@
           
         
           
-          <a class="page-link" href="/book/index.html">Books</a>
+          <a class="page-link" href="/book/">Books</a>
           
         
           
-        
-          
-          <a class="page-link" href="/jeff/index.html">Blog</a>
-          
-        
-          
-        
-          
-        
+          <a class="page-link" href="/jeff/">Blog</a>
           
         
           
         
           
           <a class="page-link" href="/encog/">Encog</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -215,31 +217,31 @@
 
 <p>To implement Genetic Programming I must have a way to represent formulas in a program. There are many different ways of doing this. Consider the following formula.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">sqrt</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)))</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">sqrt</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)))</span></code></pre></figure>
 
 <p>In Encog, I refer to the above formula as the “Common Form” of the equation. Encog can parse the above formula and store it internally. Internally Encog stores these expressions in an opcode format based on Reverse Polish Notation (RPN).</p>
 
 <p>RPN does not require parenthesis. This is a very nice feature of RPN. There are no rules of precedence. Everything is non-ambiguous. Consider a very simple expression, such as 2+4. In RPN this would be stored as follows.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="mi">2</span> <span class="mi">4</span> <span class="o">+</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="mi">2</span> <span class="mi">4</span> <span class="o">+</span></code></pre></figure>
 
 <p>The above basically says to push 2 and 4 onto a stack. Then once we hit the + operator, we pop 2 values off the stack and add them. We know to pop two values off the stack because the plus operator requires two operands. The result of the addition, which is 6, is placed back on the sack. Once the entire expression is evaluated, the answer is the last value on the stack. Now consider a slightly more complex expression.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">4</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">4</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span></code></pre></figure>
 
 <p>Written in RPN, this expression would be as follows.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="mi">2</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">/</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="mi">2</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">/</span></code></pre></figure>
 
 <p>There we start off just as before. 2 and 4 are added and the resulting 6 is on the stack. But now we push another 2 onto the stack. The division now pops 6 and 2 from the stack and divides, resulting in 3.</p>
 
 <p>Recall the slightly more complex equation from earlier in this article?</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">sqrt</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)))</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">sqrt</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)))</span></code></pre></figure>
 
 <p>This can be expressed in RPN as well. The above expression in RPN is as follows.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="mi">1</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">^</span> <span class="o">/</span> <span class="n">sqrt</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="mi">1</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">^</span> <span class="o">/</span> <span class="n">sqrt</span></code></pre></figure>
 
 <p>RPN also lends itself nicely to trees. The above expression could be rendered as the following tree.</p>
 

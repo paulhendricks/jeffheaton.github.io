@@ -40,9 +40,9 @@
           
         
           
-          <a class="page-link" href="/about/">About</a>
-          
         
+          
+          <a class="page-link" href="/about/">About</a>
           
         
           
@@ -110,25 +110,27 @@
           
         
           
-          <a class="page-link" href="/book/index.html">Books</a>
+          <a class="page-link" href="/book/">Books</a>
           
         
           
-        
-          
-          <a class="page-link" href="/jeff/index.html">Blog</a>
-          
-        
-          
-        
-          
-        
+          <a class="page-link" href="/jeff/">Blog</a>
           
         
           
         
           
           <a class="page-link" href="/encog/">Encog</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -219,13 +221,13 @@ for a neural network.</p>
 
 <p>We use the following code to define the sigmoid function.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r">sigmoid <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="p">{</span>
-<span class="m">1</span> <span class="o">/</span> <span class="p">(</span> <span class="m">1</span> <span class="o">+</span> <span class="kp">exp</span><span class="p">(</span><span class="o">-</span>x<span class="p">)</span> <span class="p">)</span>
-<span class="p">};</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">sigmoid</span> <span class="o">&lt;-</span> <span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+<span class="m">1</span> <span class="o">/</span> <span class="p">(</span> <span class="m">1</span> <span class="o">+</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="p">)</span>
+<span class="p">};</span></code></pre></figure>
 
 <p>Once the sigmoid function has been created it can easily be queried as follows.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r">sigmoid<span class="p">(</span><span class="m">0</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">sigmoid</span><span class="p">(</span><span class="m">0</span><span class="p">)</span></code></pre></figure>
 
 <p>The above code would produce 0.5.</p>
 
@@ -233,7 +235,7 @@ for a neural network.</p>
 
 <p>The above function could easily be plotted with the following command.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r">plot<span class="p">(</span>sigmoid<span class="p">,</span><span class="m">-5</span><span class="p">,</span><span class="m">5</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">plot</span><span class="p">(</span><span class="n">sigmoid</span><span class="p">,</span><span class="m">-5</span><span class="p">,</span><span class="m">5</span><span class="p">)</span></code></pre></figure>
 
 <p>The -5 and 5 specify the range to plot over. This produces the following plot.</p>
 
@@ -241,9 +243,9 @@ for a neural network.</p>
 
 <p>If you would like to save your plot to a file, use the following. The plot will be saved to your documents directory.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r">png<span class="p">(</span><span class="s">&#39;test.png&#39;</span><span class="p">)</span>
-plot<span class="p">(</span>sigmoid<span class="p">,</span> xlim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">-5</span><span class="p">,</span><span class="m">5</span><span class="p">),</span> ylim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
-dev.off<span class="p">()</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">png</span><span class="p">(</span><span class="s1">'test.png'</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">sigmoid</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="m">-5</span><span class="p">,</span><span class="m">5</span><span class="p">),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
+<span class="n">dev.off</span><span class="p">()</span></code></pre></figure>
 
 <p>The above code was used to produce the plot that you see here.</p>
 
@@ -251,9 +253,9 @@ dev.off<span class="p">()</span></code></pre></div>
 
 <p>If you would like to plot two equations on the same graph, the following code can be used.</p>
 
-<div class="highlight"><pre><code class="language-r" data-lang="r">plot<span class="p">(</span><span class="kp">sin</span><span class="p">,</span><span class="o">-</span><span class="kc">pi</span><span class="p">,</span><span class="m">2</span><span class="o">*</span><span class="kc">pi</span><span class="p">)</span>
-par<span class="p">(</span>new<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-plot<span class="p">(</span><span class="kp">cos</span><span class="p">,</span><span class="o">-</span><span class="kc">pi</span><span class="p">,</span><span class="m">2</span><span class="o">*</span><span class="kc">pi</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">plot</span><span class="p">(</span><span class="n">sin</span><span class="p">,</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span><span class="m">2</span><span class="o">*</span><span class="n">pi</span><span class="p">)</span>
+<span class="n">par</span><span class="p">(</span><span class="n">new</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">cos</span><span class="p">,</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span><span class="m">2</span><span class="o">*</span><span class="n">pi</span><span class="p">)</span></code></pre></figure>
 
   </article>
   

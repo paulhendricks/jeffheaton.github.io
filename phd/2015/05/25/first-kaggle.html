@@ -40,9 +40,9 @@
           
         
           
-          <a class="page-link" href="/about/">About</a>
-          
         
+          
+          <a class="page-link" href="/about/">About</a>
           
         
           
@@ -110,25 +110,27 @@
           
         
           
-          <a class="page-link" href="/book/index.html">Books</a>
+          <a class="page-link" href="/book/">Books</a>
           
         
           
-        
-          
-          <a class="page-link" href="/jeff/index.html">Blog</a>
-          
-        
-          
-        
-          
-        
+          <a class="page-link" href="/jeff/">Blog</a>
           
         
           
         
           
           <a class="page-link" href="/encog/">Encog</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -281,11 +283,11 @@ points.</p>
 logarithm based scale and are very heavily penalized for having a lower probability on 
 the correct answer. The following are a few lines from my submission:</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">1,0.0003,0.2132,0.2340,0.5468,6.2998e-05,0.0001,0.0050,0.0001,4.3826e-05
+<figure class="highlight"><pre><code class="language-text" data-lang="text">1,0.0003,0.2132,0.2340,0.5468,6.2998e-05,0.0001,0.0050,0.0001,4.3826e-05
 2,0.0011,0.0029,0.0010,0.0003,0.0001,0.5207,0.0013,0.4711,0.0011
 3,3.2977e-06,4.1419e-06,7.4524e-06,2.6550e-06,5.0014e-07,0.9998,5.2621e-06,0.0001,6.6447e-06
 4,0.0001,0.6786,0.3162,0.0039,3.3378e-05,4.1196e-05,0.0001,0.0001,0.0006
-5,0.1403,0.0002,0.0002,6.734e-05,0.0001,0.0027,0.0009,0.0297,0.8255</code></pre></div>
+5,0.1403,0.0002,0.0002,6.734e-05,0.0001,0.0027,0.0009,0.0297,0.8255</code></pre></figure>
 
 <p>Each line starts with a number that specifies the data item that is being answered.<br />
 The sample above shows the answers for items 1-5.  The next 9 values are the probabilities 
@@ -364,8 +366,8 @@ each of the 10 models.  This allowed each model to potentially specialize in eac
 <p>I spent considerable time tuning my GBM.  I used Nelder-Mead searches to optimize my 
 hyper-parameter vector.  I ultimately settled on the following parameters:</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;max_depth&#39;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span><span class="s">&#39;min_child_weight&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="s">&#39;subsample&#39;</span><span class="p">:</span> <span class="o">.</span><span class="mi">78</span><span class="p">,</span><span class="s">&#39;gamma&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="s">&#39;colsample_bytree&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s">&#39;eta&#39;</span><span class="p">:</span><span class="o">.</span><span class="mo">005</span><span class="p">,</span> <span class="s">&#39;threads&#39;</span><span class="p">:</span><span class="mi">24</span><span class="p">}</span>
-<span class="n">Each</span> <span class="n">of</span> <span class="n">these</span> <span class="n">two</span> <span class="n">approaches</span> <span class="p">(</span><span class="n">GBM</span> <span class="ow">and</span> <span class="n">neural</span> <span class="n">network</span><span class="p">)</span> <span class="n">produced</span> <span class="n">a</span> <span class="n">separate</span> <span class="n">submission</span> <span class="nb">file</span><span class="o">.</span> <span class="n">I</span> <span class="n">then</span> <span class="n">blended</span> <span class="n">these</span> <span class="n">together</span><span class="p">,</span> <span class="n">weighting</span> <span class="n">each</span><span class="o">.</span>  <span class="n">I</span> <span class="n">found</span> <span class="n">that</span> <span class="mf">0.65</span> <span class="n">gave</span> <span class="n">me</span> <span class="n">the</span> <span class="n">best</span> <span class="n">blend</span> <span class="k">with</span> <span class="n">my</span> <span class="n">deep</span> <span class="n">neural</span> <span class="n">network</span><span class="o">.</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s">'max_depth'</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span><span class="s">'min_child_weight'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="s">'subsample'</span><span class="p">:</span> <span class="o">.</span><span class="mi">78</span><span class="p">,</span><span class="s">'gamma'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="s">'colsample_bytree'</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s">'eta'</span><span class="p">:</span><span class="o">.</span><span class="mo">005</span><span class="p">,</span> <span class="s">'threads'</span><span class="p">:</span><span class="mi">24</span><span class="p">}</span>
+<span class="n">Each</span> <span class="n">of</span> <span class="n">these</span> <span class="n">two</span> <span class="n">approaches</span> <span class="p">(</span><span class="n">GBM</span> <span class="ow">and</span> <span class="n">neural</span> <span class="n">network</span><span class="p">)</span> <span class="n">produced</span> <span class="n">a</span> <span class="n">separate</span> <span class="n">submission</span> <span class="nb">file</span><span class="o">.</span> <span class="n">I</span> <span class="n">then</span> <span class="n">blended</span> <span class="n">these</span> <span class="n">together</span><span class="p">,</span> <span class="n">weighting</span> <span class="n">each</span><span class="o">.</span>  <span class="n">I</span> <span class="n">found</span> <span class="n">that</span> <span class="mf">0.65</span> <span class="n">gave</span> <span class="n">me</span> <span class="n">the</span> <span class="n">best</span> <span class="n">blend</span> <span class="k">with</span> <span class="n">my</span> <span class="n">deep</span> <span class="n">neural</span> <span class="n">network</span><span class="o">.</span></code></pre></figure>
 
 <h2 id="what-worked-well-for-top-teams">What Worked Well for Top Teams</h2>
 
