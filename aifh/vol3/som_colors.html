@@ -11,7 +11,7 @@
 
   <title>
     
-      Volume 3: Deep Learning and Neural Networks &middot; Heaton Research
+      AIFH Volume 3, Chapter 2: SOM Colors &middot; Heaton Research
     
   </title>
 
@@ -30,8 +30,20 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 
+  
+  <link rel="stylesheet" href="som_colors.css" media="screen" type="text/css">
+  
 
 
+
+
+  
+  <script src='encog-js-1.0.js' type="text/javascript"></script>
+  
+  <script src='encog-widget-1.0.js' type="text/javascript"></script>
+  
+  <script src='som_colors.js' type="text/javascript"></script>
+  
 
 
 <script type="text/javascript"
@@ -82,73 +94,14 @@
     <div class="content container">
       <img src="/aifh/images/web_header.png">
 <div class="page">
-  <h1 class="page-title">Volume 3: Deep Learning and Neural Networks</h1>
-  <ul>
-  <li>Chapter 1: Neural Network Basics
-    <ul>
-      <li><a href="activation.html">Activation Functions</a></li>
-      <li><a href="deriv_sigmoid.html">Derivative of the Sigmoid Function</a></li>
-      <li><a href="single_layer.html">Single Layer Network</a></li>
-    </ul>
-  </li>
-  <li>Chapter 2: Self Organizing Maps
-    <ul>
-      <li><a href="som_colors.html">SOM Colors</a></li>
-    </ul>
-  </li>
-  <li>Chapter 3: Hopfield &amp; Boltzmann Machines
-    <ul>
-      <li><a href="hopfield.html">Hopfield Network</a></li>
-      <li><a href="boltzmann_tsp_grid.html">Boltzmann Machine TSP Weight Grid</a></li>
-    </ul>
-  </li>
-  <li>Chapter 4: Feedforward Neural Networks
-    <ul>
-      <li><a href="softmax.html">Softmax</a></li>
-      <li><a href="multi_layer.html">Multi Layer Network</a></li>
-    </ul>
-  </li>
-  <li>Chapter 5: Training &amp; Evaluation
-    <ul>
-      <li><a href="anneal_roc.html">Annealing and ROC</a></li>
-    </ul>
-  </li>
-  <li>Chapter 6: Backpropagation Training
-    <ul>
-      <li><a href="xor_online.html">XOR Neural Network - Analyze Online</a></li>
-      <li><a href="xor_batch.html">XOR Neural Network - Analyze Batch</a></li>
-      <li><a href="xor_rprop.html">XOR Neural Network - Analyze Resilient Propagation(RPROP)</a></li>
-      <li><a href="neural_xor.html">XOR Neural Network</a></li>
-      <li><a href="classify_ann.html">Classify Neural Network</a></li>
-      <li><a href="benchmark_ann.html">Benchmark Neural Network</a></li>
-    </ul>
-  </li>
-  <li>Chapter 7: Other Propagation Training</li>
-  <li>Chapter 8: NEAT, CPPN and HyperNEAT</li>
-  <li>Chapter 9: Deep Learning
-    <ul>
-      <li><a href="activation_relu.html">ReLu Activation Function</a></li>
-      <li><a href="deep_belief.html">Deep Belief Neural Network</a></li>
-    </ul>
-  </li>
-  <li>Chapter 10: Convolutional Neural Networks
-    <ul>
-      <li><a href="image2text.html">Convert Image to Textual Numbers</a></li>
-    </ul>
-  </li>
-  <li>Chapter 11: Pruning and Model Selection
-    <ul>
-      <li><a href="grid_iter.html">Grid Search Iterations</a></li>
-      <li><a href="random_iter.html">Random Search Iterations</a></li>
-    </ul>
-  </li>
-  <li>Chapter 12: Dropout and Regularization</li>
-  <li>Chapter 13: Time Series and Recurrent Networks</li>
-  <li>Chapter 14: Architecting Neural Networks</li>
-  <li>Chapter 15: Visualization</li>
-  <li>Chapter 16: Modelling with Neural Networks</li>
-</ul>
-
+  <h1 class="page-title">AIFH Volume 3, Chapter 2: SOM Colors</h1>
+  <div id="example-holder">
+<div id="drawing-area"></div>
+<div id="example-btn1">
+    <input id="btnStart" type="button" value="Start" /><input id="btnStop" type="button" value="Stop" /><input id="btnSingle" type="button" value="Single" /><input id="btnClear" type="button" value="Clear" /></div>
+</div>
+<br>
+</div></div></div> 
 
 </div>
 
