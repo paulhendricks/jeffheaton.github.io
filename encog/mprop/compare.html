@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Techniques for Multi-Threaded Backpropagation for Encog</title>
+  <meta name="description" content="Jeff Heaton is a data scientist, phd student and indie publisher.  Heaton Research is the homepage for my projects.
+">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://www.heatonresearch.com/encog/mprop/compare.html">
+  <link rel="alternate" type="application/rss+xml" title="Heaton Research" href="http://www.heatonresearch.com/feed.xml" />
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Heaton Research</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/download/">Downloads</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/jeff/">Blog</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/book/">Books</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/encog/">Encog</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/jeff_index">Articles</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Techniques for Multi-Threaded Backpropagation for Encog</h1>
+  </header>
+
+  <article class="post-content">
+    <p><strong>This was originally posted Mon, 10/26/2009, and needs some updating.  I will do this soon.</strong></p>
+
+<p>This article shows how the Multi Propagation (MPROP) algorithm was implemented for Encog for Java. Though this article focuses on the Java implementation the C# version would be very similar. MPROP is based on resilient propagation, but is designed to work well with multicore computers and gain maximum performance.</p>
+
+<p>Multicore computers are becoming more and more common. There seems to be only some many gigahertz that computer manufactures can squeeze out of CPU’s. The real growth in computer performance will likely be in the number of cores contained in a computer’s CPU. As of the writing of this document, October 25, 2009, Intel i7 computers can be had for around $1000 USD. An i7 computer makes use of a Quadcore Hyperthreading CPU. This results in 8 processes being available to programs running on this computer. It is virtually impossible to buy a single-core desktop computer.</p>
+
+<p>Unfortunately programs will not take advantage of these new multicore machines unless the program is written to be multithread. A non-threaded application will simply consume nearly all of the processing power of one core and leave the remaining cores virtually idle. Writing programs to be multithread can be tricky. You must be able to break the task up into smaller packets that each thread can process. At some point the threads usually must communicate with each other and aggregate the job back together.</p>
+
+<p>Neural network training is a very time consuming task. Computers can run for hours, if not days, on a single training task. Supervised neural networks are generally trained with resilient propagation (RPROP) or back propagation. RPROP is the more modern of the two and is almost always the preferred solution. I wanted to enhance the Encog Artificial Intelligence Framework to make use of multithreading to provide fast training on multicore machines. I began Googling for how others might have done it. Unfortunately I did not find much on the topic of multithreaded implementations of back propagation or resilient propagation. I found some solutions, but I had my doubts as to how effective they would with large numbers of processors. I wanted a solution that would work with a potentially large number of processors. I did not want a great deal of synchronization between the threads either, as I may want to run this from a grid of computers at some point.</p>
+
+<p>At this point, as of Encog 2.2, I have a fairly efficient multithreaded training process in place. It only works on a single computer at this point, I will leave a grid implementation for a future version of Encog. This is implemented in the Encog class MultiPropagation. Multi Propagation, or MPROP, is a special training technique introduced in Encog that is based on Resilient Propagation.</p>
+
+<p>A short example is provided that will train a neural network with both MPROP and RPROP. This allows me to compare the overall performance of MPROP on various computer hardware. The following is the main method performs this comparison.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Logging</span><span class="o">.</span><span class="na">stopConsoleLogging</span><span class="o">();</span>
+<span class="n">BasicNetwork</span> <span class="n">network</span> <span class="o">=</span> <span class="n">generateNetwork</span><span class="o">();</span>
+<span class="n">NeuralDataSet</span> <span class="n">data</span> <span class="o">=</span> <span class="n">generateTraining</span><span class="o">();</span>
+		
+<span class="kt">double</span> <span class="n">rprop</span> <span class="o">=</span> <span class="n">evaluateRPROP</span><span class="o">(</span><span class="n">network</span><span class="o">,</span><span class="n">data</span><span class="o">);</span>
+<span class="n">network</span><span class="o">.</span><span class="na">reset</span><span class="o">();</span>
+<span class="kt">double</span> <span class="n">mprop</span> <span class="o">=</span> <span class="n">evaluateMPROP</span><span class="o">(</span><span class="n">network</span><span class="o">,</span><span class="n">data</span><span class="o">);</span>
+<span class="kt">double</span> <span class="n">factor</span> <span class="o">=</span> <span class="n">rprop</span><span class="o">/</span><span class="n">mprop</span><span class="o">;</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Factor improvement:"</span> <span class="o">+</span> <span class="n">factor</span><span class="o">);</span></code></pre></figure>
+
+<p>Both MPROP and RPROP will be fed the same training data and neural network. However, the neural network will be reset for each training algorithm so that no learning from the previous training carries through. The training data is random.</p>
+
+<p>The neural network is composed with the following parameters.</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">Input Neurons: 40
+Output Neurons: 20
+Hidden Layer #1 Neurons: 60</code></pre></figure>
+
+<p>The training data is composed of 20,000 input and ideal data pairs.</p>
+
+<p>All of the Encog training algorithms implement the Train interface. This makes them fairly interchangeable. The implementation of the evaluateMPROP and evaluateRPROP is very similar. The implementation of evaluateMPROP is shown here.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">MultiPropagation</span> <span class="n">train</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MultiPropagation</span><span class="o">(</span><span class="n">network</span><span class="o">,</span><span class="n">data</span><span class="o">);</span>
+<span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Training 20 Iterations with MPROP"</span><span class="o">);</span>
+<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">20</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span>
+<span class="o">{</span>
+  <span class="n">train</span><span class="o">.</span><span class="na">iteration</span><span class="o">();</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Iteration #"</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">" Error:"</span> <span class="o">+</span> <span class="n">train</span><span class="o">.</span><span class="na">getError</span><span class="o">());</span>
+<span class="o">}</span>
+<span class="n">train</span><span class="o">.</span><span class="na">finishTraining</span><span class="o">();</span>
+<span class="kt">long</span> <span class="n">stop</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
+<span class="kt">double</span> <span class="n">diff</span> <span class="o">=</span> <span class="o">((</span><span class="kt">double</span><span class="o">)(</span><span class="n">stop</span> <span class="o">-</span> <span class="n">start</span><span class="o">))/</span><span class="mf">1000.0</span><span class="o">;</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"MPROP Result:"</span> <span class="o">+</span> <span class="n">diff</span> <span class="o">+</span> <span class="s">" seconds."</span> <span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Final MPROP error: "</span> <span class="o">+</span> <span class="n">network</span><span class="o">.</span><span class="na">calculateError</span><span class="o">(</span><span class="n">data</span><span class="o">));</span>
+<span class="k">return</span> <span class="n">diff</span><span class="o">;</span></code></pre></figure>
+
+<p>This is a typical Encog training routine. Here we loop through 20 training iterations. We track the number of seconds that this took. A similar process is done for RPROP.</p>
+
+<p>Multi Propagation Implementation
+All propagation training techniques work similarly. Whether it be back propagation, resilient propagation or the Manhattan update rule, the technique is similar. There are two three distinct steps:</p>
+
+<ol>
+  <li>Perform a Regular Feed Forward Pass</li>
+  <li>Process the levels backwards and determine the errors at each level</li>
+  <li>Apply the changes to the weights and thresholds</li>
+</ol>
+
+<p>First, a regular feed forward pass is performed. The output from each level is kept so that the error for each level can be evaluated independent. Second, the errors are calculated at each level, and the derivatives of each of the activation functions are used to calculate gradient descents. These gradients will be used in the third step.</p>
+
+<p>The third step is what varies among the different training algorithms. Backpropagation simply takes the gradient descents and scales them by a learning rate. The scaled gradient descents are then directly applied to the weights and thresholds. The Manhattan Update Rule only uses the sign of the gradient to decide in which direction to affect the weight. The weight is then changed in either the positive or negative direction by a fixed constant.</p>
+
+<p>RPROP keeps an individual delta value for every weight and thresholds and only uses the sign of the gradient descent to increase or decrease the delta amounts. The delta amounts are then applied to the weights and thresholds.</p>
+
+<p>The MPROP algorithm uses threads to perform steps 1 &amp; 2. The training data is broken into packets that are distributed among the threads. At the beginning of each iteration threads are started to handle each of these packets. Once all threads have completed, a single thread aggregates all of the results from the threads and applies them to the neural network. There is a very brief amount of time where only one thread is executing, at the end of the iteration. This can be seen from the following monitor.</p>
+
+<p><img src="/images/content/mprop_cores.png" alt="multipropagation (MPROP) on a quadcore" /></p>
+
+<p>As you can see from the above image, the i7 is currently running at 100%. You can clearly see the end of each iteration, where each of the processors falls briefly. Fortunately, this is a very brief time and does not have a large impact on overall training efficiency. I did try implementations where I did not force the threads to wait at the end of the iteration for a resynchronization. However these did not provide as efficient of training because the RPROP algorithm, upon which MPROP is based, needs all changes applied before the next iteration begins.</p>
+
+<p>The MPROP algorithms uses a number of threads equal to the number of processors reported by Java, plus 1. Unless there is a single processor, then the MPROP algorithms falls back to a regular single threaded RPROP algorithm.</p>
+
+<h1 id="testing-results">Testing Results</h1>
+
+<p>I tried MPROP, using the above mentioned network and training data on three different computer platforms. First we will look at it on an i7 quadcore.</p>
+
+<p>Dell Studio XPS 8000, 8gig RAM Intel i7 at 2.79GHz</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">Training 20 Iterations with RPROP
+Iteration #1 Error:1.0592062021803321
+Iteration #2 Error:1.0112968157018771
+Iteration #3 Error:0.9650583848127503
+Iteration #4 Error:0.9269433225981621
+Iteration #5 Error:0.8947162095367102
+Iteration #6 Error:0.8714873694194031
+Iteration #7 Error:0.8445288449926142
+Iteration #8 Error:0.8186688302191717
+Iteration #9 Error:0.7952278955734976
+Iteration #10 Error:0.7717422560410586
+Iteration #11 Error:0.7475048877257578
+Iteration #12 Error:0.7235382011165326
+Iteration #13 Error:0.7026047081990957
+Iteration #14 Error:0.6843757761100023
+Iteration #15 Error:0.6685206160475999
+Iteration #16 Error:0.6539311876046258
+Iteration #17 Error:0.6412660225209257
+Iteration #18 Error:0.630790400329957
+Iteration #19 Error:0.6211146795350724
+Iteration #20 Error:0.6136882493691617
+RPROP Result:128.562 seconds.
+Final RPROP error: 0.6075224766406004
+Training 20 Iterations with MPROP
+Iteration #1 Error:0.6075212244066446
+Iteration #2 Error:0.8665463281875874
+Iteration #3 Error:0.8316846996192032
+Iteration #4 Error:0.7451195340393163
+Iteration #5 Error:0.7005024644028119
+Iteration #6 Error:0.6691870245157884
+Iteration #7 Error:0.649034289358449
+Iteration #8 Error:0.6339114535879514
+Iteration #9 Error:0.6208812103003265
+Iteration #10 Error:0.6111566730037973
+Iteration #11 Error:0.6056166450414902
+Iteration #12 Error:0.6003765685919015
+Iteration #13 Error:0.5964873091129251
+Iteration #14 Error:0.5932816072550446
+Iteration #15 Error:0.5905725872184455
+Iteration #16 Error:0.5882703219084173
+Iteration #17 Error:0.5863667500894574
+Iteration #18 Error:0.5848003831853418
+Iteration #19 Error:0.5835759158206529
+Iteration #20 Error:0.5823759906353797
+MPROP Result:31.88 seconds.
+Final MPROP error: 0.5814082684159508
+Factor improvement:4.032685069008783</code></pre></figure>
+
+<p>As you can see this machine had a factor improvement of about 4 times. This quadcore uses hyperthreading so 8 processors are reported to Java. Therefore MPROP used 9 threads. Despite the fact that hyperthreading reports twice the number of cores than are physically present, I do not find that it executes anywhere near as fast as additional cores. However, it does help. The fact that I got 4 times with 4 cores is really very good. Threading introduces overhead, without the hyperthreading it is very unlikely that the factor would have been 4 or higher. A factor of 4 implies that the thread switching was perfect, and not even the single threaded synchronization time at the end of each MPROP iteration affected it. Hyperthreading is to thank for this. Still, hyperthreading did not get us anywhere near 7 or 8 times.</p>
+
+<p>Now we will look at a Dual Core computer, with no hyperthreading. Here you see the results from a Dual Core iMac.</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">Training 20 Iterations with RPROP
+Iteration #1 Error:1.0619945526007815
+Iteration #2 Error:1.0173279127855563
+Iteration #3 Error:0.9728967012381747
+Iteration #4 Error:0.933266210736963
+Iteration #5 Error:0.902990819036054
+Iteration #6 Error:0.8785929993141319
+Iteration #7 Error:0.852770802106324
+Iteration #8 Error:0.8297385766666532
+Iteration #9 Error:0.8038142080023881
+Iteration #10 Error:0.7800412962894463
+Iteration #11 Error:0.7587560796078602
+Iteration #12 Error:0.7356506865399463
+Iteration #13 Error:0.7151090444337569
+Iteration #14 Error:0.695744709113637
+Iteration #15 Error:0.6788368720802751
+Iteration #16 Error:0.6642652711631868
+Iteration #17 Error:0.6509332872251975
+Iteration #18 Error:0.6397801404435584
+Iteration #19 Error:0.630090330257044
+Iteration #20 Error:0.6216381426133933
+RPROP Result:183.834 seconds.
+Final RPROP error: 0.6146150864453944
+Training 20 Iterations with MPROP
+Iteration #1 Error:0.6146143819685393
+Iteration #2 Error:0.861988806667595
+Iteration #3 Error:0.8245303438423693
+Iteration #4 Error:0.7518132811207181
+Iteration #5 Error:0.7081523967374347
+Iteration #6 Error:0.6712984917380188
+Iteration #7 Error:0.652201535422028
+Iteration #8 Error:0.6406601654553405
+Iteration #9 Error:0.629090967114433
+Iteration #10 Error:0.6175595827587673
+Iteration #11 Error:0.6122245715859175
+Iteration #12 Error:0.6062311438183174
+Iteration #13 Error:0.6013160315144382
+Iteration #14 Error:0.5977755359770852
+Iteration #15 Error:0.5946842580058522
+Iteration #16 Error:0.5920646899231164
+Iteration #17 Error:0.5896362050394485
+Iteration #18 Error:0.5876920979572654
+Iteration #19 Error:0.5859706453734917
+Iteration #20 Error:0.5844223947199683
+MPROP Result:97.25 seconds.
+Final MPROP error: 0.5831411341205304
+Factor improvement:1.8903239074550129</code></pre></figure>
+
+<p>As you can see the factor improvement over single threaded RPROP is 1.89. There is no hyperthreading, so it is just the two cores executing. Due to threading overhead and iteration synchronization times, we do not get a perfectly efficient factor of 2.0.</p>
+
+<p>We can also see the results on a single core, hyperthreading computer.</p>
+
+<p>Dimension 8100, Intel Pentium 4 CPU, 3.00 ghtz. 1GB ram</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">Training 20 Iterations with RPROP
+Iteration #1 Error:1.055330758837017
+Iteration #2 Error:1.0086543528834082
+Iteration #3 Error:0.9635498434678869
+Iteration #4 Error:0.9234062461127825
+Iteration #5 Error:0.893359620995546
+Iteration #6 Error:0.8676510392528938
+Iteration #7 Error:0.8426219917532086
+Iteration #8 Error:0.8176701896241206
+Iteration #9 Error:0.7900163103983693
+Iteration #10 Error:0.7663833064550073
+Iteration #11 Error:0.7423741422166754
+Iteration #12 Error:0.7186589370627757
+Iteration #13 Error:0.6973331339716679
+Iteration #14 Error:0.6786518719968172
+Iteration #15 Error:0.6632366051944965
+Iteration #16 Error:0.647960280068216
+Iteration #17 Error:0.637116419836954
+Iteration #18 Error:0.6275179497202836
+Iteration #19 Error:0.6193774112511847
+Iteration #20 Error:0.6130185860535315
+RPROP Result:501.408 seconds.
+Final RPROP error: 0.6072752146745306
+Training 20 Iterations with MPROP
+Iteration #1 Error:0.607274926192379
+Iteration #2 Error:0.8534056403923543
+Iteration #3 Error:0.8121626914024609
+Iteration #4 Error:0.7330129725685066
+Iteration #5 Error:0.6952683973977223
+Iteration #6 Error:0.6695707142291197
+Iteration #7 Error:0.6540724010870805
+Iteration #8 Error:0.6338389819166642
+Iteration #9 Error:0.6234153712989258
+Iteration #10 Error:0.6134344366833728
+Iteration #11 Error:0.605518025749937
+Iteration #12 Error:0.6015147936004235
+Iteration #13 Error:0.5972975056266082
+Iteration #14 Error:0.5941906318175534
+Iteration #15 Error:0.5912954856379496
+Iteration #16 Error:0.5890932691798955
+Iteration #17 Error:0.587244744073592
+Iteration #18 Error:0.585618048750272
+Iteration #19 Error:0.5842085212827279
+Iteration #20 Error:0.5829523593081855
+MPROP Result:408.015 seconds.
+Final MPROP error: 0.5819121474538267
+Factor improvement:1.228895996470718</code></pre></figure>
+
+<p>This computer is single core, yet has hyperthreading, so Java reports processors as two. Even with only hyperthreading, a factor improvement is still present, and the MPROP threading algorithm is still beneficial. If MPROP were run on a true single core computer, with no hyperthreading, Java would report the processor count as one and the MPROP algorithms would fall back to single threading.</p>
+
+<h1 id="conclusions">Conclusions</h1>
+
+<p>MPROP offers great performance improvements over the single threaded MPROP algorithms in cases where a reasonably large training set is present and multicore hardware is used. If neither of these two factors are present, MPROP will fall back to RPROP for training. Because of this, it is the best general purpose training algorithm for Encog.</p>
+
+<p>MPROP was introduced with Encog 2.2, but will continue to be enhanced with future versions of Encog. Improvements will include further optimization of the end of iteration synchronization and moving as much of this synchronization code to the threads as possible. Also options will be added at some point to allow MPROP to operate on a grid of computers.</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">&copy; 2016 by Heaton Research - <a href="/legal/">Legal and Copyright Info</a></h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Heaton Research</li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/jeffheaton">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">jeffheaton</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/jeffheaton">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">jeffheaton</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Jeff Heaton is a data scientist, phd student and indie publisher.  Heaton Research is the homepage for my projects.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5393865-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </body>
+
+</html>
