@@ -6,9 +6,78 @@
 </description>
     <link>http://www.heatonresearch.com/</link>
     <atom:link href="http://www.heatonresearch.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 23 Feb 2016 18:14:49 -0600</pubDate>
-    <lastBuildDate>Tue, 23 Feb 2016 18:14:49 -0600</lastBuildDate>
+    <pubDate>Wed, 24 Feb 2016 17:23:34 -0600</pubDate>
+    <lastBuildDate>Wed, 24 Feb 2016 17:23:34 -0600</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Teaching a Deep Learning Graduate Course at Washington University</title>
+        <description>&lt;p&gt;I will be teaching a graduate course at &lt;a href=&quot;https://engineering.wustl.edu/Pages/home.aspx&quot;&gt;Washington University in St. Louis&lt;/a&gt; for the 
+fall 2016 semester in the &lt;a href=&quot;https://sever.wustl.edu/degreeprograms/information-systems/Pages/MSIS-Curriculum.aspx&quot;&gt;Master of Science in Information Systems (MSIS)&lt;/a&gt; program.  You can see the course description here.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;T81 INFO 558	Applications of Deep Neural Networks&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Deep learning is a group of exciting new technologies for neural networks. By using a 
+combination of advanced training techniques neural network architectural components, it 
+is now possible to train neural networks of much greater complexity. This course will 
+introduce the student to deep belief neural networks, regularization units (ReLU), 
+convolution neural networks and recurrent neural networks. High performance 
+computing (HPC) aspects will demonstrate how deep learning can be leveraged both on 
+graphical processing units (GPUs), as well as grids. Deep learning allows a model to 
+learn hierarchies of information in a way that is similar to the function of the human 
+brain. Focus will be primarily upon the application of deep learning, with some 
+introduction to the mathematical foundations of deep learning. Students will use the 
+Python programming language to architect a deep learning model for several of real-world 
+data sets and interpret the results of these networks.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I will make use of my &lt;a href=&quot;http://www.heatonresearch.com/book/aifh-vol3-deep-neural.html&quot;&gt;book on deep learning&lt;/a&gt;, as well as some supplementary information.
+This will be a hands-on technical course, so we will use the Python programming language
+to make use of deep neural networks.  At this point I believe that I will make use of
+both the &lt;a href=&quot;https://www.tensorflow.org/&quot;&gt;Google TensorFlow&lt;/a&gt; and &lt;a href=&quot;http://blogs.microsoft.com/next/2016/01/25/microsoft-releases-cntk-its-open-source-deep-learning-toolkit-on-github/&quot;&gt;Microsoft CNTK&lt;/a&gt;
+I feel that both of these will give the students an easy install path, depending on their system.
+Currently, CNTK has an easy install path for Linux and Windows (but not Mac); TensorFlow has 
+an easy install path for Mac and Linux (but not Windows).  I am fond of the &lt;a href=&quot;http://caffe.berkeleyvision.org/&quot;&gt;Caffe package&lt;/a&gt; as well, but it does have an easy install path for Windows.
+For my own use I make use of Theano, but it does not have a particularly easy install path for anything!  What every path I end up taking, I will update my books examples to include it.&lt;/p&gt;
+
+&lt;p&gt;My schedule, subject to change, is:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;08/29/2016: Class 01: Python for Machine Learning&lt;/li&gt;
+  &lt;li&gt;09/05/2016: Labor Day, No class&lt;/li&gt;
+  &lt;li&gt;09/12/2016: Class 02: Neural Network Basics, Ch1&lt;/li&gt;
+  &lt;li&gt;09/19/2016: Class 03: Training a Neural Network, Ch 4, Ch 5&lt;/li&gt;
+  &lt;li&gt;09/26/2016: Class 04: Introduction to TensorFlow&lt;/li&gt;
+  &lt;li&gt;10/03/2016: Class 05: Modeling and Kaggle&lt;/li&gt;
+  &lt;li&gt;10/10/2016: Class 06: Backpropagation, Ch 6&lt;/li&gt;
+  &lt;li&gt;10/17/2016: Class 07: Neural Networks for Classification&lt;/li&gt;
+  &lt;li&gt;10/24/2016: Class 08: Neural Networks for Regression&lt;/li&gt;
+  &lt;li&gt;10/31/2016: Class 09: Preprocessing&lt;/li&gt;
+  &lt;li&gt;11/07/2016: Class 10: Regularization and Dropout, Ch 12&lt;/li&gt;
+  &lt;li&gt;11/14/2016: Class 11: Timeseries and Recurrent, Ch 13&lt;/li&gt;
+  &lt;li&gt;11/21/2016: Class 12: Convolutional Neural Networks, Ch 10&lt;/li&gt;
+  &lt;li&gt;11/28/2016: Class 13: Architecting Neural Networks, Ch 14&lt;/li&gt;
+  &lt;li&gt;12/05/2016: Class 14: Special Applications of Neural Networks&lt;/li&gt;
+  &lt;li&gt;12/12/2016: Class 15: GPU, HPC and Cloud&lt;/li&gt;
+  &lt;li&gt;12/19/2016: Final Exam&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;At this point I am planning on two of the assignments using &lt;a href=&quot;https://inclass.kaggle.com/&quot;&gt;Kaggle for Class&lt;/a&gt;.  I think it 
+will be a great way to introduce the students to Kaggle.&lt;/p&gt;
+
+&lt;p&gt;This will be my first time teaching a graduate course.  I’ve taught undergrad at &lt;a href=&quot;https://www.maryville.edu/&quot;&gt;Maryville University&lt;/a&gt; and &lt;a href=&quot;http://www.stlcc.edu/&quot;&gt;St. Louis Community College&lt;/a&gt;, 
+but its been a few years.  I’ve always taught technical courses, such as various levels of Java, C++, C# and SQL. WUSTL is the 
+university that I got my masters degree from, so I am somewhat familiar with them.&lt;/p&gt;
+
+&lt;p&gt;I will have a website that will contain all of my course information, I will post more information on that once the course starts.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 24 Feb 2016 06:00:00 -0600</pubDate>
+        <link>http://www.heatonresearch.com/2016/02/24/teaching-deep-learning-washington-university.html</link>
+        <guid isPermaLink="true">http://www.heatonresearch.com/2016/02/24/teaching-deep-learning-washington-university.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>New Look for All My Websites: Jekyll and Github</title>
@@ -830,123 +899,6 @@ basis, particularly if it were high-velocity data, I would do something more for
         
         
         <category>datascience</category>
-        
-      </item>
-    
-      <item>
-        <title>First time at the NSU Campus - Fall 2014</title>
-        <description>&lt;p&gt;I just returned from my first cluster meeting for PhD program in computer science at Nova 
-Southeastern University.  Because it was Labor Day weekend my wife went with me, and we 
-made it a mini Florida vacation.  We flew into Ft. Lauderdale on Wed, Sept 27, 2014.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Wednesday:&lt;/strong&gt; Travel day, and check into hotel.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Thursday:&lt;/strong&gt; program orientation, library tour and kickoff reception.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Friday:&lt;/strong&gt; Two class sessions (4-hours each), with a 1.5 hr break for lunch.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Saturday:&lt;/strong&gt; Two class sessions (4-hours each), with a 1.5 hr break for lunch.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Sunday:&lt;/strong&gt; Vacation day with my wife.  We checked out the beach at Ft. Lauderdale and had a a canal tour.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Monday:&lt;/strong&gt; (Labor day, USA holiday): Flew back to St. Louis.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I stayed at the closest hotel to the &lt;a href=&quot;http://www.ihg.com/holidayinnexpress/hotels/us/en/fort-lauderdale/fllsr/hoteldetail&quot;&gt;NSU campus&lt;/a&gt;, the &lt;a href=&quot;http://www.ihg.com/holidayinnexpress/hotels/us/en/fort-lauderdale/fllsr/hoteldetail&quot;&gt;Holiday Inn Airport&lt;/a&gt;.  The hotel is a good value.  They offer a free breakfast and shuttle to/from the airport.  It is nearly a 1.2 mile walk to the campus.  The roads are walk-able and have crosswalks.  In October I might walk it and shower on campus before class.  This would save the rental car expense.  I did walk to the university a few times this trip, however, more for exercise.  After a 1.2 mile walk, in the hot Florida summer sun, I would not be very popular!&lt;/p&gt;
-
-&lt;h2 id=&quot;program-orientation&quot;&gt;Program Orientation&lt;/h2&gt;
-
-&lt;p&gt;The program orientation was lead by &lt;a href=&quot;http://cec.nova.edu/faculty/seagull.html&quot;&gt;Dr. Seagull&lt;/a&gt;, 
-the Associate Dean of Academic Affairs at &lt;a href=&quot;http://cec.nova.edu/&quot;&gt;GSCIS&lt;/a&gt;. He presented an overview of the program 
-and the school.  NSU was founded in 1964, and is currently celebrating their 
-50th anniversary.  There were many different 50th anniversary banners and sings throughout 
-the campus.  For my program I must complete the following:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;32 credit hours of course work.&lt;/strong&gt;  This will amount to 8 individual four-credit hour courses.  I am currently enrolled in my first two. I will need to fly to Ft. Lauderdale twice a semester for these courses.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;8 credit hours of directed research.&lt;/strong&gt;  It will be at least a year before I start this part. However, my understanding is that I will work on a research problem with one of the professors.  This should help prepare for my own dissertation.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;24(or more) dissertation hours.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The faculty is composed of all full-time professors for the doctoral programs.  For my 
-first two classes, both instructors are full-time and live in the Florida area and had 
-been with NSU for over a decade.&lt;/p&gt;
-
-&lt;h2 id=&quot;artificial-intelligence-class&quot;&gt;Artificial Intelligence Class&lt;/h2&gt;
-
-&lt;p&gt;The artificial intelligence class (CISD 760) is taught by &lt;a href=&quot;http://www.cec.nova.edu/faculty/mukherjee.html&quot;&gt;Sumitra Mukherjee&lt;/a&gt; 
-and uses the textbook &lt;a href=&quot;http://aima.cs.berkeley.edu/&quot;&gt;Artificial Intelligence a Modern Approach&lt;/a&gt;.  For the first class sessions, the professor lectured on path finding, modeling, optimization, and Bayesian inference. We saw neural networks, genetic algorithms, decision trees, Bayesian belief networks and other algorithms.&lt;/p&gt;
-
-&lt;p&gt;The professor also covered the assignments for the semester.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Assignment 1:&lt;/strong&gt; Select a peer reviewed paper in your research area of interest.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Assignment 2:&lt;/strong&gt; Complete programs for four AI problems.  Path finding, vector optimization, data science/predictive modeling (neural net vs decision tree) and Bayesian inference.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Assignment 3:&lt;/strong&gt; Critique the paper from assignment 1, and write an “idea paper” describing further research you might like to pursue.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;In-class mid-term&lt;/strong&gt; at the next cluster meeting.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Final examination&lt;/strong&gt; assignment completed over the last several weeks of the semester.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Most PhD programs have &lt;a href=&quot;http://en.wikipedia.org/wiki/Prelims&quot;&gt;qualifying exams&lt;/a&gt;, and NSU’s CS PhD program breaks this requirement 
-over 8 in-class mid-semester examinations.  For the AI class, this is accomplished with 
-the mid-term assignment.&lt;/p&gt;
-
-&lt;p&gt;I’ve already started the programming assignment and am making use of Python with DEAP, 
-&lt;a href=&quot;http://www.numpy.org/&quot;&gt;Numpy&lt;/a&gt; and &lt;a href=&quot;http://www.numpy.org/&quot;&gt;scikit-learn&lt;/a&gt;.  I think this 
-will be a great class.  The assignment gives a good 
-chance to try out some of the AI algorithms.  The assignments also allow us to start 
-thinking about dissertation topics in AI.  I plan to conduct my dissertation research in 
-the field of AI.&lt;/p&gt;
-
-&lt;h2 id=&quot;data-base-management-systems-class&quot;&gt;Data Base Management Systems Class&lt;/h2&gt;
-
-&lt;p&gt;The data base management systems class (CISD 750) class is taught by &lt;a href=&quot;http://cec.nova.edu/~jps/&quot;&gt;Junping Sun&lt;/a&gt; using 
-the textbook &lt;a href=&quot;http://www.amazon.com/gp/product/0131873253&quot;&gt;Database Systems: The Complete Book (2nd Edition)&lt;/a&gt;.  For the first class 
-sessions, the professor lectured on a variety of topics in database theory.  This class is different than your typical “IT SQL” class.  This course is really more on the design and implementation of an actual database system.  I was familiar with the topics discussed, but I will have quite a bit of studying to do for this class.  Both professors seemed very knowledgeable of their respective areas, and very current on the latest research.&lt;/p&gt;
-
-&lt;p&gt;The assignments for this course are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Research Proposal.&lt;/li&gt;
-  &lt;li&gt;Research Report.&lt;/li&gt;
-  &lt;li&gt;In-class mid-term at the next cluster meeting.&lt;/li&gt;
-  &lt;li&gt;Final examination assignment completed over the last several weeks of the semester.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We are supposed to select a research topic for this course.  KDD (Knowledge Discovery 
-in Databases) is one of the topics.  This is the area I plan to research.  KDD is what 
-computer science groups, such as the ACM, call Data Science.&lt;/p&gt;
-
-&lt;p&gt;So far it looks like a good program.  I wanted to enter the world of academic publishing, 
-but could not fit a traditional PhD program into my life.  This program will be quite a 
-bit of work.  But, so far, the program looks like it will be a good fit for me.&lt;/p&gt;
-
-&lt;h2 id=&quot;around-the-nsu-campus&quot;&gt;Around the NSU Campus&lt;/h2&gt;
-
-&lt;p&gt;Here are some pictures that my wife and I took around the NSU campus.&lt;/p&gt;
-
-&lt;p&gt;The campus is large, and it took some walking to learn my way around!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/blog/2014-09-02-first-visit-nsu-1.jpg&quot; alt=&quot;Walking to class at NSU&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can see the main entrance to the campus below.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/blog/2014-09-02-first-visit-nsu-2.jpg&quot; alt=&quot;Jeff in front of NSU&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is the Carl DeSantis building at NSU.  The Graduate School of Information and Computer Science is located here.  I spent most of my time in the building below.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/blog/2014-09-02-first-visit-nsu-3.jpg&quot; alt=&quot;Carl DeSantis Building&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Of course, this is Ft. Lauderdale, Florida, I had to stop at the beach!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/blog/2014-09-02-first-visit-nsu-4.jpg&quot; alt=&quot;Jeff at Ft. Lauderdale Beach&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ft. Lauderdale is made up of many interesting canals.  My wife and I also took a canal tour.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/blog/2014-09-02-first-visit-nsu-5.jpg&quot; alt=&quot;Ft. Lauderdale Canal Tour&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 02 Sep 2014 08:26:00 -0500</pubDate>
-        <link>http://www.heatonresearch.com/phd/2014/09/02/first-visit-nsu.html</link>
-        <guid isPermaLink="true">http://www.heatonresearch.com/phd/2014/09/02/first-visit-nsu.html</guid>
-        
-        
-        <category>phd</category>
         
       </item>
     

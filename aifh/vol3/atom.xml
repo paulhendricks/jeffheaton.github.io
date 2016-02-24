@@ -4,13 +4,80 @@
  <title>Heaton Research</title>
  <link href="http://www.heatonresearch.com/atom.xml" rel="self"/>
  <link href="http://www.heatonresearch.com/"/>
- <updated>2016-02-23T18:14:49-06:00</updated>
+ <updated>2016-02-24T17:23:34-06:00</updated>
  <id>http://www.heatonresearch.com</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Teaching a Deep Learning Graduate Course at Washington University</title>
+   <link href="http://www.heatonresearch.com/2016/02/24/teaching-deep-learning-washington-university.html"/>
+   <updated>2016-02-24T06:00:00-06:00</updated>
+   <id>http://www.heatonresearch.com/2016/02/24/teaching-deep-learning-washington-university</id>
+   <content type="html">&lt;p&gt;I will be teaching a graduate course at &lt;a href=&quot;https://engineering.wustl.edu/Pages/home.aspx&quot;&gt;Washington University in St. Louis&lt;/a&gt; for the 
+fall 2016 semester in the &lt;a href=&quot;https://sever.wustl.edu/degreeprograms/information-systems/Pages/MSIS-Curriculum.aspx&quot;&gt;Master of Science in Information Systems (MSIS)&lt;/a&gt; program.  You can see the course description here.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;T81 INFO 558	Applications of Deep Neural Networks&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Deep learning is a group of exciting new technologies for neural networks. By using a 
+combination of advanced training techniques neural network architectural components, it 
+is now possible to train neural networks of much greater complexity. This course will 
+introduce the student to deep belief neural networks, regularization units (ReLU), 
+convolution neural networks and recurrent neural networks. High performance 
+computing (HPC) aspects will demonstrate how deep learning can be leveraged both on 
+graphical processing units (GPUs), as well as grids. Deep learning allows a model to 
+learn hierarchies of information in a way that is similar to the function of the human 
+brain. Focus will be primarily upon the application of deep learning, with some 
+introduction to the mathematical foundations of deep learning. Students will use the 
+Python programming language to architect a deep learning model for several of real-world 
+data sets and interpret the results of these networks.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I will make use of my &lt;a href=&quot;http://www.heatonresearch.com/book/aifh-vol3-deep-neural.html&quot;&gt;book on deep learning&lt;/a&gt;, as well as some supplementary information.
+This will be a hands-on technical course, so we will use the Python programming language
+to make use of deep neural networks.  At this point I believe that I will make use of
+both the &lt;a href=&quot;https://www.tensorflow.org/&quot;&gt;Google TensorFlow&lt;/a&gt; and &lt;a href=&quot;http://blogs.microsoft.com/next/2016/01/25/microsoft-releases-cntk-its-open-source-deep-learning-toolkit-on-github/&quot;&gt;Microsoft CNTK&lt;/a&gt;
+I feel that both of these will give the students an easy install path, depending on their system.
+Currently, CNTK has an easy install path for Linux and Windows (but not Mac); TensorFlow has 
+an easy install path for Mac and Linux (but not Windows).  I am fond of the &lt;a href=&quot;http://caffe.berkeleyvision.org/&quot;&gt;Caffe package&lt;/a&gt; as well, but it does have an easy install path for Windows.
+For my own use I make use of Theano, but it does not have a particularly easy install path for anything!  What every path I end up taking, I will update my books examples to include it.&lt;/p&gt;
+
+&lt;p&gt;My schedule, subject to change, is:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;08/29/2016: Class 01: Python for Machine Learning&lt;/li&gt;
+  &lt;li&gt;09/05/2016: Labor Day, No class&lt;/li&gt;
+  &lt;li&gt;09/12/2016: Class 02: Neural Network Basics, Ch1&lt;/li&gt;
+  &lt;li&gt;09/19/2016: Class 03: Training a Neural Network, Ch 4, Ch 5&lt;/li&gt;
+  &lt;li&gt;09/26/2016: Class 04: Introduction to TensorFlow&lt;/li&gt;
+  &lt;li&gt;10/03/2016: Class 05: Modeling and Kaggle&lt;/li&gt;
+  &lt;li&gt;10/10/2016: Class 06: Backpropagation, Ch 6&lt;/li&gt;
+  &lt;li&gt;10/17/2016: Class 07: Neural Networks for Classification&lt;/li&gt;
+  &lt;li&gt;10/24/2016: Class 08: Neural Networks for Regression&lt;/li&gt;
+  &lt;li&gt;10/31/2016: Class 09: Preprocessing&lt;/li&gt;
+  &lt;li&gt;11/07/2016: Class 10: Regularization and Dropout, Ch 12&lt;/li&gt;
+  &lt;li&gt;11/14/2016: Class 11: Timeseries and Recurrent, Ch 13&lt;/li&gt;
+  &lt;li&gt;11/21/2016: Class 12: Convolutional Neural Networks, Ch 10&lt;/li&gt;
+  &lt;li&gt;11/28/2016: Class 13: Architecting Neural Networks, Ch 14&lt;/li&gt;
+  &lt;li&gt;12/05/2016: Class 14: Special Applications of Neural Networks&lt;/li&gt;
+  &lt;li&gt;12/12/2016: Class 15: GPU, HPC and Cloud&lt;/li&gt;
+  &lt;li&gt;12/19/2016: Final Exam&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;At this point I am planning on two of the assignments using &lt;a href=&quot;https://inclass.kaggle.com/&quot;&gt;Kaggle for Class&lt;/a&gt;.  I think it 
+will be a great way to introduce the students to Kaggle.&lt;/p&gt;
+
+&lt;p&gt;This will be my first time teaching a graduate course.  I’ve taught undergrad at &lt;a href=&quot;https://www.maryville.edu/&quot;&gt;Maryville University&lt;/a&gt; and &lt;a href=&quot;http://www.stlcc.edu/&quot;&gt;St. Louis Community College&lt;/a&gt;, 
+but its been a few years.  I’ve always taught technical courses, such as various levels of Java, C++, C# and SQL. WUSTL is the 
+university that I got my masters degree from, so I am somewhat familiar with them.&lt;/p&gt;
+
+&lt;p&gt;I will have a website that will contain all of my course information, I will post more information on that once the course starts.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>New Look for All My Websites: Jekyll and Github</title>
