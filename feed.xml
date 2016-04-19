@@ -2,13 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Heaton Research</title>
-    <description>Jeff Heaton is a data scientist, phd student and indie publisher.  Heaton Research is the homepage for my projects.
+    <description>Jeff Heaton is a data scientist, phd student and indie publisher.  Heaton Research is the homepage for his projects.
 </description>
     <link>http://www.heatonresearch.com/</link>
     <atom:link href="http://www.heatonresearch.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 28 Mar 2016 18:55:50 -0500</pubDate>
-    <lastBuildDate>Mon, 28 Mar 2016 18:55:50 -0500</lastBuildDate>
+    <pubDate>Tue, 19 Apr 2016 17:52:59 -0500</pubDate>
+    <lastBuildDate>Tue, 19 Apr 2016 17:52:59 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Presented Two Papers at IEEE SoutheastCON 2016 in Norfolk, VA</title>
+        <description>&lt;p&gt;I presented two papers at the IEEE SoutheastCON 2016 conference in NorfolkVA on 
+April 1, 2016:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;April, 2016: &lt;a href=&quot;https://www.xcdsystem.com/SoutheastCon/program/index.cfm?pgid=457&amp;amp;day=01&amp;amp;sid=18224&quot;&gt;An Empirical Analysis of Feature Engineering for Predictive Modeling&lt;/a&gt; &lt;a href=&quot;http://www.xcdsystem.com/SoutheastCon/abstract/finalpapers/FinalPaper_11.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;a href=&quot;https://github.com/jeffheaton/jh_public/raw/master/jheaton-southeastcon-2016-features-presentation.pdf&quot;&gt;[Slides]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;April, 2016: &lt;a href=&quot;https://www.xcdsystem.com/SoutheastCon/program/index.cfm?pgid=457&amp;amp;day=01&amp;amp;sid=18224&quot;&gt;Comparing Dataset Characteristics that Favor the Apriori, Eclat or FP-Growth Frequent Itemset Mining Algorithms&lt;/a&gt; &lt;a href=&quot;http://www.xcdsystem.com/SoutheastCon/abstract/finalpapers/FinalPaper_12.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;a href=&quot;https://github.com/jeffheaton/jh_public/raw/master/jheaton_secon2016_freqitemset-presentation.pdf&quot;&gt;[Slides]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The first article is very much related to my phd dissertation topic.  For this paper, 
+I generated datasets for neural networks, support vector machines, random forests, and
+gradient boosting machines trying to see what types of equations they could learn; and
+more importantly, what types of equations they cannot learn.  My dissertation topic
+is in the area of feature engineering, so I am very interested in what types of 
+equation representations of features you can augment a model’s feature vector with to
+enhance its predictive power.  This conference paper is based on research I did for my
+phd, while I was exploring dissertation topics.&lt;/p&gt;
+
+&lt;p&gt;The second article is on frequent itemset mining.  For this paper, I examined several
+common frequent set mining items to see what effects the underlying dataset had on the
+algorithm runtime.  Frequent itemsets are outside my research area.  This paper was
+based on a paper that I wrote near the beginning of my phd program.&lt;/p&gt;
+
+&lt;p&gt;Both of these papers relied heavily on experimentation, and my code is available at
+my &lt;a href=&quot;https://github.com/jeffheaton/papers&quot;&gt;github site&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 19 Mar 2016 07:00:00 -0500</pubDate>
+        <link>http://www.heatonresearch.com/2016/03/19/ieee-southeast-con-2016-papers.html</link>
+        <guid isPermaLink="true">http://www.heatonresearch.com/2016/03/19/ieee-southeast-con-2016-papers.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Teaching a Deep Learning Graduate Course at Washington University</title>
@@ -847,58 +881,6 @@ And now they have a police box!&lt;/p&gt;
         
         
         <category>phd</category>
-        
-      </item>
-    
-      <item>
-        <title>Quick and Very Dirty Data Wrangling Example</title>
-        <description>&lt;p&gt;Data science is often described as the intersection of statistics, domain knowledge and 
-hacking skills.  One important part of hacking skills is data wrangling.  Data are rarely 
-in the exact form that you need them.  I am currently working on an example for 
-AIFH Vol 3 that will use a SOM and compare nations based on several statistics.  I could 
-not find a dataset that fit exactly what I was looking for.  So I decided to create my 
-own dataset.&lt;/p&gt;
-
-&lt;p&gt;I wanted a list of countries with three different data points that somehow indicate that 
-nation’s prosperity.  I chose GDP, lifespan and literacy rate.  Remember, this is a 
-computer science experiment, not a sociology experiment.  I am sure others could come up 
-with a much better set of data points to compare countries.  However, for my example 
-program these will work just fine.&lt;/p&gt;
-
-&lt;p&gt;I could not find a data set that was already completed.  However, all of this data is 
-contained in Wikipedia.  To wrangle the data I created a simple Python script to 
-accomplish this.  I am really starting to like Python for quick scripting projects.&lt;br /&gt;
-I could have also used R, Groovy, Perl or a host of others.  The end result looks 
-something like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;code,country,gdp,lifespan,literacy
-AFG,Afghanistan,20650,60,0.431
-ALB,Albania,12800,74,0.98
-DZA,Algeria,215700,73.12,0.918
-AND,Andorra,4800,84.2,1.0
-AGO,Angola,124000,52,0.826
-ATG,Antigua and Barbuda,1220,75.8,0.984
-[Full File]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;You can download the entire contents of Wikipedia into a data file.  This is usually how 
-you should deal with Wikipedia data.  Do not use HTTP to pull large volumes of data from 
-Wikipedia.  This is a good way to get blocked from Wikipedia.  Also, the datafile for 
-Wikipedia is not HTML encoded and much easier to parse.  I simply pulled the &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_3166-1&quot;&gt;nation codes&lt;/a&gt;
-page, &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29&quot;&gt;GDP&lt;/a&gt;, &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_countries_by_literacy_rate&quot;&gt;literacy&lt;/a&gt;, and &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_countries_by_life_expectancy&quot;&gt;lifespan&lt;/a&gt; pages into text files that my Python script could parse.&lt;/p&gt;
-
-&lt;p&gt;I linked the files together (joined) using the nation name as a key.  If a nation’s name 
-did not appear in all lists I discarded that nation.&lt;/p&gt;
-
-&lt;p&gt;You can see my Python code &lt;a href=&quot;https://github.com/jeffheaton/aifh/blob/master/vol3/misc/nations/build_nations.py&quot;&gt;here&lt;/a&gt;.  This code could be more readable.  But it gets the job 
-done.  It is a quick data wrangling hack.  If I needed to re-pull the data on a frequent 
-basis, particularly if it were high-velocity data, I would do something more formal.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 27 Dec 2014 07:26:00 -0600</pubDate>
-        <link>http://www.heatonresearch.com/datascience/2014/12/27/quick-dirty-data-wrangling.html</link>
-        <guid isPermaLink="true">http://www.heatonresearch.com/datascience/2014/12/27/quick-dirty-data-wrangling.html</guid>
-        
-        
-        <category>datascience</category>
         
       </item>
     

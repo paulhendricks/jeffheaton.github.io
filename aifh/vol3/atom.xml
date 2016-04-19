@@ -4,13 +4,45 @@
  <title>Heaton Research</title>
  <link href="http://www.heatonresearch.com/atom.xml" rel="self"/>
  <link href="http://www.heatonresearch.com/"/>
- <updated>2016-03-28T18:55:50-05:00</updated>
+ <updated>2016-04-19T17:52:59-05:00</updated>
  <id>http://www.heatonresearch.com</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Presented Two Papers at IEEE SoutheastCON 2016 in Norfolk, VA</title>
+   <link href="http://www.heatonresearch.com/2016/03/19/ieee-southeast-con-2016-papers.html"/>
+   <updated>2016-03-19T07:00:00-05:00</updated>
+   <id>http://www.heatonresearch.com/2016/03/19/ieee-southeast-con-2016-papers</id>
+   <content type="html">&lt;p&gt;I presented two papers at the IEEE SoutheastCON 2016 conference in NorfolkVA on 
+April 1, 2016:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;April, 2016: &lt;a href=&quot;https://www.xcdsystem.com/SoutheastCon/program/index.cfm?pgid=457&amp;amp;day=01&amp;amp;sid=18224&quot;&gt;An Empirical Analysis of Feature Engineering for Predictive Modeling&lt;/a&gt; &lt;a href=&quot;http://www.xcdsystem.com/SoutheastCon/abstract/finalpapers/FinalPaper_11.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;a href=&quot;https://github.com/jeffheaton/jh_public/raw/master/jheaton-southeastcon-2016-features-presentation.pdf&quot;&gt;[Slides]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;April, 2016: &lt;a href=&quot;https://www.xcdsystem.com/SoutheastCon/program/index.cfm?pgid=457&amp;amp;day=01&amp;amp;sid=18224&quot;&gt;Comparing Dataset Characteristics that Favor the Apriori, Eclat or FP-Growth Frequent Itemset Mining Algorithms&lt;/a&gt; &lt;a href=&quot;http://www.xcdsystem.com/SoutheastCon/abstract/finalpapers/FinalPaper_12.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;a href=&quot;https://github.com/jeffheaton/jh_public/raw/master/jheaton_secon2016_freqitemset-presentation.pdf&quot;&gt;[Slides]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The first article is very much related to my phd dissertation topic.  For this paper, 
+I generated datasets for neural networks, support vector machines, random forests, and
+gradient boosting machines trying to see what types of equations they could learn; and
+more importantly, what types of equations they cannot learn.  My dissertation topic
+is in the area of feature engineering, so I am very interested in what types of 
+equation representations of features you can augment a model’s feature vector with to
+enhance its predictive power.  This conference paper is based on research I did for my
+phd, while I was exploring dissertation topics.&lt;/p&gt;
+
+&lt;p&gt;The second article is on frequent itemset mining.  For this paper, I examined several
+common frequent set mining items to see what effects the underlying dataset had on the
+algorithm runtime.  Frequent itemsets are outside my research area.  This paper was
+based on a paper that I wrote near the beginning of my phd program.&lt;/p&gt;
+
+&lt;p&gt;Both of these papers relied heavily on experimentation, and my code is available at
+my &lt;a href=&quot;https://github.com/jeffheaton/papers&quot;&gt;github site&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Teaching a Deep Learning Graduate Course at Washington University</title>

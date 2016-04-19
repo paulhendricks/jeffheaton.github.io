@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About Jeff Heaton</title>
+  <title>Flat Spot Problem (Sigmoid/Logist Activation Functions)</title>
   <meta name="description" content="Jeff Heaton is a data scientist, phd student and indie publisher.  Heaton Research is the homepage for his projects.
 ">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.heatonresearch.com/about/">
+  <link rel="canonical" href="http://www.heatonresearch.com/encog/flat_spot.html">
   <link rel="alternate" type="application/rss+xml" title="Heaton Research" href="http://www.heatonresearch.com/feed.xml" />
 
 <script type="text/x-mathjax-config">
@@ -231,42 +231,53 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">About Jeff Heaton</h1>
+    <h1 class="post-title">Flat Spot Problem (Sigmoid/Logist Activation Functions)</h1>
   </header>
 
   <article class="post-content">
-    <p><img src="/images/about-jeff.jpg" alt="Alt text" /></p>
+    <h1 id="flat-spot-problem">Flat Spot Problem</h1>
 
-<p>Jeff Heaton is a data scientist, PhD student and indy publisher.  Jeff works primarily in the programming languages Python, R, C#, Java and C/C++. He is an active technology blogger, open source contributor, and author of more than ten books. His areas of expertise include Data Science, Predictive Modeling, Data Mining, Big Data, Business Intelligence and Artificial Intelligence. He is the lead developer for the Encog Machine Learning Framework open source project. Jeff holds a Masters Degree in Information Management from Washington University, is a Senior Member of the IEEE, a Sun Certified Java Programmer and a Fellow of the Life Management Institute.</p>
+<p>The Flat Spot Problem is an issue observed by <a href="https://www.cs.cmu.edu/~sef/">Scott Fahlman</a> in a paper on the <a href="https://en.wikipedia.org/wiki/Quickprop">Quickprop</a>
+training method. Flat spot occurs in certain activation functions, particularly the 
+<a href="https://en.wikipedia.org/wiki/Sigmoid_function">Sigmoid/Logistic</a> Activation Function. Encog does not use flat spot on the Hyperbolic 
+Tangent or <a href="https://en.wikipedia.org/wiki/Rectifier_(neural_networks)">ReLU</a> Activation Functions. Flatspot can make it very difficult for a neural 
+network to property train with propagation training. Because of the Flatspot problem, 
+certain hidden neurons can be rendered completely useless. This can greatly increase 
+training time, and decrease overall efficiency for neural networks. For small neural 
+networks, with just a few hidden neurons, if enough random weights fall into the flat 
+spot range, the neural network will fail to ever converge.</p>
 
-<p>Jeff lives in St. Louis, MO with his wife Tracy. Jeff and Tracy are both Star Trek and Doctor Who fans. They also enjoy adventures and <a href="https://www.youtube.com/watch?v=AUfHW6TRIfI">got married in a helicopter</a> over Las Vegas, NV. They have traveled to many places in the United States as well as Canada, Mexico, England, the Dominican Republic, Puerto Rico, Haiti, and Spain. Tracy has been to even more countries and speaks three languages!</p>
+<p>To see why the Flatspot problem exists, consider that all propagation training methods 
+require a derivative of the activation function. Consider the derivative of the sigmoid 
+activation function.</p>
 
-<h1 id="jeffs-social-media-pages">Jeff’s Social Media Pages</h1>
+<script type="math/tex; mode=display">o_j(1 − o_j)</script>
+
+<p>Where $o_j$ is the sigmoid output from unit $j$. The above derivative will approach zero 
+when $o_j$ is near 1.0 or 0.0. The graph illustrates this. You can see the flat spot at 
+the top of the graph, near zero.</p>
+
+<p>Eliminating the flat spot is as simple as adding a constant, such as 0.1 to the derivative 
+function. This results in.</p>
+
+<script type="math/tex; mode=display">oj(1 − o_j) + 0.1</script>
+
+<p>This, generally, has a very positive effect on all propagation training. No change is 
+made to the actual activation function, so the flat spot modification is only necessary 
+at training time.</p>
+
+<h1 id="encog-handling-of-the-flat-spot">Encog Handling of the Flat Spot</h1>
+
+<p>By default Encog addresses the flat spot. This has been shown to enhance Encog training. 
+However, you can disable the flat spot propcessing. To do this set the FixFlatSpot 
+property, on any propagation training object to false.</p>
+
+<h1 id="references">References</h1>
 
 <ul>
-  <li><a href="https://github.com/jeffheaton">Jeff’s Profile at GitHub</a></li>
-  <li><a href="http://stackoverflow.com/users/173355/jeffheaton">Jeff’s Profile at Stack Overflow</a></li>
-  <li><a href="http://www.google.com/+JeffHeaton">Jeff’s Profile at Google+</a></li>
-  <li><a href="https://www.facebook.com/encog.framework">Encog Machine Learning Framework on Facebook</a></li>
-  <li><a href="http://twitter.com/jeffheaton">Jeff’s Twitter Feed</a></li>
-  <li><a href="http://www.linkedin.com/in/jeffheaton">Jeff’s Profile at Linked In</a></li>
-  <li><a href="http://www.youtube.com/user/HeatonResearch">Heaton Research Videos on YouTube</a></li>
-  <li><a href="http://www.youtube.com/user/jeffheatondotcom">Jeff’s Personal Videos on YouTube</a></li>
-  <li><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=1374026">Jeff’s Profile at the Code Project</a></li>
-  <li><a href="http://www.amazon.com/gp/pdp/profile/A2WM1KL9DQSQ18">Jeff’s Profile at Amazon USA</a></li>
-  <li><a href="https://www.amazon.com/author/jeffheaton">Jeff’s Author Page at Amazon USA</a></li>
-  <li><a href="http://www.amazon.co.uk/gp/pdp/profile/A2WM1KL9DQSQ18">Jeff’s Profile at Amazon UK</a></li>
-  <li><a href="https://www.ohloh.net/accounts/jeffheaton">Jeff’s Profile at Ohloh</a></li>
+  <li>An Empirical Study of Learning Speed in Back-Propagation Networks” (Scott E. Fahlman, 1988)</li>
 </ul>
 
-<h1 id="jeffs-pgp-encryption-information">Jeff’s PGP Encryption Information</h1>
-
-<p>If you (or I for that matter) need to send me an encrypted file, here is my PGP public cert and fingerprint.</p>
-
-<ul>
-  <li>Jeff’s Fingerprint: FC2456F962E1A4CE02151213C160B39D443140A5</li>
-  <li>Jeff’s Public Key: <a href="/dload/FC2456F962E1A4CE02151213C160B39D443140A5.asc">Download</a></li>
-</ul>
 
   </article>
 
