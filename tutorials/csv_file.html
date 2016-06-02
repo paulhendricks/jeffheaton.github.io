@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Heaton Research Downloads</title>
+  <title>Reading, Writing and Processing CSV Files</title>
   <meta name="description" content="Jeff Heaton is a data scientist, phd student and indie publisher.  Heaton Research is the homepage for his projects.
 ">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.heatonresearch.com/download/">
+  <link rel="canonical" href="http://www.heatonresearch.com/tutorials/csv_file.html">
   <link rel="alternate" type="application/rss+xml" title="Heaton Research" href="http://www.heatonresearch.com/feed.xml" />
 
 <script type="text/x-mathjax-config">
@@ -235,35 +235,35 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Heaton Research Downloads</h1>
+    <h1 class="post-title">Reading, Writing and Processing CSV Files</h1>
   </header>
 
   <article class="post-content">
-    <h1 id="downloads-for-jeff-heatons-books">Downloads for Jeff Heaton’s Books</h1>
-<p>The following books have examples that you can download. Some of our books have multiple 
-editions, makre sure you choose the correct edition for the book you own.  All
-source code from my books is free and open software, you do not need to have purchased
-a book to use the source code.</p>
+    <h1 id="read-a-csv-line-by-line-in-python">Read a CSV (line-by-line) in Python</h1>
+<p>```python
+# Read a CSV file in Python, libe-by-line, by Jeff Heaton (http://www.jeffheaton.com/tutorials/)
+import codecs
+import csv</p>
 
-<ul>
-  <li><a href="https://github.com/jeffheaton/aifh">Artificial Intelligence for Humans  - All Volumes</a></li>
-  <li>Introduction to the Math of Neural Networks - No downloadable files.</li>
-  <li><a href="https://github.com/jeffheaton/jeffheaton-book-code">Code for all of my other books</a></li>
-</ul>
+<p>FILENAME = “/Users/jeff/projects/dissertation/gp_java/src/main/resources/iris.csv”
+ENCODING = ‘utf-8’</p>
 
-<h1 id="encog-downloads">Encog Downloads</h1>
+<p>with codecs.open(FILENAME, “r”, ENCODING) as fp:
+    reader = csv.reader(fp)</p>
 
-<p>This page contains downloads for Encog, as well as Heaton Research books. Additionally, 
-any ebooks that you have purchased from us should be available here is well. If you do dot 
-see any of your ebook purchases here, make sure you are logged in.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code># read CSV headers
+headers = next(reader)
+print(headers)
 
-<ul>
-  <li><a href="https://code.google.com/p/encog-java/downloads/list">Encog for Java</a></li>
-  <li><a href="https://code.google.com/p/encog-cs/downloads/list">Encog for .Net</a></li>
-  <li><a href="https://github.com/encog/encog-c/downloads">Encog for C/C++ (experimental)</a></li>
-  <li><a href="https://github.com/encog/encog-javascript/downloads">Encog for Javascript (experimental)</a></li>
-</ul>
+# read rest of file
+for row in reader:
+    # Print each row
+    print(row)
 
+    # Print individual fields of the row
+    # print("{},{},{},{} = {}".format(row[0],row[1],row[2],row[3],row[4])) ```
+</code></pre>
+</div>
 
   </article>
 
