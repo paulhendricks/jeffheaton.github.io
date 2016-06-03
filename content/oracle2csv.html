@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Page Not Found</title>
+  <title>Download an Oracle Table to a CSV File</title>
   <meta name="description" content="Jeff Heaton is a data scientist, phd student and indie publisher.  Heaton Research is the homepage for his projects.
 ">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.heatonresearch.com/404.html">
+  <link rel="canonical" href="http://www.heatonresearch.com/content/oracle2csv.html">
   <link rel="alternate" type="application/rss+xml" title="Heaton Research" href="http://www.heatonresearch.com/feed.xml" />
 
 <script type="text/x-mathjax-config">
@@ -237,23 +237,62 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Page Not Found</h1>
+    <h1 class="post-title">Download an Oracle Table to a CSV File</h1>
   </header>
 
   <article class="post-content">
-    <h1 id="page-not-found">Page Not Found</h1>
+    
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">__author__</span> <span class="o">=</span> <span class="s">'jheaton'</span>
 
-<p>We are sorry, we could not find the page you were looking for.  Consider one of the
-following destinations:</p>
+<span class="kn">import</span> <span class="nn">codecs</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">cx_Oracle</span>
 
-<ul>
-  <li><a href="/encog/">Encog Project</a></li>
-  <li><a href="/book/">Jeff Heaton’s Books</a></li>
-  <li><a href="/jeff/">Jeff Heaton’s Blog</a></li>
-  <li><a href="/aifh/">Artificial Intelligence for Humans</a></li>
-  <li><a href="/download/">Downloads</a></li>
-  <li><a href="/about/">About Jeff</a></li>
-</ul>
+<span class="n">ORACLE_CONNECT</span> <span class="o">=</span> <span class="s">"schema/password@(DESCRIPTION=(SOURCE_ROUTE=OFF)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=host)(PORT=1532)))(CONNECT_DATA=(SID=STLPESP)(SRVR=sid)))"</span>
+<span class="n">OUTPUT_ENCODING</span> <span class="o">=</span> <span class="s">"utf-8"</span>
+<span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">100000</span>
+
+<span class="n">ORACLE_SQL</span> <span class="o">=</span> <span class="s">"""
+select * from KMEISINGER.KBM_094_MORT_STUDY_POL_2
+"""</span>
+
+<span class="k">def</span> <span class="nf">append_row</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="n">rows</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">codecs</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">"a"</span><span class="p">,</span> <span class="n">OUTPUT_ENCODING</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="n">dialect</span><span class="o">=</span><span class="s">'excel'</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+            <span class="n">output</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">export_table_data</span><span class="p">(</span><span class="n">orcl</span><span class="p">,</span><span class="n">filename</span><span class="p">):</span>
+    <span class="c"># output each table content to a separate CSV file</span>
+
+    <span class="k">with</span> <span class="n">codecs</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">"w"</span><span class="p">,</span> <span class="n">OUTPUT_ENCODING</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="n">sql</span> <span class="o">=</span> <span class="n">ORACLE_SQL</span>
+    <span class="n">curs2</span> <span class="o">=</span> <span class="n">orcl</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">curs2</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
+
+    <span class="n">cols</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">curs2</span><span class="o">.</span><span class="n">description</span><span class="p">:</span>
+        <span class="n">cols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">col</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">append_row</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="p">[</span><span class="n">cols</span><span class="p">]</span> <span class="p">)</span>
+
+    <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span> <span class="c"># add table rows</span>
+        <span class="n">row_data</span> <span class="o">=</span> <span class="n">curs2</span><span class="o">.</span><span class="n">fetchmany</span><span class="p">(</span><span class="n">BATCH_SIZE</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">row_data</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">done</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">append_row</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">row_data</span><span class="p">)</span>
+            <span class="n">row</span><span class="o">+=</span><span class="nb">len</span><span class="p">(</span><span class="n">row_data</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"{:,d}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">row</span><span class="p">))</span>
+
+<span class="n">orcl</span> <span class="o">=</span> <span class="n">cx_Oracle</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">ORACLE_CONNECT</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Connected to Oracle: "</span> <span class="o">+</span> <span class="n">orcl</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+
+<span class="n">export_table_data</span><span class="p">(</span><span class="n">orcl</span><span class="p">,</span><span class="s">"output.csv"</span><span class="p">)</span></code></pre></figure>
 
 
   </article>

@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Page Not Found</title>
+  <title>Installing Oracle (cx_Oracle) for Python</title>
   <meta name="description" content="Jeff Heaton is a data scientist, phd student and indie publisher.  Heaton Research is the homepage for his projects.
 ">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.heatonresearch.com/404.html">
+  <link rel="canonical" href="http://www.heatonresearch.com/content/oracle.html">
   <link rel="alternate" type="application/rss+xml" title="Heaton Research" href="http://www.heatonresearch.com/feed.xml" />
 
 <script type="text/x-mathjax-config">
@@ -237,23 +237,92 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Page Not Found</h1>
+    <h1 class="post-title">Installing Oracle (cx_Oracle) for Python</h1>
   </header>
 
   <article class="post-content">
-    <h1 id="page-not-found">Page Not Found</h1>
-
-<p>We are sorry, we could not find the page you were looking for.  Consider one of the
-following destinations:</p>
+    <h1 id="installing-oracle-for-python-with-anaconda-python-3x-on-windows">Installing Oracle for Python with Anaconda Python 3.x on Windows</h1>
+<p>The process of installing Oracle drivers into Python is complex. To use Python with Oracle 
+three components must all be inplace and be of the same version (Python 3.5 suggested) 
+and architecture (64-bit suggested). This tutorial assumes that you desire a Python 3.5 
+instance running in 64-bit. To do this, you must have installed:</p>
 
 <ul>
-  <li><a href="/encog/">Encog Project</a></li>
-  <li><a href="/book/">Jeff Heaton’s Books</a></li>
-  <li><a href="/jeff/">Jeff Heaton’s Blog</a></li>
-  <li><a href="/aifh/">Artificial Intelligence for Humans</a></li>
-  <li><a href="/download/">Downloads</a></li>
-  <li><a href="/about/">About Jeff</a></li>
+  <li>Part 1: Anaconda Python 3.5 (64-bit)</li>
+  <li>Part 2: cx_Oracle for Python 3.5 (64-bit)</li>
+  <li>Part 3: Oracle 64-bit Instant Client (64-bit)</li>
 </ul>
+
+<p>That perfect chain of 64-bit and Python 3.5 cannot be broken or you get a series of very 
+cryptic error messages. RGA INSTALLS 16-bit Oracle on Most Machines. This is a problem, 
+but it can be worked around.</p>
+
+<h1 id="part-1-anaconda-python-3x-64-bit">Part 1: Anaconda Python 3.x (64-bit)</h1>
+
+<p>Run the following cell to determmine what sort of Python you have.</p>
+
+<p>Make sure that the below says you are running 3.x, Anaconda and 64-bit. Note that you 
+have a Python version and an Anaconda Verison. Python version is displayed first.</p>
+
+<p>First, see what version of Python you have installed and how many bits.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Find out what type of Python you have (make sure to rerun this for your machine)</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="p">)</span></code></pre></figure>
+
+<p>This should respond something like this:</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">3.4.4 |Anaconda 2.2.0 (64-bit)| (default, Feb 16 2016, 09:54:04) [MSC v.1600 64 bit (AMD64)]</code></pre></figure>
+
+<h1 id="part-2-install-cxoracle-pythons-driver">Part 2: Install cx_Oracle (Python’s Driver)</h1>
+
+<p>Next you will need to install a binary of the cx_Oracle Python driver. This the Python 
+side of things and interfaces Python to the actual Oracle driver (that is installed in 
+Step 3). Issue the below command to the command line.</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">pip install cx_Oracle</code></pre></figure>
+
+<p>You can also download a binary image directly, this is usually not necessary on Windows. 
+The link below takes you to binary images:</p>
+
+<h1 id="part-3-install-oracle-driver-oracles-driver">Part 3: Install Oracle Driver (Oracle’s Driver)</h1>
+
+<p>Python needs a 64-bit Oracle driver. Download the Oracle 12 instant client.</p>
+
+<ul>
+  <li><a href="http://www.oracle.com/technetwork/topics/winx64soft-089540.html">Oracle 12 64-bit Windows Instant Client</a> - Choose first link</li>
+</ul>
+
+<p>The above link requires you to have an Oracle ID.  If you wish to just obtain the file, 
+you can get it from the following RGA share:</p>
+
+<p>This is simply a zip file, I suggest unzipping it to c:\Oracle\, this will create a directory such as:</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">C:\Oracle\instantclient_12_1</code></pre></figure>
+
+<h1 id="does-it-work">Does it Work?</h1>
+
+<p>Now it is time to test the drive.  If you can execute the following command, and not get 
+an error, then you have successfully configured Oracle for Python.</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text"># Use the directory you unzipped the instant client to:
+import os
+os.chdir("C:\\Oracle\\instantclient_12_1")
+import cx_Oracle</code></pre></figure>
+
+<h1 id="simple-oracle-query">Simple Oracle Query</h1>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">ORACLE_CONNECT = "schema/password@(DESCRIPTION=(SOURCE_ROUTE=OFF)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=host)(PORT=1521)))(CONNECT_DATA=(SID=sid)(SRVR=DEDICATED)))"
+
+orcl = cx_Oracle.connect(ORACLE_CONNECT)
+print("Connected to Oracle: " + orcl.version)
+
+sql = "select * from MYTABLE"
+curs = orcl.cursor()
+curs.execute(sql)
+
+for row in curs:
+    print(row)</code></pre></figure>
 
 
   </article>
